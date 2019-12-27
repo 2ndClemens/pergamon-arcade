@@ -1,5 +1,5 @@
 {
-    "name": "pergamon-",
+    "name": "pergamon",
     "dependencies": {
         "device": "*",
         "animation": "*",
