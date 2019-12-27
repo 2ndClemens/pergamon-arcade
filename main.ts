@@ -588,6 +588,139 @@ b b b b b b b b b b b b b b b b
 d d d d d d d d d d d d d d d d 
 c c c c c c c c c c c c c c c c 
 `
+    //% blockIdentity=images._tile
+    export const tile33 = img`
+f d d b c 2 c c c 2 c c c 2 c c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c d 4 c 2 d 4 c 2 d 4 c 
+f d d b c d b c b d b c b d b c 
+f d d b c d b c b d b c b d b c 
+f d d d d d d d d d d d d d d d 
+f b b b b b b b b b b b b b b b 
+f b d b d b d b d b d b d b d b 
+f d d d d d d d d d d d d d d d 
+f b b b b b b b b b b b b b b b 
+f b b b b b b b b b b b b b b b 
+f f f f f f f f f f f f f f f f 
+`
+    //% blockIdentity=images._tile
+    export const tile34 = img`
+c 2 c c c 2 c c c 2 c c c 2 c c 
+2 4 4 c 2 4 4 c 2 4 4 c 2 4 4 c 
+2 4 4 c 2 4 4 c 2 4 4 c 2 4 4 c 
+2 4 4 c 2 4 4 c 2 4 4 c 2 4 4 c 
+2 4 4 c 2 4 4 c 2 4 4 c 2 4 4 c 
+2 4 4 c 2 4 4 c 2 4 4 c 2 4 4 c 
+2 4 4 c 2 4 4 c 2 4 4 c 2 4 4 c 
+2 c 4 c 2 c 4 c 2 c 4 c 2 c 4 c 
+c 2 c c c 2 c c c 2 c c c c c c 
+2 4 4 c 2 4 4 c 2 4 4 c 2 4 4 c 
+2 4 4 c 2 4 4 c 2 4 4 c 2 4 4 c 
+2 4 4 c 2 4 4 c 2 4 4 c 2 4 4 c 
+2 4 4 c 2 4 4 c 2 4 4 c 2 4 4 c 
+2 4 4 c 2 4 4 c 2 4 4 c 2 4 4 c 
+2 4 4 c 2 4 4 c 2 4 4 c 2 4 4 c 
+2 c 4 c 2 c 4 c 2 c 4 c 2 c 4 c 
+`
+    //% blockIdentity=images._tile
+    export const tile35 = img`
+f d d b c 2 c c c 2 c c c 2 c c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c c 4 c 2 c 4 c 2 c 4 c 
+f d d b c 2 c c c 2 c c c c c c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c c 4 c 2 c 4 c 2 c 4 c 
+`
+    //% blockIdentity=images._tile
+    export const tile36 = img`
+f b b c c 2 c c c 2 c c c 2 c c 
+f b b c 2 4 4 c 2 4 4 c 2 4 4 c 
+f b b c 2 4 4 c 2 4 4 c 2 4 4 c 
+f b b c 2 4 4 c 2 4 4 c 2 4 4 c 
+f b b c 2 4 4 c 2 4 4 c 2 4 4 c 
+f b b c 2 4 4 c 2 4 4 c 2 4 4 c 
+f d d c 2 d 4 c 2 d 4 c 2 d 4 c 
+f d d b b d b c b d b c b d b c 
+f d d b b d b c b d b c b d b c 
+f d d d d d d d d d d d d d d d 
+f b b b b b b b b b b b b b b b 
+f b d b d b d b d b d b d b d b 
+f d d d d d d d d d d d d d d d 
+f b b b b b b b b b b b b b b b 
+f b b b b b b b b b b b b b b b 
+f f f f f f f f f f f f f f f f 
+`
+    //% blockIdentity=images._tile
+    export const tile37 = img`
+c 2 c c c 2 c c c 2 c c b d d f 
+2 4 4 c 2 4 4 c 2 4 4 c b d d f 
+2 4 4 c 2 4 4 c 2 4 4 c b d d f 
+2 4 4 c 2 4 4 c 2 4 4 c b d d f 
+2 4 4 c 2 4 4 c 2 4 4 c b d d f 
+2 4 4 c 2 4 4 c 2 4 4 c b d d f 
+2 d 4 c 2 d 4 c 2 d 4 c b d d f 
+b d b c b d b c b d b c b d d f 
+b d b c b d b c b d b c b d d f 
+d d d d d d d d d d d d d d d f 
+b b b b b b b b b b b b b b b f 
+d b d b d b d b d b d b d b d f 
+d d d d d d d d d d d d d d d f 
+b b b b b b b b b b b b b b b f 
+b b b b b b b b b b b b b b b f 
+f f f f f f f f f f f f f f f f 
+`
+    //% blockIdentity=images._tile
+    export const tile38 = img`
+f d d b c 2 c c c 2 c c c 2 c c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c c 4 c 2 c 4 c 2 c 4 c 
+f d d b c 2 c c c 2 c c c c c c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c 4 4 c 2 4 4 c 2 4 4 c 
+f d d b c c 4 c 2 c 4 c 2 c 4 c 
+`
+    //% blockIdentity=images._tile
+    export const tile39 = img`
+c 2 c c c 2 c c c 2 c c b d d f 
+2 4 4 c 2 4 4 c 2 4 4 c b d d f 
+2 4 4 c 2 4 4 c 2 4 4 c b d d f 
+2 4 4 c 2 4 4 c 2 4 4 c b d d f 
+2 4 4 c 2 4 4 c 2 4 4 c b d d f 
+2 4 4 c 2 4 4 c 2 4 4 c b d d f 
+2 4 4 c 2 4 4 c 2 4 4 c b d d f 
+2 c 4 c 2 c 4 c 2 c 4 c b d d f 
+c 2 c c c 2 c c c 2 c c b d d f 
+2 4 4 c 2 4 4 c 2 4 4 c b d d f 
+2 4 4 c 2 4 4 c 2 4 4 c b d d f 
+2 4 4 c 2 4 4 c 2 4 4 c b d d f 
+2 4 4 c 2 4 4 c 2 4 4 c b d d f 
+2 4 4 c 2 4 4 c 2 4 4 c b d d f 
+2 4 4 c 2 4 4 c 2 4 4 c b d d f 
+2 c 4 c 2 c 4 c 2 c 4 c b d d f 
+`
 }
 controller.up.onEvent(ControllerButtonEvent.Released, function () {
     hero.ay = 300
@@ -673,27 +806,27 @@ controller.left.onEvent(ControllerButtonEvent.Released, function () {
     [img`
 . . . . . e e e e . . . . . . . 
 . . . . e e d d d e . . . . . . 
-. . . e e d b d b . . . . . . . 
-. . . e d d 1 d 1 . . . . . . . 
-. . . e e d d b d . . . . . . . 
-. . . . e d d d d . . . . . . . 
-. . . . . d d d d . . . . . . . 
+. . . . e d b d b d e . . . . . 
+. . . . d d 1 d 1 d . . . . . . 
+. . . . . d d b d d . . . . . . 
+. . . . . e d d d e . . . . . . 
+. . . . . e d d d e . . . . . . 
 . . . . . b d d . . . . . . . . 
 . . . . b b b b c . . . . . . . 
 . . . . b b 1 1 c . . . . . . . 
 . . . b b 1 1 1 c b . . . . . . 
-. . . b 1 1 1 1 1 b . . . . . . 
-. . . b 1 1 1 1 1 c . . . . . . 
-. . . b 1 1 1 1 1 c c . . . . . 
-. . . b 1 1 1 1 1 b c . . . . . 
-. . . b 1 1 1 1 1 b c . . . . . 
-. . . b 1 1 1 1 b b c . . . . . 
-. . b 1 1 1 1 1 b 1 c . . . . . 
-. . b 1 1 1 1 1 b 1 c . . . . . 
-. . b 1 c 1 1 b 1 1 c . . . . . 
-. . b 1 d c 1 b 1 c c . . . . . 
-. . b 1 d d 1 b 1 c b . . . . . 
-. . b 1 d d b 1 1 c b . . . . . 
+. . . b 1 1 1 1 b b . . . . . . 
+. . . b 1 1 1 1 b c . . . . . . 
+. . . b 1 1 1 1 b c c . . . . . 
+. . . b 1 1 1 b 1 1 c . . . . . 
+. . . b 1 1 1 b 1 1 c . . . . . 
+. . . b 1 1 b b 1 1 c . . . . . 
+. . b 1 1 1 b 1 1 1 c . . . . . 
+. . b 1 1 1 b 1 1 1 c . . . . . 
+. . c 1 1 1 b 1 1 1 c . . . . . 
+. . d c 1 1 b 1 1 c d . . . . . 
+. . d d 1 1 b 1 1 d d . . . . . 
+. . d d 1 1 b 1 1 d d . . . . . 
 . . b 1 1 b c 1 1 1 b . . . . . 
 . . b 1 b c 1 1 1 1 b . . . . . 
 . . 1 1 c 1 1 1 1 1 b . . . . . 
@@ -702,7 +835,7 @@ controller.left.onEvent(ControllerButtonEvent.Released, function () {
 . . . 1 b 1 1 1 1 1 b . . . . . 
 . . . 1 b 1 1 1 1 1 . . . . . . 
 . . . b c c c c b . . . . . . . 
-. . . d d d . b b d d . . . . . 
+. . . d d d . b b d . . . . . . 
 `],
     100,
     true
@@ -954,7 +1087,7 @@ scene.setBackgroundImage(img`
 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
 `)
 tiles.setTilemap(tiles.createTilemap(
-            hex`40001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000017191a181600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d0e0f10112111121314150000000000000000000000000000000000000000000000000000000000000000000000000000000000001b1b1b1b1b1b1b1b1b0000080707070707070707070c0000000000000000000000000000000000000000000000000000000000000000000000000000000000001c1c1c1c1c1c1c1c1c0000040004000400040004000400000000000000000000000000000000000000000000000000000000000d1a150000000d1a15000000001d1d1d1d1d1d1d1d1d00000500050005000500050005000000001b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b000000040004000000040004000000001e1e1e1e1e1e1e1e1e00000500050005000500050005000000001c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c000000050005000000050005000000001f1f1f1f1f1f1f1f1f00000500050005000500050005000000001d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d0000000500050000000500050000000a09090909090909090900000600060006000600060006000000001e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e00000005000500000005000500000a09090909090909090909000a09090909090909090909090b0020001f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f000000060006000000060006000a090909090909090909090903030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303`,
+            hex`40001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000017191a181600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d0e0f1011211112131415000000000000000000000000000000000000000000000000000000000000000000000000000000000000271b1b1b1b1b1b1b1b0000080707070707070707070c00000000000000000000000000000000000000000000000000000000000d1a150000000d1a1500000000221c1c1c1c1c1c1c1c00000400040004000400040004000000000000000000000000000000000000000000000000000000000008070c00000008070c000000001d1d1d1d1d1d1d1d1d0000050005000500050005000500000000241b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b28000000040004000000040004000000001e1e1e1e1e1e1e1e1e0000050005000500050005000500000000221c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c1c26000000050005000000050005000000001f1f1f1f1f1f1f1f1f00000500050005000500050005000000001d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d1d0000000500050000000500050000000a09090909090909090900000600060006000600060006000000001e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e00000005000500000005000500000a09090909090909090909000a09090909090909090909090b0020001f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f000000060006000000060006000a090909090909090909090903030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303`,
             img`
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -973,33 +1106,33 @@ tiles.setTilemap(tiles.createTilemap(
 . 2 2 2 2 2 2 2 2 2 2 2 2 2 . 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 . . . . . . . . . . . 
 2 2 2 2 . . . . . . . . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,sprites.castle.tileGrass2,sprites.castle.tileDarkGrass2,sprites.castle.tilePath5,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32],
+            [myTiles.tile0,sprites.castle.tileGrass2,sprites.castle.tileDarkGrass2,sprites.castle.tilePath5,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39],
             TileScale.Sixteen
         ))
 hero = sprites.create(img`
 . . . . . e e e e . . . . . . . 
 . . . . e e d d d e . . . . . . 
-. . . e e d b d b . . . . . . . 
-. . . e d d 1 d 1 . . . . . . . 
-. . . e e d d b d . . . . . . . 
-. . . . e d d d d . . . . . . . 
-. . . . . d d d d . . . . . . . 
+. . . . e d b d b d e . . . . . 
+. . . . d d 1 d 1 d . . . . . . 
+. . . . . d d b d d . . . . . . 
+. . . . . e d d d e . . . . . . 
+. . . . . e d d d e . . . . . . 
 . . . . . b d d . . . . . . . . 
 . . . . b b b b c . . . . . . . 
 . . . . b b 1 1 c . . . . . . . 
 . . . b b 1 1 1 c b . . . . . . 
-. . . b 1 1 1 1 1 b . . . . . . 
-. . . b 1 1 1 1 1 c . . . . . . 
-. . . b 1 1 1 1 1 c c . . . . . 
-. . . b 1 1 1 1 1 b c . . . . . 
-. . . b 1 1 1 1 1 b c . . . . . 
-. . . b 1 1 1 1 b b c . . . . . 
-. . b 1 1 1 1 1 b 1 c . . . . . 
-. . b 1 1 1 1 1 b 1 c . . . . . 
-. . b 1 c 1 1 b 1 1 c . . . . . 
-. . b 1 d c 1 b 1 c c . . . . . 
-. . b 1 d d 1 b 1 c b . . . . . 
-. . b 1 d d b 1 1 c b . . . . . 
+. . . b 1 1 1 1 b b . . . . . . 
+. . . b 1 1 1 1 b c . . . . . . 
+. . . b 1 1 1 1 b c c . . . . . 
+. . . b 1 1 1 b 1 1 c . . . . . 
+. . . b 1 1 1 b 1 1 c . . . . . 
+. . . b 1 1 b b 1 1 c . . . . . 
+. . b 1 1 1 b 1 1 1 c . . . . . 
+. . b 1 1 1 b 1 1 1 c . . . . . 
+. . c 1 1 1 b 1 1 1 c . . . . . 
+. . d c 1 1 b 1 1 c d . . . . . 
+. . d d 1 1 b 1 1 d d . . . . . 
+. . d d 1 1 b 1 1 d d . . . . . 
 . . b 1 1 b c 1 1 1 b . . . . . 
 . . b 1 b c 1 1 1 1 b . . . . . 
 . . 1 1 c 1 1 1 1 1 b . . . . . 
@@ -1008,8 +1141,9 @@ hero = sprites.create(img`
 . . . 1 b 1 1 1 1 1 b . . . . . 
 . . . 1 b 1 1 1 1 1 . . . . . . 
 . . . b c c c c b . . . . . . . 
-. . . d d d . b b d d . . . . . 
+. . . d d d . b b d . . . . . . 
 `, SpriteKind.Player)
+hero.z = -2
 let sprite_list = sprites.allOfKind(SpriteKind.Food)
 for (let index = 0; index <= 4; index++) {
     for (let index2 = 0; index2 <= 4; index2++) {
