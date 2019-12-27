@@ -804,45 +804,45 @@ controller.left.onEvent(ControllerButtonEvent.Released, function () {
     animation.runImageAnimation(
     hero,
     [img`
-. . . . . e e e e . . . . . . . 
-. . . . e e d d d e . . . . . . 
-. . . . e d b d b d e . . . . . 
-. . . . d d 1 d 1 d . . . . . . 
-. . . . . d d b d d . . . . . . 
-. . . . . e d d d e . . . . . . 
-. . . . . e d d d e . . . . . . 
-. . . . . b d d . . . . . . . . 
-. . . . b b b b c . . . . . . . 
-. . . . b b 1 1 c . . . . . . . 
-. . . b b 1 1 1 c b . . . . . . 
-. . . b 1 1 1 1 b b . . . . . . 
-. . . b 1 1 1 1 b c . . . . . . 
-. . . b 1 1 1 1 b c c . . . . . 
-. . . b 1 1 1 b 1 1 c . . . . . 
-. . . b 1 1 1 b 1 1 c . . . . . 
-. . . b 1 1 b b 1 1 c . . . . . 
-. . b 1 1 1 b 1 1 1 c . . . . . 
-. . b 1 1 1 b 1 1 1 c . . . . . 
-. . c 1 1 1 b 1 1 1 c . . . . . 
-. . d c 1 1 b 1 1 c d . . . . . 
-. . d d 1 1 b 1 1 d d . . . . . 
-. . d d 1 1 b 1 1 d d . . . . . 
-. . b 1 1 b c 1 1 1 b . . . . . 
-. . b 1 b c 1 1 1 1 b . . . . . 
-. . 1 1 c 1 1 1 1 1 b . . . . . 
-. . . 1 b 1 1 1 1 1 b . . . . . 
-. . . 1 b 1 1 1 1 1 b . . . . . 
-. . . 1 b 1 1 1 1 1 b . . . . . 
-. . . 1 b 1 1 1 1 1 . . . . . . 
-. . . b c c c c b . . . . . . . 
-. . . d d d . b b d . . . . . . 
+. . . . . . . e e e e . . . . . 
+. . . . . . e d d d e e . . . . 
+. . . . . e d b d b d e . . . . 
+. . . . . . d 1 d 1 d d . . . . 
+. . . . . . d d b d d . . . . . 
+. . . . . . e d d d e . . . . . 
+. . . . . . e d d d e . . . . . 
+. . . . . . . . d d b . . . . . 
+. . . . . . . c b b b b . . . . 
+. . . . . . . c 1 1 b b . . . . 
+. . . . . . b c 1 1 1 b b . . . 
+. . . . . . b b 1 1 1 1 b . . . 
+. . . . . . c b 1 1 1 1 b . . . 
+. . . . . c c b 1 1 1 1 b . . . 
+. . . . . c 1 1 b 1 1 1 b . . . 
+. . . . . c 1 1 b 1 1 1 b . . . 
+. . . . . c 1 1 b b 1 1 b . . . 
+. . . . . c 1 1 1 b 1 1 1 b . . 
+. . . . . c 1 1 1 b 1 1 1 b . . 
+. . . . . c 1 1 1 b 1 1 1 c . . 
+. . . . . d c 1 1 b 1 1 c d . . 
+. . . . . d d 1 1 b 1 1 d d . . 
+. . . . . d d 1 1 b 1 1 d d . . 
+. . . . . b 1 1 1 c b 1 1 b . . 
+. . . . . b 1 1 1 1 c b 1 b . . 
+. . . . . b 1 1 1 1 1 c 1 1 . . 
+. . . . . b 1 1 1 1 1 b 1 . . . 
+. . . . . b 1 1 1 1 1 b 1 . . . 
+. . . . . b 1 1 1 1 1 b 1 . . . 
+. . . . . . 1 1 1 1 1 b 1 . . . 
+. . . . . . . b c c c c b . . . 
+. . . . . . d b b . d d d . . . 
 `],
     100,
     true
     )
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    otherSprite.destroy(effects.ashes, 500)
+    otherSprite.destroy(effects.fire, 500)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
@@ -924,27 +924,27 @@ controller.right.onEvent(ControllerButtonEvent.Released, function () {
     [img`
 . . . . . e e e e . . . . . . . 
 . . . . e e d d d e . . . . . . 
-. . . e e d b d b . . . . . . . 
-. . . e d d 1 d 1 . . . . . . . 
-. . . e e d d b d . . . . . . . 
-. . . . e d d d d . . . . . . . 
-. . . . . d d d d . . . . . . . 
+. . . . e d b d b d e . . . . . 
+. . . . d d 1 d 1 d . . . . . . 
+. . . . . d d b d d . . . . . . 
+. . . . . e d d d e . . . . . . 
+. . . . . e d d d e . . . . . . 
 . . . . . b d d . . . . . . . . 
 . . . . b b b b c . . . . . . . 
 . . . . b b 1 1 c . . . . . . . 
 . . . b b 1 1 1 c b . . . . . . 
-. . . b 1 1 1 1 1 b . . . . . . 
-. . . b 1 1 1 1 1 c . . . . . . 
-. . . b 1 1 1 1 1 c c . . . . . 
-. . . b 1 1 1 1 1 b c . . . . . 
-. . . b 1 1 1 1 1 b c . . . . . 
-. . . b 1 1 1 1 b b c . . . . . 
-. . b 1 1 1 1 1 b 1 c . . . . . 
-. . b 1 1 1 1 1 b 1 c . . . . . 
-. . b 1 c 1 1 b 1 1 c . . . . . 
-. . b 1 d c 1 b 1 c c . . . . . 
-. . b 1 d d 1 b 1 c b . . . . . 
-. . b 1 d d b 1 1 c b . . . . . 
+. . . b 1 1 1 1 b b . . . . . . 
+. . . b 1 1 1 1 b c . . . . . . 
+. . . b 1 1 1 1 b c c . . . . . 
+. . . b 1 1 1 b 1 1 c . . . . . 
+. . . b 1 1 1 b 1 1 c . . . . . 
+. . . b 1 1 b b 1 1 c . . . . . 
+. . b 1 1 1 b 1 1 1 c . . . . . 
+. . b 1 1 1 b 1 1 1 c . . . . . 
+. . c 1 1 1 b 1 1 1 c . . . . . 
+. . d c 1 1 b 1 1 c d . . . . . 
+. . d d 1 1 b 1 1 d d . . . . . 
+. . d d 1 1 b 1 1 d d . . . . . 
 . . b 1 1 b c 1 1 1 b . . . . . 
 . . b 1 b c 1 1 1 1 b . . . . . 
 . . 1 1 c 1 1 1 1 1 b . . . . . 
@@ -953,7 +953,7 @@ controller.right.onEvent(ControllerButtonEvent.Released, function () {
 . . . 1 b 1 1 1 1 1 b . . . . . 
 . . . 1 b 1 1 1 1 1 . . . . . . 
 . . . b c c c c b . . . . . . . 
-. . . d d d . b b d d . . . . . 
+. . . d d d . b b d . . . . . . 
 `],
     100,
     true
@@ -1172,8 +1172,3 @@ controller.moveSprite(hero, 100, 0)
 hero.setFlag(SpriteFlag.StayInScreen, true)
 scene.cameraFollowSprite(hero)
 hero.ay = 300
-game.onUpdate(function () {
-    if (hero.isHittingTile(CollisionDirection.Top)) {
-    	
-    }
-})
