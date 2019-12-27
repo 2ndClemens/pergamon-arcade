@@ -3,8 +3,7 @@
     "dependencies": {
         "device": "*",
         "animation": "*",
-        "Color Fading": "github:jwunderl/pxt-color#v0.0.30",
-        "color-coded-tilemap": "*"
+        "pxt-circuit-playground-character-icons": "github:adafruit/circuit-playground-character-icons#v0.0.6"
     },
     "description": "",
     "files": [
