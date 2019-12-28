@@ -10,7 +10,25 @@
         "main.ts",
         "README.md"
     ],
-    "preferredEditor": "blocksprj",
+    "preferredEditor": "tsprj",
+    "palette": [
+        "#000000",
+        "#ffffff",
+        "#ff2121",
+        "#d8a7b9",
+        "#ff8135",
+        "#fff609",
+        "#249ca3",
+        "#8ed880",
+        "#003fad",
+        "#99e3ed",
+        "#8e2ec4",
+        "#a4839f",
+        "#5c406c",
+        "#e5cdc4",
+        "#91463d",
+        "#000000"
+    ],
     "testFiles": [
         "test.ts"
     ]
