@@ -1185,6 +1185,7 @@ controller.moveSprite(hero, 100, 0)
 hero.setFlag(SpriteFlag.StayInScreen, true)
 scene.cameraFollowSprite(hero)
 hero.ay = 300
+hero.setPosition(60, 200)
 game.onUpdate(function () {
     if (hero.vy < 0) {
         hero.setFlag(SpriteFlag.Ghost, true)
