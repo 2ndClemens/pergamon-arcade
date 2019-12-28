@@ -762,7 +762,6 @@ c c c b b b b b b b b b b b b b
 }
 controller.up.onEvent(ControllerButtonEvent.Released, function () {
     hero.ay = 300
-    hero.setFlag(SpriteFlag.Ghost, false)
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
@@ -999,7 +998,6 @@ controller.right.onEvent(ControllerButtonEvent.Released, function () {
 })
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     hero.vy = -200
-    hero.setFlag(SpriteFlag.Ghost, true)
 })
 let hero: Sprite = null
 scene.setBackgroundImage(img`
@@ -1187,3 +1185,10 @@ controller.moveSprite(hero, 100, 0)
 hero.setFlag(SpriteFlag.StayInScreen, true)
 scene.cameraFollowSprite(hero)
 hero.ay = 300
+game.onUpdate(function () {
+    if (hero.vy < 0) {
+        hero.setFlag(SpriteFlag.Ghost, true)
+    } else {
+        hero.setFlag(SpriteFlag.Ghost, false)
+    }
+})
