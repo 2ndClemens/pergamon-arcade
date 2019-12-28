@@ -949,6 +949,139 @@ d d d d d d d d d d d d d b . .
 . . . f c 6 b d d 1 d b c . . . 
 . . . f c 6 b d d 1 d b c . . . 
 `
+    //% blockIdentity=images._tile
+    export const tile52 = img`
+b b b b b b b b b b b b b b b b 
+d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d 
+c c c c c c c c c c c c c c c c 
+b b b b b b b b b b b b b b b b 
+d d d d d d d d d d d d d d d d 
+b b b b b b b b b b b b b b b b 
+d d d d d d d d d d d d d d d d 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+d d d d d d d d d d d d d d d d 
+c c c c c c c c c c c c c c c c 
+`
+    //% blockIdentity=images._tile
+    export const tile53 = img`
+b b b b b b b b b b b b b b b b 
+. c d d d d d d d d d d d d d d 
+. c d d d d d d d d d d d d d d 
+. c d d d d d d d d d d d d d d 
+. c d d d d d d d d d d d d d d 
+. c d d d d d d d d d d d d d d 
+. c d d d d d d d d d d d d d d 
+. c d d d d d d d d d d d d d d 
+c c c c c c c c c c c c c c c c 
+. c b b b b b b b b b b b b b b 
+. c d d d d d d d d d d d d d d 
+. . c b b b b b b b b b b b b b 
+. . c d d d d d d d d d d d d d 
+. c 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+. . c d d d d d d d d d d d d d 
+. . c c c c c c c c c c c c c c 
+`
+    //% blockIdentity=images._tile
+    export const tile54 = img`
+b b b b b b b b b b b b b b b b 
+. c d d d d d d d d d d d d c . 
+. c d d d d d d d d d d d d c . 
+. c d d d d d d d d d d d d c . 
+. c d d d d d d d d d d d d c . 
+. c d d d d d d d d d d d d c . 
+. c d d d d d d d d d d d d c . 
+. c d d d d d d d d d d d d c . 
+c c c c c c c c c c c c c c c c 
+. c b b b b b b b b b b b b c . 
+. c d d d d d d d d d d d d c . 
+. . c b b b b b b b b b b c . . 
+. . c d d d d d d d d d d c . . 
+. c 3 3 3 3 3 3 3 3 3 3 3 3 c . 
+. . c d d d d d d d d d d c . . 
+. . c c c c c c c c c c c c . . 
+`
+    //% blockIdentity=images._tile
+    export const tile55 = img`
+b b b b b b b b b b b b b b b b 
+d d d d d d d d d d d d d d c . 
+d d d d d d d d d d d d d d c . 
+d d d d d d d d d d d d d d c . 
+d d d d d d d d d d d d d d c . 
+d d d d d d d d d d d d d d c . 
+d d d d d d d d d d d d d d c . 
+d d d d d d d d d d d d d d c . 
+c c c c c c c c c c c c c c c c 
+b b b b b b b b b b b b b b c . 
+d d d d d d d d d d d d d d c . 
+b b b b b b b b b b b b b c . . 
+d d d d d d d d d d d d d c . . 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 c . 
+d d d d d d d d d d d d d c . . 
+c c c c c c c c c c c c c c . . 
+`
+    //% blockIdentity=images._tile
+    export const tile56 = img`
+b b b b b b b b b b b b b b b b 
+d d d d d d d d d d d d d d d d 
+b b b b b b b b b b b b b b b b 
+c c c c c c c c c c c c c c c c 
+d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d 
+c c c c c c c c c c c c c c c c 
+d b b d d b b d d b b d d b b d 
+d b b d d b b d d b b d d b b d 
+d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d 
+c c c c c c c c c c c c c c c c 
+b b b b b b b b b b b b b b b b 
+d d d d d d d d d d d d d d d d 
+d d d d d d d d d d d d d d d d 
+b b b b b b b b b b b b b b b b 
+`
+    //% blockIdentity=images._tile
+    export const tile57 = img`
+b b b b b b b b c . . . . . . . 
+d d d d d d d c . . . . . . . . 
+b b b b b b c . . . . . . . . . 
+c c c c c c c . . . . . . . . . 
+d d d d d c . . . . . . . . . . 
+d d d d d c . . . . . . . . . . 
+c c c c c c . . . . . . . . . . 
+c b b c . . . . . . . . . . . . 
+c b b c . . . . . . . . . . . . 
+c d d c . . . . . . . . . . . . 
+b b b c . . . . . . . . . . . . 
+c c c c . . . . . . . . . . . . 
+c . . . . . . . . . . . . . . . 
+b . . . . . . . . . . . . . . . 
+b . . . . . . . . . . . . . . . 
+c . . . . . . . . . . . . . . . 
+`
+    //% blockIdentity=images._tile
+    export const tile58 = img`
+. . . . . . . c b b b b b b b b 
+. . . . . . . . c d d d d d d d 
+. . . . . . . . . c b b b b b b 
+. . . . . . . . . c c c c c c c 
+. . . . . . . . . . c d d d d d 
+. . . . . . . . . . c d d d d d 
+. . . . . . . . . . c c c c c c 
+. . . . . . . . . . . . c b b c 
+. . . . . . . . . . . . c b b c 
+. . . . . . . . . . . . c d d c 
+. . . . . . . . . . . . c b b b 
+. . . . . . . . . . . . c c c c 
+. . . . . . . . . . . . . . . c 
+. . . . . . . . . . . . . . . b 
+. . . . . . . . . . . . . . . b 
+. . . . . . . . . . . . . . . c 
+`
 }
 controller.up.onEvent(ControllerButtonEvent.Released, function () {
     hero.ay = 300
@@ -1330,7 +1463,7 @@ function prepareLevel (num: number) {
 . 2 2 2 2 2 2 2 2 2 2 2 2 2 . 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 . . . . . . . . . . . 
 2 2 2 2 . . . . . . . . 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,sprites.castle.tileGrass2,sprites.castle.tileDarkGrass2,sprites.castle.tilePath5,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47,myTiles.tile48,myTiles.tile49,myTiles.tile50,myTiles.tile51],
+            [myTiles.tile0,sprites.castle.tileGrass2,sprites.castle.tileDarkGrass2,sprites.castle.tilePath5,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47,myTiles.tile48,myTiles.tile49,myTiles.tile50,myTiles.tile51,myTiles.tile52,myTiles.tile53,myTiles.tile54,myTiles.tile55,myTiles.tile56,myTiles.tile57,myTiles.tile58],
             TileScale.Sixteen
         ))
     }
@@ -1458,7 +1591,7 @@ function prepareLevel (num: number) {
 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
 `)
         tiles.setTilemap(tiles.createTilemap(
-            hex`2000200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003500003500003500003500003500000035000035000035000035000035000000340000340000340000340000340000003400003400003400003400003400000034000034000034000034000034000000340000340000340000340000340000003400003400003400003400003400000034000034000034000034000034000000330000330000330000330000330000003300003300003300003300003300000032000032000032000032000032000000320000320000320000320000320000003100002f30303100002f3030310000002f30303100002f30303100002f0000002e00002c2d2d2e00002c2d2d2e0000002c2d2d2e00002c2d2d2e00002c00002a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a`,
+            hex`20002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003a3b3c3a3a3a3a3b3c3a3b3c3a3a3a3a3a3b3c3a3b3c3a3a3a3a3b3c3a00000038000037363639000038000037363636390000380000373636390000380000003500003500003500003500003500000035000035000035000035000035000000340000340000340000340000340000003400003400003400003400003400000034000034000034000034000034000000340000340000340000340000340000003400003400003400003400003400000034000034000034000034000034000000330000330000330000330000330000003300003300003300003300003300000032000032000032000032000032000000320000320000320000320000320000003100002f30303100002f3030310000002f30303100002f30303100002f0000002e00002c2d2d2e00002c2d2d2e0000002c2d2d2e00002c2d2d2e00002c00002a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a`,
             img`
 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
@@ -1482,7 +1615,7 @@ function prepareLevel (num: number) {
 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
-2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
+2 2 . . 2 2 2 2 . . 2 . . 2 2 2 2 2 . . 2 . . 2 2 2 2 . . 2 2 2 
 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
@@ -1493,7 +1626,7 @@ function prepareLevel (num: number) {
 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,sprites.castle.tileGrass2,sprites.castle.tileDarkGrass2,sprites.castle.tilePath5,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,sprites.castle.tileGrass1,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47,myTiles.tile48,myTiles.tile49,myTiles.tile50,myTiles.tile51],
+            [myTiles.tile0,sprites.castle.tileGrass2,sprites.castle.tileDarkGrass2,sprites.castle.tilePath5,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,sprites.castle.tileGrass1,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47,myTiles.tile48,myTiles.tile49,myTiles.tile50,myTiles.tile51,myTiles.tile52,myTiles.tile53,myTiles.tile54,myTiles.tile55,myTiles.tile56,myTiles.tile57,myTiles.tile58],
             TileScale.Sixteen
         ))
     }
