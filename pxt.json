@@ -2,7 +2,8 @@
     "name": "pergamon",
     "dependencies": {
         "device": "*",
-        "animation": "*"
+        "animation": "*",
+        "jacdac-game": "*"
     },
     "description": "",
     "files": [

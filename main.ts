@@ -2034,6 +2034,26 @@ let reward = sprites.create(img`
 . . . . c b b 3 3 3 3 b 3 3 3 3 b b b 3 3 3 3 3 3 3 . . . . . . 
 `, SpriteKind.Food)
 reward.setPosition(100, 200)
+let mySprite = sprites.create(img`
+. . . . . . . . . . . . . . . . 
+. . . . . 5 5 . . . . . . . . . 
+. . . 5 5 5 5 5 . . . . . . . . 
+. . . 5 5 . 2 5 2 2 2 2 2 . . . 
+. . . . 5 2 2 . 5 . . . . 2 2 . 
+. . . . 5 5 2 2 2 5 5 5 . 2 . . 
+. . . 3 . 5 5 3 2 2 . 5 5 5 . . 
+. . . 5 5 5 5 . 3 2 2 3 . 5 . . 
+. 5 5 3 5 5 3 3 . . . 2 . 5 . . 
+5 5 . . 2 . 5 5 . . 2 2 . 5 . . 
+. . 5 5 5 . . 5 . 2 2 . 5 5 . . 
+. . . . 5 5 . 5 5 2 . 5 5 . . . 
+. . . . . 5 5 2 5 5 . 5 . . . . 
+. . . . . 2 5 5 5 5 5 5 . . . . 
+. . . . . . . . . 5 . . . . . . 
+. . . . . . . . . . . . . . . . 
+`, SpriteKind.Enemy)
+mySprite.ay = 300
+mySprite.vx = 30
 game.onUpdate(function () {
     if (hero.vy < 0) {
         hero.setFlag(SpriteFlag.Ghost, true)
@@ -2043,5 +2063,11 @@ game.onUpdate(function () {
     if (hero.x > 1000) {
         prepareLevel(1)
         hero.x = 60
+    }
+    if (mySprite.isHittingTile(CollisionDirection.Left)) {
+        mySprite.vx = 30
+    }
+    if (mySprite.isHittingTile(CollisionDirection.Right)) {
+        mySprite.vx = -30
     }
 })
