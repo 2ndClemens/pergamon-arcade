@@ -1368,9 +1368,6 @@ b b b b b b b b b b b . . . . .
 c c c c c c c c c c c . . . . . 
 `
 }
-controller.up.onEvent(ControllerButtonEvent.Released, function () {
-    hero.ay = 300
-})
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     hero,
@@ -1490,7 +1487,10 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
     otherSprite.destroy(effects.rings, 500)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    controller.moveSprite(hero, 100, 0)
+    hero.setFlag(SpriteFlag.Ghost, true)
     hero.vy = -150
+    hero.ay = 300
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
@@ -2203,11 +2203,16 @@ let mySprite = sprites.create(img`
 `, SpriteKind.Enemy)
 mySprite.ay = 300
 mySprite.vx = 30
+let mySprite2 = "jhgjhg"
+info.setScore(0)
 game.onUpdate(function () {
+    info.setScore(hero.vy)
     if (hero.tileKindAt(TileDirection.Bottom, myTiles.tile6) || hero.tileKindAt(TileDirection.Center, myTiles.tile6)) {
-        controller.moveSprite(hero, 100, 50)
-        hero.ay = 0
-        hero.vy = 0
+        if (hero.vy >= 0) {
+            controller.moveSprite(hero, 100, 50)
+            hero.ay = 0
+            hero.vy = 0
+        }
     } else {
         controller.moveSprite(hero, 100, 0)
         hero.ay = 300
