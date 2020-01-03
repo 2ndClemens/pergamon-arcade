@@ -1,3 +1,6 @@
+namespace SpriteKind {
+    export const Event = SpriteKind.create()
+}
 namespace myTiles {
     //% blockIdentity=images._tile
     export const tile0 = img`
@@ -1368,6 +1371,12 @@ b b b b b b b b b b b . . . . .
 c c c c c c c c c c c . . . . . 
 `
 }
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Event, function (sprite, otherSprite) {
+    if (otherSprite == athena && athenaInfoSeen == false) {
+        game.showLongText("ATHENA NIKEPHOROS       \"phoros\" means \"carry\" but she is not carrying anything...", DialogLayout.Bottom)
+        athenaInfoSeen = true
+    }
+})
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     hero,
@@ -2075,6 +2084,8 @@ function prepareLevel (num: number) {
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     hero.vy = -150
 })
+let athenaInfoSeen = false
+let athena: Sprite = null
 let currentLevel = 0
 let hero: Sprite = null
 hero = sprites.create(img`
@@ -2117,7 +2128,7 @@ hero.setFlag(SpriteFlag.StayInScreen, true)
 scene.cameraFollowSprite(hero)
 hero.ay = 300
 prepareLevel(currentLevel)
-let reward = sprites.create(img`
+athena = sprites.create(img`
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . 1 . . . . . . 1 . . . . . . . . . . . . 
 . . . . . . . . . . . . 1 c . . . . . c . . . . . . . . . . . . 
@@ -2182,8 +2193,8 @@ let reward = sprites.create(img`
 . . . . f b b c . c b b 1 b b 3 3 3 3 1 c c . . . . c c c . . . 
 . . . . f b b c 1 c c b 1 b b b b b b 1 c c . . . . . c . . . . 
 . . . . c b b 3 3 3 3 b 3 3 3 3 b b b 3 3 3 3 3 3 3 . . . . . . 
-`, SpriteKind.Food)
-reward.setPosition(100, 200)
+`, SpriteKind.Event)
+athena.setPosition(250, 170)
 let mySprite = sprites.create(img`
 . . . . . . . . . . . . . . . . 
 . . . . . 5 5 . . . . . . . . . 
@@ -2205,6 +2216,7 @@ let mySprite = sprites.create(img`
 mySprite.ay = 300
 mySprite.vx = 30
 info.setScore(0)
+athenaInfoSeen = false
 game.onUpdate(function () {
     info.setScore(hero.y)
     if (hero.tileKindAt(TileDirection.Bottom, myTiles.tile6) || hero.tileKindAt(TileDirection.Center, myTiles.tile6)) {
