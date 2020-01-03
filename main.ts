@@ -2075,6 +2075,7 @@ function prepareLevel (num: number) {
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     hero.vy = -150
 })
+let currentLevel = 0
 let hero: Sprite = null
 hero = sprites.create(img`
 . . . . . e e e e . . . . . . . 
@@ -2115,7 +2116,6 @@ controller.moveSprite(hero, 100, 0)
 hero.setFlag(SpriteFlag.StayInScreen, true)
 scene.cameraFollowSprite(hero)
 hero.ay = 300
-let currentLevel = 0
 prepareLevel(currentLevel)
 let reward = sprites.create(img`
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
