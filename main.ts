@@ -1376,12 +1376,14 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Event, function (sprite, otherSp
     if (otherSprite == athena && athenaInfoSeen == false) {
         game.showLongText("ATHENA NIKEPHOROS       \"phoros\" means \"carry\" but she is not carrying anything...", DialogLayout.Bottom)
         athenaInfoSeen = true
+        animation.stopAnimation(animation.AnimationTypes.All, hero)
     }
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.item, function (sprite, otherSprite) {
     if (otherSprite == nike && nikeInfoSeen == false) {
         game.showLongText("A small staue of NIKE. This clearly belongs someplace else. Press 'B' to pick it up or put it down.", DialogLayout.Bottom)
         nikeInfoSeen = true
+        animation.stopAnimation(animation.AnimationTypes.All, hero)
     }
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
