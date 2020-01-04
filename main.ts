@@ -1378,6 +1378,12 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Event, function (sprite, otherSp
         athenaInfoSeen = true
     }
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.item, function (sprite, otherSprite) {
+    if (otherSprite == nike && nikeInfoSeen == false) {
+        game.showLongText("A small staue of NIKE. This clearly belongs someplace else. Press 'B' to pick it up or put it down.", DialogLayout.Bottom)
+        nikeInfoSeen = true
+    }
+})
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     hero,
@@ -2098,6 +2104,7 @@ function prepareLevel (num: number) {
 }
 let currentObject: Sprite = null
 let empty: Sprite = null
+let nikeInfoSeen = false
 let athenaInfoSeen = false
 let nike: Sprite = null
 let athena: Sprite = null
@@ -2284,6 +2291,7 @@ mySprite.ay = 300
 mySprite.vx = 30
 info.setScore(0)
 athenaInfoSeen = false
+nikeInfoSeen = false
 empty = sprites.create(img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
