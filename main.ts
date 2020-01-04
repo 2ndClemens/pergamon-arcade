@@ -1453,7 +1453,13 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     )
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    currentObject = empty
+    if (currentObject == empty) {
+        currentObject = nike
+    } else {
+        currentObject = empty
+        nike.x = athena.x - 12
+        nike.y = athena.y - 30
+    }
 })
 controller.left.onEvent(ControllerButtonEvent.Released, function () {
     animation.runImageAnimation(
@@ -2088,6 +2094,7 @@ function prepareLevel (num: number) {
 let currentObject: Sprite = null
 let empty: Sprite = null
 let athenaInfoSeen = false
+let nike: Sprite = null
 let athena: Sprite = null
 let currentLevel = 0
 let hero: Sprite = null
@@ -2144,22 +2151,22 @@ athena = sprites.create(img`
 . . . . . . . . . . . 3 1 1 1 b b b c f . . . . . . . . . . . . 
 . . . . . . . . . . . . c c c 1 c c c c . . . . . . . . . . . . 
 . . . . . . . . . . . . 1 c 1 d 1 3 1 c . . . . . . . . . . . . 
-. . . . 1 . . . . . . . 1 d d d d 3 f c . . . . . . . . . . . . 
-. . . . c c . . . . . . 1 c 1 d f f f . . . . . . . . . . . . . 
-. . . . 3 c c . . . . . . 3 b b f f . . . . . . . . . . . . . . 
-. . b . d c . . . . . b b 3 c b b f . . . . . . . . . . . . . . 
-. . b . d c . . . . b 1 1 1 1 1 1 f c c c c . . . . . . . . . . 
-. b b . d c . . . b b 1 1 1 c c c c 1 1 1 c c . . . . . . . . . 
-. . b . d c . . b 1 1 1 1 1 3 1 1 c 1 1 1 c c . . . . . . . . . 
-. . b b 1 c . . b 1 1 3 1 1 3 1 1 1 1 1 1 d c . . . . . . . . . 
-. . b b 1 c . . b 1 1 3 1 1 3 1 1 1 1 1 1 1 d c . . . . . . . . 
-. . b d 1 f . . b 1 1 3 1 1 1 1 1 1 1 1 1 1 d c . . . . . . . . 
-. . b d 1 f . . b 3 3 1 1 1 1 1 1 1 1 1 b 3 3 c . . . . . . . . 
-. . b d 1 f . . b 1 3 1 1 1 1 1 1 d 1 1 1 3 1 c . . . . . . . . 
-. . b d 1 f . b 1 3 3 d d d d d d 1 1 3 b 1 1 c . . . . . . . . 
-. . b d 1 f . . b 3 3 1 1 1 1 1 1 1 1 3 c f 1 c . . . . . . . . 
-. . b d 3 c c c b 3 3 3 1 1 1 1 1 1 1 3 c f 1 c . . . . . . . . 
-. . b d 3 1 c c b 3 3 3 1 1 1 1 1 3 3 3 3 f 1 c c . . . . . . . 
+. . . . . . . . . . . . 1 d d d d 3 f c . . . . . . . . . . . . 
+. . . . . . . . . . . . 1 c 1 d f f f . . . . . . . . . . . . . 
+. . . . . . . . . . . . . 3 b b f f . . . . . . . . . . . . . . 
+. . . . . . . . . . . b b 3 c b b f . . . . . . . . . . . . . . 
+. . . . . . . . . . b 1 1 1 1 1 1 f c c c c . . . . . . . . . . 
+. . . . . . . . . b b 1 1 1 c c c c 1 1 1 c c . . . . . . . . . 
+. . . . . . . . b 1 1 1 1 1 3 1 1 c 1 1 1 c c . . . . . . . . . 
+. . . . . . . . b 1 1 3 1 1 3 1 1 1 1 1 1 d c . . . . . . . . . 
+. . . . . . . . b 1 1 3 1 1 3 1 1 1 1 1 1 1 d c . . . . . . . . 
+. . . . . . . . b 1 1 3 1 1 1 1 1 1 1 1 1 1 d c . . . . . . . . 
+. . . . . . . . b 3 3 1 1 1 1 1 1 1 1 1 b 3 3 c . . . . . . . . 
+. . . . . . . . b 1 3 1 1 1 1 1 1 d 1 1 1 3 1 c . . . . . . . . 
+. . . . . . . b 1 3 3 d d d d d d 1 1 3 b 1 1 c . . . . . . . . 
+. . . . . . . . b 3 3 1 1 1 1 1 1 1 1 3 c f 1 c . . . . . . . . 
+. . b b b b c c b 3 3 3 1 1 1 1 1 1 1 3 c f 1 c . . . . . . . . 
+. . b d d 1 c c b 3 3 3 1 1 1 1 1 3 3 3 3 f 1 c c . . . . . . . 
 . . b b 1 3 1 f b 3 3 3 3 3 3 3 3 1 3 3 c f 1 1 c . . . . . . . 
 . . . b c f c f b b 3 1 1 1 3 3 3 3 1 3 c f f b c . . . . . . . 
 . . . b . f d f f b 3 1 1 1 1 3 1 3 1 3 c c 1 b b c . . . . . . 
@@ -2229,7 +2236,7 @@ c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c
 . b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b . 
 c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 
 `, SpriteKind.Event)
-let nike = sprites.create(img`
+nike = sprites.create(img`
 . c . . . . . . 
 c d c . . c . . 
 . c . . c 1 c . 
