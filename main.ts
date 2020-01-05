@@ -2350,7 +2350,7 @@ game.onUpdate(function () {
         prepareLevel(currentLevel)
         hero.x = 990
     }
-    if (currentLevel == 1 && hero.x > 630) {
+    if (currentLevel == 1 && hero.x > 750) {
         currentLevel = 2
         prepareLevel(currentLevel)
         hero.x = 60
