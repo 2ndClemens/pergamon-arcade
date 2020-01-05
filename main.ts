@@ -1786,6 +1786,105 @@ function prepareLevel (num: number) {
             [myTiles.tile0,sprites.castle.tileGrass2,sprites.castle.tileDarkGrass2,sprites.castle.tilePath5,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47,myTiles.tile48,myTiles.tile49,myTiles.tile50,myTiles.tile51,myTiles.tile52,myTiles.tile53,myTiles.tile54,myTiles.tile55,myTiles.tile56,myTiles.tile57,myTiles.tile58,myTiles.tile59,myTiles.tile60,myTiles.tile61,myTiles.tile62,myTiles.tile63,myTiles.tile64,myTiles.tile65,myTiles.tile66,myTiles.tile67,myTiles.tile68,myTiles.tile69,myTiles.tile70,myTiles.tile71,myTiles.tile72,myTiles.tile73],
             TileScale.Sixteen
         ))
+        athena = sprites.create(img`
+. . . . . . . . . . . . . . . c . . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . 1 . . c 1 . . 1 . . . . . . . . . . . . 
+. . . . . . . . . . . . 1 c . c 1 . . 1 . . . . . . . . . . . . 
+. . . . . . . . . . . . 1 f . c 1 . c 1 . . . . . . . . . . . . 
+. . . . . . . . . . . . 1 f . c 1 c c 1 . . . . . . . . . . . . 
+. . . . . . . . . . . . 1 f c c 1 c 1 1 . . . . . . . . . . . . 
+. . . . . . . . . . . . 1 b b c b b 1 f . . . . . . . . . . . . 
+. . . . . . . . . . . 3 b b b b b b b f . . . . . . . . . . . . 
+. . . . . . . . . . . 3 1 c d d d d c f . . . . . . . . . . . . 
+. . . . . . . . . . . 3 d 1 1 d d d b f . . . . . . . . . . . . 
+. . . . . . . . . . . . d c c 1 c c b c . . . . . . . . . . . . 
+. . . . . . . . . . . . d c 1 d 1 d b c . . . . . . . . . . . . 
+. . . . . . . . . . . . d d d 3 d 3 f c . . . . . . . . . . . . 
+. . . . . . . . . . . . d c 1 3 d f f . . . . . . . . . . . . . 
+. . . . . . . . . . . . . 3 d d d f . . . . . . . . . . . . . . 
+. . . . . . . . . . . b b 3 c b b f . . . . . . . . . . . . . . 
+. . . . . . . . . . b 1 1 1 1 1 1 f c c c c . . . . . . . . . . 
+. . . . . . . . . b b 1 1 1 d d d d d 1 d c c . . . . . . . . . 
+. . . . . . . . b 1 1 1 1 1 d d d d 1 1 d d c . . . . . . . . . 
+. . . . . . . . b 1 1 3 1 1 d 1 1 d 1 1 d d c . . . . . . . . . 
+. . . . . . . . b 1 1 3 1 1 d 1 1 1 1 1 1 d d c . . . . . . . . 
+. . . . . . . . b 1 1 3 1 1 1 d d 1 1 1 1 d d c . . . . . . . . 
+. . . . . . . . b 3 3 1 1 1 1 1 1 1 1 1 1 d d c . . . . . . . . 
+. . . . . . . . b 1 3 1 1 1 1 1 1 d 1 1 1 d d c . . . . . . . . 
+. . . . . . . b 1 3 3 d d d d d d 1 1 3 b d 1 c . . . . . . . . 
+. . . . . . . . b 3 3 1 1 1 1 1 1 1 1 3 c f 1 c . . . . . . . . 
+. . b b b b c c b 3 3 3 d d d d d d d 3 c f 1 c . . . . . . . . 
+. . b d d 1 c c b 3 3 3 d d d d d 3 d 3 3 f 1 c c . . . . . . . 
+. . b b 1 3 1 f b 3 3 3 3 3 3 3 3 1 3 3 c f b 1 c . . . . . . . 
+. . . b c f c f b b 3 1 1 1 3 3 3 3 1 3 c f b b c . . . . . . . 
+. . . b . f d f f b 3 1 1 1 1 3 1 3 1 3 c c b b b c . . . . . . 
+. . . . . f 1 f f f 3 1 1 1 1 3 1 3 1 3 3 c . f b c . . . . . . 
+. . . . c 1 1 f . f 3 1 1 1 1 3 1 3 1 3 3 c . f b c . . . . . . 
+. . . . c b 1 f . f 1 1 d 1 1 3 1 3 1 3 3 c . f b c . . . . . . 
+. . . . c b 1 f . f 3 1 d 1 3 1 1 3 1 3 3 c . f b c . . . . . . 
+. . . . c b 1 f . f c 1 d 1 3 1 3 d 1 3 3 c . f b b c . . . . . 
+. . . . c b 1 f . f c 1 d 1 3 1 3 d 1 3 c c . f b b c . . . . . 
+. . . . c b 1 f . f c 1 d 1 3 1 3 d 1 3 c . . f f d b c . . . . 
+. . . . c b 1 c . f c 1 d 1 3 d 3 d 1 3 c . . f f d b c . . . . 
+. . . . c b 1 c . f c 1 d 1 3 d 3 d 1 3 c . . f f d b c . . . . 
+. . . . c b 1 c . f c 1 d 1 3 d 3 d 1 3 c . . f f d b c . . . . 
+. . . . c b 1 c . f c 1 d 1 3 d 3 d 1 3 c c . f f c 1 b c . . . 
+. . . . c b 1 c . f c 1 d 1 b d 3 d 1 3 3 c . f c c 1 b c . . . 
+. . . . c b 1 c . f c 1 d 1 b d 3 d 1 3 3 c . f c c 1 b c . . . 
+. . . . c b 1 c . f c 1 d 1 b d 3 d 1 3 c . . f c c 1 b c . . . 
+. . . . c b 1 c . f c 1 d 1 b d 3 d 1 3 c . . f c c 1 b c . . . 
+. . . . c b 1 c . f c 1 d 1 b d 3 d 1 3 c . . f c c 1 b c . . . 
+. . . . c b 1 c . f c 1 d 1 b d 3 d 1 3 c c . f f c 1 b c . . . 
+. . . . f b 1 c . f c 1 d 1 b d 3 d 1 3 c c . . f c 1 b c . . . 
+. . . . f b 1 c . f c 1 d 1 b d 3 d 1 3 c c . . f c 1 b c . . . 
+. . . . f b 1 c . f c 1 d 1 b d 3 d 1 3 c c . . f c 1 b c . . . 
+. . . . f b 1 c . f c 1 d 1 b d 3 d 1 3 c c . . f c d b c . . . 
+. . . . f b 1 c . f c 1 d 1 b d 3 d 1 3 c c . . c c d b c . . . 
+. . . . f b 1 c . f c 1 d 1 b d 3 d 1 3 c c . . c c c b c . . . 
+. . . . f b 1 c . f c 1 d 1 b d 3 d 1 3 c c . . d c c c c . . . 
+. . . . f b 1 c . c c 1 d 1 b d 3 d 1 3 c c . . . c c c c . . . 
+. . . . f b 1 c . c c 1 d 1 b d 3 d 1 3 c c . . . c c c c . . . 
+. . . . f b 1 c . c c 1 d 1 b d 3 d 1 3 c c . . . c c d c c . . 
+. . . . f b 1 c . c b 1 d 1 b d b d 1 3 c c . . . c c d c . . . 
+. . . . f b 1 c . c b 1 d 1 b d 3 d 1 3 c c . . . d c d c . . . 
+. . . . f b 1 c . c b 1 d 1 b d b d 1 3 3 c . . . . c c c . . . 
+. . . . f b 1 c . c b 1 d 1 b d 3 d 1 3 c c . . . . c c c . . . 
+. . . . f b 1 c 1 c c 1 d 1 b b b b 1 3 c c . . . . . c . . . . 
+. . . . c b b 3 3 3 3 b d b 3 3 b b b 3 3 3 3 3 3 3 . . . . . . 
+c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 
+. b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b . 
+. . . c c c c c c c c c c c c c c c c c c c c c c c c c c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
+. . . c c c c c c c c c c c c c c c c c c c c c c c c c c . . . 
+. . d d d d d d d d d d d d d d d d d d d d d d d d d d d d . . 
+. b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b . 
+c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 
+`, SpriteKind.Event)
+        athena.setPosition(270, 180)
         hero.setPosition(60, 200)
         hero.z = 1
     }
@@ -1951,6 +2050,7 @@ function prepareLevel (num: number) {
             [myTiles.tile0,sprites.castle.tileGrass2,sprites.castle.tileDarkGrass2,sprites.castle.tilePath5,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,sprites.castle.tileGrass1,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47,myTiles.tile48,myTiles.tile49,myTiles.tile50,myTiles.tile51,myTiles.tile52,myTiles.tile53,myTiles.tile54,myTiles.tile55,myTiles.tile56,myTiles.tile57,myTiles.tile58,myTiles.tile59,myTiles.tile60,myTiles.tile61,myTiles.tile62,myTiles.tile63,myTiles.tile64,myTiles.tile65,myTiles.tile66,myTiles.tile67,myTiles.tile68,myTiles.tile69,myTiles.tile70,myTiles.tile71,myTiles.tile72,myTiles.tile73],
             TileScale.Sixteen
         ))
+        athena.destroy()
         hero.setPosition(30, 0)
         hero.z = 1
     }
@@ -2104,12 +2204,12 @@ function prepareLevel (num: number) {
         hero.z = 1
     }
 }
+let athena: Sprite = null
 let currentObject: Sprite = null
 let empty: Sprite = null
 let nikeInfoSeen = false
 let athenaInfoSeen = false
 let nike: Sprite = null
-let athena: Sprite = null
 let currentLevel = 0
 let hero: Sprite = null
 hero = sprites.create(img`
@@ -2152,104 +2252,6 @@ hero.setFlag(SpriteFlag.StayInScreen, true)
 scene.cameraFollowSprite(hero)
 hero.ay = 300
 prepareLevel(currentLevel)
-athena = sprites.create(img`
-. . . . . . . . . . . . . . . c . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . 1 . . c 1 . . 1 . . . . . . . . . . . . 
-. . . . . . . . . . . . 1 c . c 1 . . 1 . . . . . . . . . . . . 
-. . . . . . . . . . . . 1 f . c 1 . c 1 . . . . . . . . . . . . 
-. . . . . . . . . . . . 1 f . c 1 c c 1 . . . . . . . . . . . . 
-. . . . . . . . . . . . 1 f c c 1 c 1 1 . . . . . . . . . . . . 
-. . . . . . . . . . . . 1 b b c b b 1 f . . . . . . . . . . . . 
-. . . . . . . . . . . 3 b b b b b b b f . . . . . . . . . . . . 
-. . . . . . . . . . . 3 1 c d d d d c f . . . . . . . . . . . . 
-. . . . . . . . . . . 3 d 1 1 d d d b f . . . . . . . . . . . . 
-. . . . . . . . . . . . d c c 1 c c b c . . . . . . . . . . . . 
-. . . . . . . . . . . . d c 1 d 1 d b c . . . . . . . . . . . . 
-. . . . . . . . . . . . d d d 3 d 3 f c . . . . . . . . . . . . 
-. . . . . . . . . . . . d c 1 3 d f f . . . . . . . . . . . . . 
-. . . . . . . . . . . . . 3 d d d f . . . . . . . . . . . . . . 
-. . . . . . . . . . . b b 3 c b b f . . . . . . . . . . . . . . 
-. . . . . . . . . . b 1 1 1 1 1 1 f c c c c . . . . . . . . . . 
-. . . . . . . . . b b 1 1 1 d d d d d 1 d c c . . . . . . . . . 
-. . . . . . . . b 1 1 1 1 1 d d d d 1 1 d d c . . . . . . . . . 
-. . . . . . . . b 1 1 3 1 1 d 1 1 d 1 1 d d c . . . . . . . . . 
-. . . . . . . . b 1 1 3 1 1 d 1 1 1 1 1 1 d d c . . . . . . . . 
-. . . . . . . . b 1 1 3 1 1 1 d d 1 1 1 1 d d c . . . . . . . . 
-. . . . . . . . b 3 3 1 1 1 1 1 1 1 1 1 1 d d c . . . . . . . . 
-. . . . . . . . b 1 3 1 1 1 1 1 1 d 1 1 1 d d c . . . . . . . . 
-. . . . . . . b 1 3 3 d d d d d d 1 1 3 b d 1 c . . . . . . . . 
-. . . . . . . . b 3 3 1 1 1 1 1 1 1 1 3 c f 1 c . . . . . . . . 
-. . b b b b c c b 3 3 3 d d d d d d d 3 c f 1 c . . . . . . . . 
-. . b d d 1 c c b 3 3 3 d d d d d 3 d 3 3 f 1 c c . . . . . . . 
-. . b b 1 3 1 f b 3 3 3 3 3 3 3 3 1 3 3 c f b 1 c . . . . . . . 
-. . . b c f c f b b 3 1 1 1 3 3 3 3 1 3 c f b b c . . . . . . . 
-. . . b . f d f f b 3 1 1 1 1 3 1 3 1 3 c c b b b c . . . . . . 
-. . . . . f 1 f f f 3 1 1 1 1 3 1 3 1 3 3 c . f b c . . . . . . 
-. . . . c 1 1 f . f 3 1 1 1 1 3 1 3 1 3 3 c . f b c . . . . . . 
-. . . . c b 1 f . f 1 1 d 1 1 3 1 3 1 3 3 c . f b c . . . . . . 
-. . . . c b 1 f . f 3 1 d 1 3 1 1 3 1 3 3 c . f b c . . . . . . 
-. . . . c b 1 f . f c 1 d 1 3 1 3 d 1 3 3 c . f b b c . . . . . 
-. . . . c b 1 f . f c 1 d 1 3 1 3 d 1 3 c c . f b b c . . . . . 
-. . . . c b 1 f . f c 1 d 1 3 1 3 d 1 3 c . . f f d b c . . . . 
-. . . . c b 1 c . f c 1 d 1 3 d 3 d 1 3 c . . f f d b c . . . . 
-. . . . c b 1 c . f c 1 d 1 3 d 3 d 1 3 c . . f f d b c . . . . 
-. . . . c b 1 c . f c 1 d 1 3 d 3 d 1 3 c . . f f d b c . . . . 
-. . . . c b 1 c . f c 1 d 1 3 d 3 d 1 3 c c . f f c 1 b c . . . 
-. . . . c b 1 c . f c 1 d 1 b d 3 d 1 3 3 c . f c c 1 b c . . . 
-. . . . c b 1 c . f c 1 d 1 b d 3 d 1 3 3 c . f c c 1 b c . . . 
-. . . . c b 1 c . f c 1 d 1 b d 3 d 1 3 c . . f c c 1 b c . . . 
-. . . . c b 1 c . f c 1 d 1 b d 3 d 1 3 c . . f c c 1 b c . . . 
-. . . . c b 1 c . f c 1 d 1 b d 3 d 1 3 c . . f c c 1 b c . . . 
-. . . . c b 1 c . f c 1 d 1 b d 3 d 1 3 c c . f f c 1 b c . . . 
-. . . . f b 1 c . f c 1 d 1 b d 3 d 1 3 c c . . f c 1 b c . . . 
-. . . . f b 1 c . f c 1 d 1 b d 3 d 1 3 c c . . f c 1 b c . . . 
-. . . . f b 1 c . f c 1 d 1 b d 3 d 1 3 c c . . f c 1 b c . . . 
-. . . . f b 1 c . f c 1 d 1 b d 3 d 1 3 c c . . f c d b c . . . 
-. . . . f b 1 c . f c 1 d 1 b d 3 d 1 3 c c . . c c d b c . . . 
-. . . . f b 1 c . f c 1 d 1 b d 3 d 1 3 c c . . c c c b c . . . 
-. . . . f b 1 c . f c 1 d 1 b d 3 d 1 3 c c . . d c c c c . . . 
-. . . . f b 1 c . c c 1 d 1 b d 3 d 1 3 c c . . . c c c c . . . 
-. . . . f b 1 c . c c 1 d 1 b d 3 d 1 3 c c . . . c c c c . . . 
-. . . . f b 1 c . c c 1 d 1 b d 3 d 1 3 c c . . . c c d c c . . 
-. . . . f b 1 c . c b 1 d 1 b d b d 1 3 c c . . . c c d c . . . 
-. . . . f b 1 c . c b 1 d 1 b d 3 d 1 3 c c . . . d c d c . . . 
-. . . . f b 1 c . c b 1 d 1 b d b d 1 3 3 c . . . . c c c . . . 
-. . . . f b 1 c . c b 1 d 1 b d 3 d 1 3 c c . . . . c c c . . . 
-. . . . f b 1 c 1 c c 1 d 1 b b b b 1 3 c c . . . . . c . . . . 
-. . . . c b b 3 3 3 3 b d b 3 3 b b b 3 3 3 3 3 3 3 . . . . . . 
-c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 
-. b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b . 
-. . . c c c c c c c c c c c c c c c c c c c c c c c c c c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c d d d d d d d d d d d d d d d d d d d d d d d d c . . . 
-. . . c c c c c c c c c c c c c c c c c c c c c c c c c c . . . 
-. . d d d d d d d d d d d d d d d d d d d d d d d d d d d d . . 
-. b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b . 
-c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 
-`, SpriteKind.Event)
 nike = sprites.create(img`
 . c . . . . . . 
 c d c . . c . . 
@@ -2270,7 +2272,6 @@ c d c . . c . .
 `, SpriteKind.item)
 nike.setPosition(680, 215)
 nike.z = 4
-athena.setPosition(270, 180)
 let mySprite = sprites.create(img`
 . . . . . . . . . . . . . . . . 
 . . . . . 5 5 . . . . . . . . . 
