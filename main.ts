@@ -1381,7 +1381,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Event, function (sprite, otherSp
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.item, function (sprite, otherSprite) {
     if (otherSprite == nike && nikeInfoSeen == false) {
-        game.showLongText("A small staue of NIKE. This clearly belongs someplace else. Press 'B' to pick it up or put it down.", DialogLayout.Bottom)
+        game.showLongText("A small statue of NIKE. This clearly belongs someplace else. Press 'B' to pick it up or put it down.", DialogLayout.Bottom)
         nikeInfoSeen = true
         animation.stopAnimation(animation.AnimationTypes.All, hero)
     }
@@ -1885,6 +1885,9 @@ c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c
 c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 
 `, SpriteKind.Event)
         athena.setPosition(270, 180)
+        if (friezeLeft) {
+            friezeLeft.destroy()
+        }
         hero.setPosition(60, 200)
         hero.z = 1
     }
@@ -2050,7 +2053,12 @@ c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c
             [myTiles.tile0,sprites.castle.tileGrass2,sprites.castle.tileDarkGrass2,sprites.castle.tilePath5,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,sprites.castle.tileGrass1,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47,myTiles.tile48,myTiles.tile49,myTiles.tile50,myTiles.tile51,myTiles.tile52,myTiles.tile53,myTiles.tile54,myTiles.tile55,myTiles.tile56,myTiles.tile57,myTiles.tile58,myTiles.tile59,myTiles.tile60,myTiles.tile61,myTiles.tile62,myTiles.tile63,myTiles.tile64,myTiles.tile65,myTiles.tile66,myTiles.tile67,myTiles.tile68,myTiles.tile69,myTiles.tile70,myTiles.tile71,myTiles.tile72,myTiles.tile73],
             TileScale.Sixteen
         ))
-        athena.destroy()
+        if (athena) {
+            athena.destroy()
+        }
+        if (friezeLeft) {
+            friezeLeft.destroy()
+        }
         hero.setPosition(30, 0)
         hero.z = 1
     }
@@ -2200,17 +2208,71 @@ c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c
             [myTiles.tile0,sprites.castle.tileGrass2,sprites.castle.tileDarkGrass2,sprites.castle.tilePath5,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,sprites.castle.tileGrass1,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47,myTiles.tile48,myTiles.tile49,myTiles.tile50,myTiles.tile51,myTiles.tile52,myTiles.tile53,myTiles.tile54,myTiles.tile55,myTiles.tile56,myTiles.tile57,myTiles.tile58,myTiles.tile59,myTiles.tile60,myTiles.tile61,myTiles.tile62,myTiles.tile63,myTiles.tile64,myTiles.tile65,myTiles.tile66,myTiles.tile67,myTiles.tile68,myTiles.tile69,myTiles.tile70,myTiles.tile71,myTiles.tile72,myTiles.tile73],
             TileScale.Sixteen
         ))
+        if (athena) {
+            athena.destroy()
+        }
+        friezeLeft = sprites.create(img`
+c c c c c c c c c c c c c c c c d d d d d d d d d d d d d d d d d d d d c c 1 c c c c c c d d d c c c c c c c c c c . c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 3 c c c 
+c c d c c c c c c c d d d d d c d c c c c c c c c c c c c c c c c c c c d 1 1 1 d d d c c c c c d d d d d d d d d c c c c c c c c c c c c c c c d d d d d d d d d d d 1 c c c c c c c c c c c c d d d d d d d d d d d d 3 c c c 
+c d d d d d d d d c c c c c c c c c d d d d d d d d d d c c c c c c c c c 1 1 1 1 c c d c c c d d d d d d d d d d c d d d d c c d d d d d d d d d d d d d d d d d d d 1 1 d d d d d d d d c d c d c c c c c c c c c c 3 3 3 c 3 
+c d d d d d d d d d d d d c c c d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 d c c c d d d d d d d d d d c d d d d c c d d d d d d d d d d d d d d d d d d d 1 1 1 1 d d d d d d c d c c d d d d d d d d d d 3 3 3 c c 
+c d d d d d d d d d d c c c c d d d d d d d d d d d d d d d d d d d d d 1 d 1 1 1 1 d 1 d d c d d d d d d d d d d c d d d d d c d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 d d d d c d c c d d d d d d d d d d 3 3 3 c c 
+c d d d d d d d d d c d c d c d d d d d d d d d d d d d d d 1 d 1 d d d d d 1 1 1 d 1 1 1 d c d d d d d d d d d d c d d d d c c d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 d d 1 d d c c d d d d d d d d d d d 3 3 3 c c 
+c d d d d d d d c c d d c d c d d d d d d d d d d d d d d 1 1 d 1 d d d d d 1 d 1 1 1 1 1 1 1 d d d d d d d d d d c d d d d c c d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 d 1 d d c c d d d d d d d d d d d 3 3 3 c c 
+c d d d d d d c d d d d c d c d d d d d d d d d d d d 1 d 1 1 1 1 d d d d d d 1 1 1 1 1 d 1 c 1 d d d d d d d d d c d d d d c c d d d d d d d d d d d d d d d d d d d 1 d 1 1 1 d 1 1 d 1 d c c d d d d d d d d d d d 3 3 3 c c 
+c d d d d d c d d d d d c d c d d d d d d d d d d d d 1 1 1 1 1 1 1 d d d d d d d 1 1 1 1 1 1 d 1 d d d d d d d d c d d d d c c d d d d d d d d d d d d d d d d d d d d 1 1 d 1 d d 1 1 1 1 c c d d d 1 1 1 1 d d d d 3 . 3 c c 
+c d d d d c c d d d d c d d c d d d d d d d d d d d d d 1 1 1 1 1 1 d d d d d d d d 1 1 1 1 d 1 d 1 d d d d d d c d d d d d c c d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 c c d d 1 1 1 1 1 1 1 d d 3 . 3 c c 
+c c d d d c d d d d d c d d c d c d d d d d d d d d d d 1 1 1 1 1 1 d d d d d d d d d d 1 c 1 1 1 1 1 1 1 1 1 d c d d d d d c 1 d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 c d d d d d 1 1 1 1 1 1 3 . 3 c c 
+. c d d d c d d d d d c d d c d d d d d d d d d d d d d 1 1 1 1 1 1 d d d d d d d d d c c 1 1 d 1 1 1 1 1 1 1 d c d d d d 1 c 1 1 d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 d 1 1 c d d d d d d d 1 1 1 1 3 . 3 c c 
+. c d d d c c d d d d c d d d c d d d d d d c c c c c 1 1 1 1 1 1 1 c c d d d c c c c c d d 1 1 1 1 1 1 1 d d d c d d d d 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 c d d d d d d d d 1 1 1 1 3 3 c c 
+c c d d d d d c c c c c d d d c c c c c c c d d d d d 1 1 1 1 1 1 1 c c c c c c c c d d d d 1 d d d 1 1 1 1 1 c d d d d d 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 1 d d d d d d d d 1 1 1 1 1 c c c 
+c d d d d d d d d d d c c c c c d d d d d d d c c c c 1 1 1 1 1 1 1 d d d d d d d d c c c c c 1 d d 1 1 1 d 1 c d d d d d 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 1 d d d d d d d d d 1 1 1 1 c c c 
+c c c c c c c c c c c c c c c c d d d d d d d d d d d 1 1 1 1 1 1 1 1 d d d d d d d d d d d d 1 d d d 1 1 c d 1 d d d d d 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 1 1 d d d d d d d d 1 d 1 1 c c c 
+d d d d d d d d d d d d c d d d d d d d d d d d d d d 1 1 1 1 1 1 1 1 d d d d d d d d d d d d 1 c c c 1 1 d d 1 d d d d d 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 c 1 1 d d d d d d d d 1 d 1 1 c c c 
+d d d d d d d d d d d d c d d d d d d d d d d d d d d 1 1 1 1 1 1 1 1 d d d 1 1 d c c c c c c d 1 d d 1 1 d d 1 d d d d d d 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 d 1 1 1 d d d d d d d 1 1 d 1 1 c c c 
+d d d d d d d d 1 1 1 1 1 1 1 d d d d d d d d d d d d 1 1 1 1 1 1 1 1 c c 1 1 1 c d d d d d d d 1 d d d 1 1 d d 1 d d d d d c 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 1 1 d d d d d d 1 1 1 3 1 c c c 
+d c c c c c c 1 1 1 d 1 c 1 d 1 1 d d d d d c c c c c 1 1 1 1 1 1 1 d d 1 1 1 1 1 d d d d d d d d 1 d d 1 1 d d 1 d d d d d c c d d d 1 d d 1 d 1 d d d d d d d d d d d d d d d d 1 d 1 1 1 1 c 1 1 d d d d d 1 1 1 1 1 . c c c 
+c c d d d d 1 1 1 1 1 1 1 1 1 c c 1 1 c c c d d d d d 1 1 1 1 1 1 1 d 1 1 1 d d 1 1 d d d d d d d 1 d d d 1 1 d 1 d d d d d c c d d d 1 d 1 1 1 1 d d d d d d d d d d d d d d d d 1 d 1 1 1 1 c 1 1 d d d d 1 1 1 1 1 3 . c c c 
+c d d d d 1 1 1 1 d 1 1 1 1 1 d 1 1 d 1 1 1 d d d d d 1 1 1 1 1 1 1 1 1 1 d d d d 1 1 d d d d d d d 1 d d 1 1 1 d 1 d d d d c c d d d d d 1 1 1 1 1 d d d d d d d d d d d d d d d d 1 d 1 1 1 1 1 1 1 d d 1 1 1 1 1 d 3 . c c c 
+c c d d d 1 1 1 1 1 1 1 1 1 1 1 1 1 1 d d d 1 d d d d 1 1 1 1 1 1 1 1 d d d d d d d 1 d d d d d d d d 1 d 1 1 1 d 1 d d d d c c d d d d 1 1 1 1 1 1 d d d d d d d d d 1 1 1 1 1 1 d d 1 d 1 1 1 1 1 1 1 1 1 d d 1 d d 3 . c c c 
+c c d d d 1 1 1 d 1 d 1 1 1 1 1 1 1 1 1 c c c 1 c c c 1 1 1 1 1 1 1 1 c c c c c c d d d d d d d d d d 1 d 1 d 1 1 d 1 d d d c c d d 1 1 1 1 1 1 1 1 d d d d d d d 1 1 1 1 1 1 d d 1 1 1 1 1 1 1 1 1 d d d d d d d d d 3 c c c c 
+c c d d d 1 d 1 d d 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 d d 1 1 1 1 d 1 1 d d d d d d d c 1 c 1 d d d d d d d 1 1 d d 1 d 1 d d d c c d d d 1 1 1 1 1 1 1 d d d d d 1 1 1 1 1 1 d 1 1 1 1 1 1 1 1 1 c 1 1 1 d d d d d d d d 3 c c c c 
+c c d d d 1 1 d d d d d 1 1 1 1 1 1 1 1 1 1 1 1 1 d d 1 1 1 1 1 1 d d d d d d d d 1 1 1 1 c c d d d d d d 1 1 d 1 1 1 d d d c c d d d 1 1 1 1 1 1 1 d d d d d 1 1 1 d d d d d d d d d d 1 1 1 1 1 d 1 d d d d d d d d 3 c c . c 
+c c d d d 1 d d d d d d d 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 d d d d d d d 1 1 1 1 d d d d c c d d d d d 1 d d 1 1 d d d c c d d 1 1 1 1 1 1 d 1 d d d d 1 1 1 d d d d d d d d 1 1 1 1 1 d 1 d 1 d d d d d d d d d 3 c c . c 
+c c d d d d d d d d d d d d d 1 1 1 1 1 d 1 1 1 1 1 d d 1 1 1 1 d d d d d d d 1 1 1 1 d d d d d c d d d d d d 1 d d 1 d d d c c d d 1 1 1 1 d 1 1 1 d d d d d 1 1 d d d d d d d d 1 1 1 1 c d c 1 1 d d d d d d d d d 3 c c c c 
+c c d d d d d d d d d d d d d d d 1 1 1 1 d 1 1 1 1 1 1 1 1 1 1 d d d d d d 1 1 1 1 d d d d d d d c d d d d d 1 1 d d 1 d c c c d d 1 1 1 1 d 1 1 1 d d d d d 1 1 d d d d d d d d 1 1 1 d c d c d 1 d d d d d d d d d 3 c c c c 
+c c d d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 1 1 1 1 d 1 d d d d d c 1 1 1 c 1 1 c c c c c c c c c c c c c 1 1 c 1 1 1 c c d d 1 1 1 1 d 1 1 1 1 d d d d 1 1 d d d d d d d 1 1 1 d d c d c 1 1 1 d d d d d d d d 3 c c c c 
+c c c c c c c c c d d d d c c c c c c 1 c 1 1 1 c 1 1 c 1 1 c c c c c c 1 1 1 1 1 d 1 1 d d d d d d d d d d d d d 1 1 c 1 1 . c d d 1 1 1 1 d d 1 1 1 d d d d d 1 1 d d d d d 1 1 1 1 c c c c c d 1 1 1 1 d d d d d d 3 c c c c 
+c c c c c c c c c c c c c c c c c c c c c c c c c c 1 1 c c c c c c 1 1 1 1 1 1 c c c 1 1 c c c c c c c c c c c c 1 d 1 1 1 1 c d d 1 1 1 1 c c 1 1 1 c c c c c c 1 1 c c c 1 1 1 1 c d d c d c d d 1 1 d 1 d d d d d 3 c c c c 
+c c d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 d d d d d 1 1 d d d d d d d d d d d d 1 d 1 1 d d d d 1 1 1 1 d d d 1 1 d d d d d d 1 1 1 1 1 1 1 1 d d d d d d d d d d 1 1 d 1 d d d d 3 c c c c 
+c c d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 d d d d d d d 1 1 1 d d d d d d d d d d d d 1 1 d 1 d d d 1 1 1 1 d d d 1 1 1 d d d d d d d d 1 1 1 1 1 d d d d d d d d d d d 1 1 d 1 d d d 3 c 3 c c 
+c c d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 d d d d d d d d d 1 1 d d d d d d d d d d d d 1 d 1 1 d d d 1 1 1 1 d d d 1 d 1 1 d d d d d d d 1 d 1 1 d d d d d d d d d d d d 1 1 1 d 1 d d 3 c 3 c c 
+c c d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 d d d d d d d d d d d d 1 1 d d d d d d d d d d d 1 1 1 1 d d d 1 1 1 1 d d d d 1 1 1 d d d d d d 1 1 1 1 1 d d d d d d d d d d d d d 1 d 1 1 d d 3 c 3 c c 
+c c d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 d d d d d d d d d d d d d d 1 1 d d d d d d d d d d 1 d 1 1 d d d d 1 d 1 1 d d d d 1 d 1 1 d d d d d 1 d 1 1 1 d d d d d d d d d d d d d d 1 d 1 1 d 3 c 3 c c 
+c c d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d 1 1 d d d d d d d d d 1 1 d 1 d d d d 1 d 1 1 d d d d 1 d d 1 1 d d d d 1 d 1 1 d d d d d d d d d d d d d d d 1 1 d 1 d 3 c 3 . c 
+c c d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 d d d d d d 1 1 1 1 d d d d d 1 1 1 d d d d d 1 1 d 1 1 d d d 1 1 1 1 d d d d d d d d d d d d d d d d 1 1 1 1 d c c . c 
+c c d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d 1 d 1 1 1 1 d d d d d 1 d 1 1 d d d d d d d 1 1 1 d d d d d d 1 1 1 1 1 d d 1 1 d 1 d d d d d d d d d d d d d d d d 1 1 1 1 d c . c 
+c c d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 d d d d d d 1 d 1 1 d d d d d d d 1 1 1 d d d d d d d d 1 1 1 1 1 1 1 d 1 d d d d d d d d d d d d d d d d d 1 d 1 d c 3 c 
+c c d d d d d d d d d d d d d 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 d d d d d d 1 d 1 d 1 d d d d d d d d 1 1 1 d d d d d d d d 1 d 1 1 1 1 d 1 d d d d d d d d d d d d d d d d d 1 1 1 d c 3 c 
+c c d d d d d d d d d d d 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 d d d d d d d d 1 1 1 1 1 d d d d d d d d d 1 1 d d d d d d d d d 1 1 1 1 d 1 1 d d d d d d d d d d d d d d d d d d 1 1 1 c c c 
+c c d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 d d d d d d d d d 1 d 1 d d d d d d d d d d d d d 1 d d d d d d d d d d d d 1 1 1 d d d d d d d d d d d d d d d d d d d 1 1 1 1 c c 
+c d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 d d d d d d d d d d 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d 1 d 1 d d d d d d d d d d d d d d d d d d d d d d d d c c 
+c c d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 d d d d d d d d d d d 1 d 1 d d d d d d d d d c c c c c c c c c c c c c c c c c 1 c c d d d d d d d d d d d d d d d d d d d d d d d d c c 
+c c d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d c c c c c 1 c c c c c c c c c c c c c c 1 1 c c c c c c c c c c c c c c c c c d d d d d d d d d d d c c c c c c c c c c c c c c c c c c c c c c c c d d c c 
+c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 
+`, SpriteKind.Player)
+        friezeLeft.setPosition(88, 172)
         hero.setPosition(30, 200)
         hero.z = 1
     }
 }
+let friezeLeft: Sprite = null
 let athena: Sprite = null
 let currentObject: Sprite = null
 let empty: Sprite = null
 let nikeInfoSeen = false
 let athenaInfoSeen = false
 let nike: Sprite = null
-let currentLevel = 0
 let hero: Sprite = null
 hero = sprites.create(img`
 . . . . . e e e e . . . . . . . 
@@ -2251,6 +2313,7 @@ controller.moveSprite(hero, 100, 0)
 hero.setFlag(SpriteFlag.StayInScreen, true)
 scene.cameraFollowSprite(hero)
 hero.ay = 300
+let currentLevel = 1
 prepareLevel(currentLevel)
 nike = sprites.create(img`
 . c . . . . . . 
