@@ -1887,6 +1887,7 @@ c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c
         athena.setPosition(270, 180)
         if (friezeLeft) {
             friezeLeft.destroy()
+            friezeRight.destroy()
         }
         hero.setPosition(60, 200)
         hero.z = 1
@@ -2058,6 +2059,7 @@ c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c
         }
         if (friezeLeft) {
             friezeLeft.destroy()
+            friezeRight.destroy()
         }
         hero.setPosition(30, 0)
         hero.z = 1
