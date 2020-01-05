@@ -1944,7 +1944,7 @@ function prepareLevel (num: number) {
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. 2 . . 2 2 2 2 . . 2 2 2 2 . . . 2 2 2 2 . . 2 2 2 2 . . 2 . . 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
@@ -2319,7 +2319,7 @@ game.onUpdate(function () {
         nike.y = hero.y - 10
     }
     info.setScore(hero.x)
-    if (hero.tileKindAt(TileDirection.Bottom, myTiles.tile6) || hero.tileKindAt(TileDirection.Center, myTiles.tile6)) {
+    if (hero.tileKindAt(TileDirection.Bottom, myTiles.tile6) || hero.tileKindAt(TileDirection.Center, myTiles.tile6) || (hero.tileKindAt(TileDirection.Bottom, myTiles.tile59) || hero.tileKindAt(TileDirection.Center, myTiles.tile59))) {
         if (hero.vy >= 0) {
             controller.moveSprite(hero, 100, 50)
             hero.ay = 0
