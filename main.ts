@@ -1627,6 +1627,9 @@ c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c
     if (enemy0) {
         enemy0.destroy()
     }
+    if (enemy1) {
+        enemy1.destroy()
+    }
     if (friezeLeft) {
         friezeLeft.destroy()
         friezeRight.destroy()
@@ -1770,18 +1773,14 @@ controller.left.onEvent(ControllerButtonEvent.Released, function () {
     true
     )
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
-    otherSprite.destroy(effects.rings, 500)
-})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     controller.moveSprite(hero, 100, 0)
-    hero.setFlag(SpriteFlag.Ghost, true)
-    hero.vy = -150
     hero.ay = 300
+    hero.vy = -150
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
-    otherSprite.destroy(effects.fire, 500)
+    otherSprite.destroy(effects.fire, 200)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
@@ -2123,14 +2122,18 @@ c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 1 c c c c c c c c c c 
 5 5 . . 2 . 5 5 . . 2 2 . 5 . . 
 . . 5 5 5 . . 5 . 2 2 . 5 5 . . 
 . . . . 5 5 . 5 5 2 . 5 5 . . . 
-. . . . . 5 5 2 5 5 . 5 . . . . 
-. . . . . 2 5 5 5 5 5 5 . . . . 
-. . . . . . . . . 5 . . . . . . 
-. . . . . . . . . . . . . . . . 
+. . . . . 5 5 2 5 5 . 5 2 . . . 
+. . . . . 2 5 5 5 5 5 5 2 2 . . 
+. . . . . . 2 2 2 2 2 2 2 2 2 . 
+. . . . . . . 2 2 2 2 2 . . . . 
 `, SpriteKind.Enemy)
+    enemy1 = sprites.create(enemy0.image, SpriteKind.Enemy)
     enemy0.ay = 0
-    enemy0.vx = 30
-    enemy0.setPosition(200, 180)
+    enemy0.vx = 100
+    enemy0.setPosition(300, 180)
+    enemy1.ay = 0
+    enemy1.vx = -100
+    enemy1.setPosition(300, 196)
 }
 controller.right.onEvent(ControllerButtonEvent.Released, function () {
     animation.runImageAnimation(
@@ -2341,6 +2344,9 @@ function prepareLevel2 () {
     if (enemy0) {
         enemy0.destroy()
     }
+    if (enemy1) {
+        enemy1.destroy()
+    }
     if (friezeLeft) {
         friezeLeft.destroy()
         friezeRight.destroy()
@@ -2361,6 +2367,7 @@ function prepareLevel (num: number) {
 }
 let friezeRight: Sprite = null
 let friezeLeft: Sprite = null
+let enemy1: Sprite = null
 let enemy0: Sprite = null
 let athena: Sprite = null
 let currentObject: Sprite = null
@@ -2458,7 +2465,7 @@ game.onUpdate(function () {
         nike.x = hero.x + 5
         nike.y = hero.y - 10
     }
-    info.setScore(hero.x)
+    info.setScore(hero.vy)
     if (hero.tileKindAt(TileDirection.Bottom, myTiles.tile6) || hero.tileKindAt(TileDirection.Center, myTiles.tile6) || (hero.tileKindAt(TileDirection.Bottom, myTiles.tile59) || hero.tileKindAt(TileDirection.Center, myTiles.tile59))) {
         if (hero.vy >= 0) {
             controller.moveSprite(hero, 100, 50)
@@ -2505,9 +2512,15 @@ game.onUpdate(function () {
         hero.x = 630
     }
     if (enemy0.isHittingTile(CollisionDirection.Left)) {
-        enemy0.vx = 30
+        enemy0.vx = 100
     }
     if (enemy0.isHittingTile(CollisionDirection.Right)) {
-        enemy0.vx = -30
+        enemy0.vx = -100
+    }
+    if (enemy1.isHittingTile(CollisionDirection.Left)) {
+        enemy1.vx = 100
+    }
+    if (enemy1.isHittingTile(CollisionDirection.Right)) {
+        enemy1.vx = -100
     }
 })
