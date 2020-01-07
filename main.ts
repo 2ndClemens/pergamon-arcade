@@ -1733,9 +1733,10 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 controller.left.onEvent(ControllerButtonEvent.Released, function () {
-    animation.runImageAnimation(
-    hero,
-    [img`
+    if (!(controller.right.isPressed())) {
+        animation.runImageAnimation(
+        hero,
+        [img`
 . . . . . . . e e e e . . . . . 
 . . . . . . e d d d e e . . . . 
 . . . . . e d b d b d e . . . . 
@@ -1769,9 +1770,10 @@ controller.left.onEvent(ControllerButtonEvent.Released, function () {
 . . . . . . . b c c c c b . . . 
 . . . . . . d b b . d d d . . . 
 `],
-    100,
-    true
-    )
+        100,
+        true
+        )
+    }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     controller.moveSprite(hero, 100, 0)
@@ -2216,9 +2218,10 @@ c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 1 c c c c c c c c c c 
     enemy1.setPosition(300, 196)
 }
 controller.right.onEvent(ControllerButtonEvent.Released, function () {
-    animation.runImageAnimation(
-    hero,
-    [img`
+    if (!(controller.left.isPressed())) {
+        animation.runImageAnimation(
+        hero,
+        [img`
 . . . . . e e e e . . . . . . . 
 . . . . e e d d d e . . . . . . 
 . . . . e d b d b d e . . . . . 
@@ -2252,9 +2255,10 @@ controller.right.onEvent(ControllerButtonEvent.Released, function () {
 . . . b c c c c b . . . . . . . 
 . . . d d d . b b d . . . . . . 
 `],
-    100,
-    true
-    )
+        100,
+        true
+        )
+    }
 })
 function prepareLevel2 () {
     scene.setBackgroundImage(img`
