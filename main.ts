@@ -1379,262 +1379,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Event, function (sprite, otherSp
         animation.stopAnimation(animation.AnimationTypes.All, hero)
     }
 })
-function setHeroDirection () {
-    if (hero.vx > 0 && currentDirection != "walkRight") {
-        setHeroAnimation("walkRight")
-        currentDirection = "walkRight"
-    }
-    if (hero.vx < 0 && currentDirection != "walkLeft") {
-        setHeroAnimation("walkLeft")
-        currentDirection = "walkLeft"
-    }
-    if (hero.vx == 0 && currentDirection != "idle") {
-        if (currentDirection == "walkRight") {
-            setHeroAnimation("idleRight")
-        } else {
-            setHeroAnimation("idleLeft")
-        }
-        currentDirection = "idle"
-    }
-}
-function setHeroAnimation (direction: string) {
-    if (direction == "walkLeft") {
-        animation.runImageAnimation(
-        hero,
-        [img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . e e e e . . . . . 
-. . . . . . e d d d e e . . . . 
-. . . . . . . b d b d e e . . . 
-. . . . . . . 1 d 1 d d e . . . 
-. . . . . . . d b d d e e . . . 
-. . . . . . . d d d d e . . . . 
-. . . . . . . d d d d . . . . . 
-. . . . . . . . d d b . . . . . 
-. . . . . . . c b b b . . . . . 
-. . . . . . . c 1 1 1 b . . . . 
-. . . . . . b c 1 1 1 b b . . . 
-. . . . . . b 1 1 1 1 1 b . . . 
-. . . . . . c 1 1 1 1 1 b . . . 
-. . . . . c c 1 1 1 1 1 b . . . 
-. . . . . c b 1 1 1 1 1 b . . . 
-. . . . . c b 1 1 1 1 1 b . . . 
-. . . . . c b b 1 1 1 1 b . . . 
-. . . . . c 1 b 1 1 1 1 b 1 . . 
-. . . . . c 1 b 1 1 c 1 b 1 . . 
-. . . . . c c b 1 c d 1 b 1 . . 
-. . . . . b c b 1 d d 1 b . . . 
-. . . . . b c b b d d 1 b . . . 
-. . . . . b 1 1 1 c b 1 b . . . 
-. . . . . b 1 1 1 1 1 b b . . . 
-. . . . . b 1 1 1 1 1 c 1 . . . 
-. . . . . . b 1 1 1 1 b 1 . . . 
-. . . . . . b 1 1 1 1 b 1 . . . 
-. . . . . . b 1 1 1 1 . b . . . 
-. . . . . . b 1 1 1 1 . b . . . 
-. . . . . . . b c c c c b . . . 
-. . . . . . . . d d d . . . . . 
-`,img`
-. . . . . . . e e e e . . . . . 
-. . . . . . e d d d e e . . . . 
-. . . . . . . b d b d e e . . . 
-. . . . . . . 1 d 1 d d e . . . 
-. . . . . . . d b d d e e . . . 
-. . . . . . . d d d d e . . . . 
-. . . . . . . d d d d . . . . . 
-. . . . . . . . d d b . . . . . 
-. . . . . . . c b b b b . . . . 
-. . . . . . . c 1 1 b b . . . . 
-. . . . . . b c 1 1 1 b b . . . 
-. . . . . . b 1 1 1 1 1 b . . . 
-. . . . . . c 1 1 1 1 1 b . . . 
-. . . . . c c 1 1 1 1 1 b . . . 
-. . . . . c b 1 1 1 1 1 b . . . 
-. . . . . c b 1 1 1 1 1 b . . . 
-. . . . . c b b 1 1 1 1 b . . . 
-. . . . . c 1 b 1 1 1 1 1 b . . 
-. . . . . c 1 b 1 1 1 1 1 b . . 
-. . . . . c 1 1 b 1 1 c 1 b . . 
-. . . . . c c 1 b 1 c d 1 b . . 
-. . . . . b c 1 b 1 d d 1 b . . 
-. . . . . b c 1 1 b d d 1 b . . 
-. . . . . b 1 1 1 c b 1 1 b . . 
-. . . . . b 1 1 1 1 c b 1 b . . 
-. . . . . b 1 1 1 1 1 c 1 1 . . 
-. . . . . b 1 1 1 1 1 b 1 . . . 
-. . . . . b 1 1 1 1 1 b 1 . . . 
-. . . . . b 1 1 1 1 1 b 1 . . . 
-. . . . . . 1 1 1 1 1 b 1 . . . 
-. . . . . . . b c c c c b . . . 
-. . . . . d d b b . d d d . . . 
-`],
-        100,
-        true
-        )
-    }
-    if (direction == "walkRight") {
-        animation.runImageAnimation(
-        hero,
-        [img`
-. . . . . . . . . . . . . . . . 
-. . . . . e e e e . . . . . . . 
-. . . . e e d d d e . . . . . . 
-. . . e e d b d b . . . . . . . 
-. . . e d d 1 d 1 . . . . . . . 
-. . . e e d d b d . . . . . . . 
-. . . . e d d d d . . . . . . . 
-. . . . . d d d d . . . . . . . 
-. . . . . b d d . . . . . . . . 
-. . . . . b b b c . . . . . . . 
-. . . . b 1 1 1 c . . . . . . . 
-. . . b b 1 1 1 c b . . . . . . 
-. . . b 1 1 1 1 1 b . . . . . . 
-. . . b 1 1 1 1 1 c . . . . . . 
-. . . b 1 1 1 1 1 c c . . . . . 
-. . . b 1 1 1 1 1 b c . . . . . 
-. . . b 1 1 1 1 1 b c . . . . . 
-. . . b 1 1 1 1 b b c . . . . . 
-. . b 1 1 1 1 1 b 1 c . . . . . 
-. . b 1 1 c 1 1 b 1 c . . . . . 
-. . b 1 1 d c 1 b c c . . . . . 
-. . . b 1 d d 1 b c b . . . . . 
-. . . b 1 d d b b c b . . . . . 
-. . . b 1 b c 1 1 1 b . . . . . 
-. . . b b 1 1 1 1 1 b . . . . . 
-. . . 1 c 1 1 1 1 1 b . . . . . 
-. . . 1 b 1 1 1 1 b . . . . . . 
-. . . 1 b 1 1 1 1 b . . . . . . 
-. . . b . 1 1 1 1 b . . . . . . 
-. . . b . 1 1 1 1 b . . . . . . 
-. . . b c c c c b . . . . . . . 
-. . . . . d d d . . . . . . . . 
-`,img`
-. . . . . e e e e . . . . . . . 
-. . . . e e d d d e . . . . . . 
-. . . e e d b d b . . . . . . . 
-. . . e d d 1 d 1 . . . . . . . 
-. . . e e d d b d . . . . . . . 
-. . . . e d d d d . . . . . . . 
-. . . . . d d d d . . . . . . . 
-. . . . . b d d . . . . . . . . 
-. . . . b b b b c . . . . . . . 
-. . . . b b 1 1 c . . . . . . . 
-. . . b b 1 1 1 c b . . . . . . 
-. . . b 1 1 1 1 1 b . . . . . . 
-. . . b 1 1 1 1 1 c . . . . . . 
-. . . b 1 1 1 1 1 c c . . . . . 
-. . . b 1 1 1 1 1 b c . . . . . 
-. . . b 1 1 1 1 1 b c . . . . . 
-. . . b 1 1 1 1 b b c . . . . . 
-. . b 1 1 1 1 1 b 1 c . . . . . 
-. . b 1 1 1 1 1 b 1 c . . . . . 
-. . b 1 c 1 1 b 1 1 c . . . . . 
-. . b 1 d c 1 b 1 c c . . . . . 
-. . b 1 d d 1 b 1 c b . . . . . 
-. . b 1 d d b 1 1 c b . . . . . 
-. . b 1 1 b c 1 1 1 b . . . . . 
-. . b 1 b c 1 1 1 1 b . . . . . 
-. . 1 1 c 1 1 1 1 1 b . . . . . 
-. . . 1 b 1 1 1 1 1 b . . . . . 
-. . . 1 b 1 1 1 1 1 b . . . . . 
-. . . 1 b 1 1 1 1 1 b . . . . . 
-. . . 1 b 1 1 1 1 1 . . . . . . 
-. . . b c c c c b . . . . . . . 
-. . . d d d . b b d d . . . . . 
-`],
-        100,
-        true
-        )
-    }
-    if (direction == "walkUp") {
-    	
-    }
-    if (direction == "walkDown") {
-    	
-    }
-    if (direction == "idleLeft") {
-        animation.runImageAnimation(
-        hero,
-        [img`
-. . . . . . . e e e e . . . . . 
-. . . . . . e d d d e e . . . . 
-. . . . . e d b d b d e . . . . 
-. . . . . . d 1 d 1 d d . . . . 
-. . . . . . d d b d d . . . . . 
-. . . . . . e d d d e . . . . . 
-. . . . . . e d d d e . . . . . 
-. . . . . . . . d d b . . . . . 
-. . . . . . . c b b b b . . . . 
-. . . . . . . c 1 1 b b . . . . 
-. . . . . . b c 1 1 1 b b . . . 
-. . . . . . b b 1 1 1 1 b . . . 
-. . . . . . c b 1 1 1 1 b . . . 
-. . . . . c c b 1 1 1 1 b . . . 
-. . . . . c 1 1 b 1 1 1 b . . . 
-. . . . . c 1 1 b 1 1 1 b . . . 
-. . . . . c 1 1 b b 1 1 b . . . 
-. . . . . c 1 1 1 b 1 1 1 b . . 
-. . . . . c 1 1 1 b 1 1 1 b . . 
-. . . . . c 1 1 1 b 1 1 1 c . . 
-. . . . . d c 1 1 b 1 1 c d . . 
-. . . . . d d 1 1 b 1 1 d d . . 
-. . . . . d d 1 1 b 1 1 d d . . 
-. . . . . b 1 1 1 c b 1 1 b . . 
-. . . . . b 1 1 1 1 c b 1 b . . 
-. . . . . b 1 1 1 1 1 c 1 1 . . 
-. . . . . b 1 1 1 1 1 b 1 . . . 
-. . . . . b 1 1 1 1 1 b 1 . . . 
-. . . . . b 1 1 1 1 1 b 1 . . . 
-. . . . . . 1 1 1 1 1 b 1 . . . 
-. . . . . . . b c c c c b . . . 
-. . . . . . d b b . d d d . . . 
-`],
-        100,
-        true
-        )
-    }
-    if (direction == "idleRight") {
-        animation.runImageAnimation(
-        hero,
-        [img`
-. . . . . e e e e . . . . . . . 
-. . . . e e d d d e . . . . . . 
-. . . . e d b d b d e . . . . . 
-. . . . d d 1 d 1 d . . . . . . 
-. . . . . d d b d d . . . . . . 
-. . . . . e d d d e . . . . . . 
-. . . . . e d d d e . . . . . . 
-. . . . . b d d . . . . . . . . 
-. . . . b b b b c . . . . . . . 
-. . . . b b 1 1 c . . . . . . . 
-. . . b b 1 1 1 c b . . . . . . 
-. . . b 1 1 1 1 b b . . . . . . 
-. . . b 1 1 1 1 b c . . . . . . 
-. . . b 1 1 1 1 b c c . . . . . 
-. . . b 1 1 1 b 1 1 c . . . . . 
-. . . b 1 1 1 b 1 1 c . . . . . 
-. . . b 1 1 b b 1 1 c . . . . . 
-. . b 1 1 1 b 1 1 1 c . . . . . 
-. . b 1 1 1 b 1 1 1 c . . . . . 
-. . c 1 1 1 b 1 1 1 c . . . . . 
-. . d c 1 1 b 1 1 c d . . . . . 
-. . d d 1 1 b 1 1 d d . . . . . 
-. . d d 1 1 b 1 1 d d . . . . . 
-. . b 1 1 b c 1 1 1 b . . . . . 
-. . b 1 b c 1 1 1 1 b . . . . . 
-. . 1 1 c 1 1 1 1 1 b . . . . . 
-. . . 1 b 1 1 1 1 1 b . . . . . 
-. . . 1 b 1 1 1 1 1 b . . . . . 
-. . . 1 b 1 1 1 1 1 b . . . . . 
-. . . 1 b 1 1 1 1 1 . . . . . . 
-. . . b c c c c b . . . . . . . 
-. . . d d d . b b d . . . . . . 
-`],
-        100,
-        true
-        )
-    }
-}
 function prepareLevel0 () {
     scene.setBackgroundImage(img`
 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
@@ -1893,6 +1637,28 @@ c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c
     hero.setPosition(60, 200)
     hero.z = 1
 }
+function setHeroDirection () {
+    if (hero.vx > 0 && currentDirection != "walkRight") {
+        setHeroAnimation("walkRight")
+        currentDirection = "walkRight"
+    }
+    if (hero.vx < 0 && currentDirection != "walkLeft") {
+        setHeroAnimation("walkLeft")
+        currentDirection = "walkLeft"
+    }
+    if (hero.vy < 0 && currentDirection != "walkUp") {
+        setHeroAnimation("walkUp")
+        currentDirection = "walkUp"
+    }
+    if (hero.vx == 0 && hero.vy == 0 && currentDirection != "idle") {
+        if (currentDirection == "walkRight") {
+            setHeroAnimation("idleRight")
+        } else {
+            setHeroAnimation("idleLeft")
+        }
+        currentDirection = "idle"
+    }
+}
 sprites.onOverlap(SpriteKind.Player, SpriteKind.item, function (sprite, otherSprite) {
     if (otherSprite == nike && nikeInfoSeen == false) {
         game.showLongText("A small statue of NIKE. This clearly belongs someplace else. Press 'B' to pick it up or put it down.", DialogLayout.Bottom)
@@ -1900,6 +1666,315 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.item, function (sprite, otherSpr
         animation.stopAnimation(animation.AnimationTypes.All, hero)
     }
 })
+function setHeroAnimation (direction: string) {
+    if (direction == "walkLeft") {
+        animation.runImageAnimation(
+        hero,
+        [img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . e e e e . . . . . 
+. . . . . . e d d d e e . . . . 
+. . . . . . . b d b d e e . . . 
+. . . . . . . 1 d 1 d d e . . . 
+. . . . . . . d b d d e e . . . 
+. . . . . . . d d d d e . . . . 
+. . . . . . . d d d d . . . . . 
+. . . . . . . . d d b . . . . . 
+. . . . . . . c b b b . . . . . 
+. . . . . . . c 1 1 1 b . . . . 
+. . . . . . b c 1 1 1 b b . . . 
+. . . . . . b 1 1 1 1 1 b . . . 
+. . . . . . c 1 1 1 1 1 b . . . 
+. . . . . c c 1 1 1 1 1 b . . . 
+. . . . . c b 1 1 1 1 1 b . . . 
+. . . . . c b 1 1 1 1 1 b . . . 
+. . . . . c b b 1 1 1 1 b . . . 
+. . . . . c 1 b 1 1 1 1 b 1 . . 
+. . . . . c 1 b 1 1 c 1 b 1 . . 
+. . . . . c c b 1 c d 1 b 1 . . 
+. . . . . b c b 1 d d 1 b . . . 
+. . . . . b c b b d d 1 b . . . 
+. . . . . b 1 1 1 c b 1 b . . . 
+. . . . . b 1 1 1 1 1 b b . . . 
+. . . . . b 1 1 1 1 1 c 1 . . . 
+. . . . . . b 1 1 1 1 b 1 . . . 
+. . . . . . b 1 1 1 1 b 1 . . . 
+. . . . . . b 1 1 1 1 . b . . . 
+. . . . . . b 1 1 1 1 . b . . . 
+. . . . . . . b c c c c b . . . 
+. . . . . . . . d d d . . . . . 
+`,img`
+. . . . . . . e e e e . . . . . 
+. . . . . . e d d d e e . . . . 
+. . . . . . . b d b d e e . . . 
+. . . . . . . 1 d 1 d d e . . . 
+. . . . . . . d b d d e e . . . 
+. . . . . . . d d d d e . . . . 
+. . . . . . . d d d d . . . . . 
+. . . . . . . . d d b . . . . . 
+. . . . . . . c b b b b . . . . 
+. . . . . . . c 1 1 b b . . . . 
+. . . . . . b c 1 1 1 b b . . . 
+. . . . . . b 1 1 1 1 1 b . . . 
+. . . . . . c 1 1 1 1 1 b . . . 
+. . . . . c c 1 1 1 1 1 b . . . 
+. . . . . c b 1 1 1 1 1 b . . . 
+. . . . . c b 1 1 1 1 1 b . . . 
+. . . . . c b b 1 1 1 1 b . . . 
+. . . . . c 1 b 1 1 1 1 1 b . . 
+. . . . . c 1 b 1 1 1 1 1 b . . 
+. . . . . c 1 1 b 1 1 c 1 b . . 
+. . . . . c c 1 b 1 c d 1 b . . 
+. . . . . b c 1 b 1 d d 1 b . . 
+. . . . . b c 1 1 b d d 1 b . . 
+. . . . . b 1 1 1 c b 1 1 b . . 
+. . . . . b 1 1 1 1 c b 1 b . . 
+. . . . . b 1 1 1 1 1 c 1 1 . . 
+. . . . . b 1 1 1 1 1 b 1 . . . 
+. . . . . b 1 1 1 1 1 b 1 . . . 
+. . . . . b 1 1 1 1 1 b 1 . . . 
+. . . . . . 1 1 1 1 1 b 1 . . . 
+. . . . . . . b c c c c b . . . 
+. . . . . d d b b . d d d . . . 
+`],
+        100,
+        true
+        )
+    }
+    if (direction == "walkRight") {
+        animation.runImageAnimation(
+        hero,
+        [img`
+. . . . . . . . . . . . . . . . 
+. . . . . e e e e . . . . . . . 
+. . . . e e d d d e . . . . . . 
+. . . e e d b d b . . . . . . . 
+. . . e d d 1 d 1 . . . . . . . 
+. . . e e d d b d . . . . . . . 
+. . . . e d d d d . . . . . . . 
+. . . . . d d d d . . . . . . . 
+. . . . . b d d . . . . . . . . 
+. . . . . b b b c . . . . . . . 
+. . . . b 1 1 1 c . . . . . . . 
+. . . b b 1 1 1 c b . . . . . . 
+. . . b 1 1 1 1 1 b . . . . . . 
+. . . b 1 1 1 1 1 c . . . . . . 
+. . . b 1 1 1 1 1 c c . . . . . 
+. . . b 1 1 1 1 1 b c . . . . . 
+. . . b 1 1 1 1 1 b c . . . . . 
+. . . b 1 1 1 1 b b c . . . . . 
+. . b 1 1 1 1 1 b 1 c . . . . . 
+. . b 1 1 c 1 1 b 1 c . . . . . 
+. . b 1 1 d c 1 b c c . . . . . 
+. . . b 1 d d 1 b c b . . . . . 
+. . . b 1 d d b b c b . . . . . 
+. . . b 1 b c 1 1 1 b . . . . . 
+. . . b b 1 1 1 1 1 b . . . . . 
+. . . 1 c 1 1 1 1 1 b . . . . . 
+. . . 1 b 1 1 1 1 b . . . . . . 
+. . . 1 b 1 1 1 1 b . . . . . . 
+. . . b . 1 1 1 1 b . . . . . . 
+. . . b . 1 1 1 1 b . . . . . . 
+. . . b c c c c b . . . . . . . 
+. . . . . d d d . . . . . . . . 
+`,img`
+. . . . . e e e e . . . . . . . 
+. . . . e e d d d e . . . . . . 
+. . . e e d b d b . . . . . . . 
+. . . e d d 1 d 1 . . . . . . . 
+. . . e e d d b d . . . . . . . 
+. . . . e d d d d . . . . . . . 
+. . . . . d d d d . . . . . . . 
+. . . . . b d d . . . . . . . . 
+. . . . b b b b c . . . . . . . 
+. . . . b b 1 1 c . . . . . . . 
+. . . b b 1 1 1 c b . . . . . . 
+. . . b 1 1 1 1 1 b . . . . . . 
+. . . b 1 1 1 1 1 c . . . . . . 
+. . . b 1 1 1 1 1 c c . . . . . 
+. . . b 1 1 1 1 1 b c . . . . . 
+. . . b 1 1 1 1 1 b c . . . . . 
+. . . b 1 1 1 1 b b c . . . . . 
+. . b 1 1 1 1 1 b 1 c . . . . . 
+. . b 1 1 1 1 1 b 1 c . . . . . 
+. . b 1 c 1 1 b 1 1 c . . . . . 
+. . b 1 d c 1 b 1 c c . . . . . 
+. . b 1 d d 1 b 1 c b . . . . . 
+. . b 1 d d b 1 1 c b . . . . . 
+. . b 1 1 b c 1 1 1 b . . . . . 
+. . b 1 b c 1 1 1 1 b . . . . . 
+. . 1 1 c 1 1 1 1 1 b . . . . . 
+. . . 1 b 1 1 1 1 1 b . . . . . 
+. . . 1 b 1 1 1 1 1 b . . . . . 
+. . . 1 b 1 1 1 1 1 b . . . . . 
+. . . 1 b 1 1 1 1 1 . . . . . . 
+. . . b c c c c b . . . . . . . 
+. . . d d d . b b d d . . . . . 
+`],
+        100,
+        true
+        )
+    }
+    if (direction == "walkUp") {
+        animation.runImageAnimation(
+        hero,
+        [img`
+. . . . . . e e e e . . . . . . 
+. . . . . e e e e e e . . . . . 
+. . . . . e e e e e e . . . . . 
+. . . . . d e e e e d . . . . . 
+. . . . . e e e e e e . . . . . 
+. . . . . d e e e d e . . . . . 
+. . . . . d d d d d . . . . . . 
+. . . . . d d d d b . . . . . . 
+. . . . . . c b b b b . . . . . 
+. . . . . . c 1 1 b b . . . . . 
+. . . . . b c 1 1 1 b b . . . . 
+. . . . . b 1 1 1 1 1 b . . . . 
+. . . . . c 1 1 1 1 1 b . . . . 
+. . . . c c 1 1 1 1 1 b . . . . 
+. . . . c b 1 1 1 1 1 c . . . . 
+. . . . b b 1 1 1 1 1 c . . . . 
+. . . . b b 1 1 1 1 1 c . . . . 
+. . . d b 1 1 1 1 1 1 c b . . . 
+. . . d b 1 1 1 1 1 1 c b . . . 
+. . . d b 1 1 1 1 1 1 c b . . . 
+. . . . c c 1 1 1 1 1 1 b . . . 
+. . . . b c 1 1 1 1 1 1 b . . . 
+. . . . b c 1 1 1 1 1 1 b . . . 
+. . . . b 1 1 1 1 1 1 1 b . . . 
+. . . . b 1 1 1 1 1 1 1 b . . . 
+. . . . b 1 1 1 1 1 1 1 1 . . . 
+. . . . b 1 1 1 1 1 1 1 . . . . 
+. . . . b 1 1 1 1 1 1 1 . . . . 
+. . . . b 1 1 1 1 1 1 1 . . . . 
+. . . . . 1 1 1 1 1 b 1 . . . . 
+. . . . . c c c c c c b . . . . 
+. . . . . . d d . d d d . . . . 
+`,img`
+. . . . . . . . . . . . . . . . 
+. . . . . . e e e e . . . . . . 
+. . . . . e e e e e e . . . . . 
+. . . . . e e e e e e . . . . . 
+. . . . . d e e e e d . . . . . 
+. . . . . e e e e e e . . . . . 
+. . . . . d e e e d e . . . . . 
+. . . . . d d d d d . . . . . . 
+. . . . . d d d d b . . . . . . 
+. . . . . . c b b b b . . . . . 
+. . . . . . c 1 1 b b . . . . . 
+. . . . . b c 1 1 1 b b . . . . 
+. . . . . b 1 1 1 1 1 b . . . . 
+. . . . . c 1 1 1 1 1 b . . . . 
+. . . . c c 1 1 1 1 1 b . . . . 
+. . . . c b 1 1 1 1 1 c . . . . 
+. . . . b b 1 1 1 1 1 c . . . . 
+. . . d b 1 1 1 1 1 1 c b . . . 
+. . . d b 1 1 1 1 1 1 c b . . . 
+. . . d b 1 1 1 1 1 1 c b . . . 
+. . . . c c 1 1 1 1 1 1 b . . . 
+. . . . b c 1 1 1 1 1 1 b . . . 
+. . . . b c 1 1 1 1 1 1 b . . . 
+. . . . b 1 1 1 1 1 1 1 b . . . 
+. . . . b 1 1 1 1 1 1 1 b . . . 
+. . . . b 1 1 1 1 1 1 1 1 . . . 
+. . . . b 1 1 1 1 1 1 1 . . . . 
+. . . . b 1 1 1 1 1 1 1 . . . . 
+. . . . b 1 1 1 1 1 1 1 . . . . 
+. . . . . 1 1 1 1 1 b 1 . . . . 
+. . . . . c c c c c c b . . . . 
+. . . . . . d d . d d d . . . . 
+`],
+        100,
+        true
+        )
+    }
+    if (direction == "walkDown") {
+    	
+    }
+    if (direction == "idleLeft") {
+        animation.runImageAnimation(
+        hero,
+        [img`
+. . . . . . . e e e e . . . . . 
+. . . . . . e d d d e e . . . . 
+. . . . . e d b d b d e . . . . 
+. . . . . . d 1 d 1 d d . . . . 
+. . . . . . d d b d d . . . . . 
+. . . . . . e d d d e . . . . . 
+. . . . . . e d d d e . . . . . 
+. . . . . . . . d d b . . . . . 
+. . . . . . . c b b b b . . . . 
+. . . . . . . c 1 1 b b . . . . 
+. . . . . . b c 1 1 1 b b . . . 
+. . . . . . b b 1 1 1 1 b . . . 
+. . . . . . c b 1 1 1 1 b . . . 
+. . . . . c c b 1 1 1 1 b . . . 
+. . . . . c 1 1 b 1 1 1 b . . . 
+. . . . . c 1 1 b 1 1 1 b . . . 
+. . . . . c 1 1 b b 1 1 b . . . 
+. . . . . c 1 1 1 b 1 1 1 b . . 
+. . . . . c 1 1 1 b 1 1 1 b . . 
+. . . . . c 1 1 1 b 1 1 1 c . . 
+. . . . . d c 1 1 b 1 1 c d . . 
+. . . . . d d 1 1 b 1 1 d d . . 
+. . . . . d d 1 1 b 1 1 d d . . 
+. . . . . b 1 1 1 c b 1 1 b . . 
+. . . . . b 1 1 1 1 c b 1 b . . 
+. . . . . b 1 1 1 1 1 c 1 1 . . 
+. . . . . b 1 1 1 1 1 b 1 . . . 
+. . . . . b 1 1 1 1 1 b 1 . . . 
+. . . . . b 1 1 1 1 1 b 1 . . . 
+. . . . . . 1 1 1 1 1 b 1 . . . 
+. . . . . . . b c c c c b . . . 
+. . . . . . d b b . d d d . . . 
+`],
+        100,
+        true
+        )
+    }
+    if (direction == "idleRight") {
+        animation.runImageAnimation(
+        hero,
+        [img`
+. . . . . e e e e . . . . . . . 
+. . . . e e d d d e . . . . . . 
+. . . . e d b d b d e . . . . . 
+. . . . d d 1 d 1 d . . . . . . 
+. . . . . d d b d d . . . . . . 
+. . . . . e d d d e . . . . . . 
+. . . . . e d d d e . . . . . . 
+. . . . . b d d . . . . . . . . 
+. . . . b b b b c . . . . . . . 
+. . . . b b 1 1 c . . . . . . . 
+. . . b b 1 1 1 c b . . . . . . 
+. . . b 1 1 1 1 b b . . . . . . 
+. . . b 1 1 1 1 b c . . . . . . 
+. . . b 1 1 1 1 b c c . . . . . 
+. . . b 1 1 1 b 1 1 c . . . . . 
+. . . b 1 1 1 b 1 1 c . . . . . 
+. . . b 1 1 b b 1 1 c . . . . . 
+. . b 1 1 1 b 1 1 1 c . . . . . 
+. . b 1 1 1 b 1 1 1 c . . . . . 
+. . c 1 1 1 b 1 1 1 c . . . . . 
+. . d c 1 1 b 1 1 c d . . . . . 
+. . d d 1 1 b 1 1 d d . . . . . 
+. . d d 1 1 b 1 1 d d . . . . . 
+. . b 1 1 b c 1 1 1 b . . . . . 
+. . b 1 b c 1 1 1 1 b . . . . . 
+. . 1 1 c 1 1 1 1 1 b . . . . . 
+. . . 1 b 1 1 1 1 1 b . . . . . 
+. . . 1 b 1 1 1 1 1 b . . . . . 
+. . . 1 b 1 1 1 1 1 b . . . . . 
+. . . 1 b 1 1 1 1 1 . . . . . . 
+. . . b c c c c b . . . . . . . 
+. . . d d d . b b d . . . . . . 
+`],
+        100,
+        true
+        )
+    }
+}
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     if (currentObject == empty) {
         if (Math.abs(hero.x - nike.x) < 25) {
