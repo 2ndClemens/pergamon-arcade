@@ -1650,6 +1650,10 @@ function setHeroDirection () {
         setHeroAnimation("walkUp")
         currentDirection = "walkUp"
     }
+    if (hero.vy > 0 && currentDirection != "walkDown") {
+        setHeroAnimation("walkDown")
+        currentDirection = "walkDown"
+    }
     if (hero.vx == 0 && hero.vy == 0 && currentDirection != "idle") {
         if (currentDirection == "walkRight") {
             setHeroAnimation("idleRight")
@@ -1890,7 +1894,78 @@ function setHeroAnimation (direction: string) {
         )
     }
     if (direction == "walkDown") {
-    	
+        animation.runImageAnimation(
+        hero,
+        [img`
+. . . . . . e e e e . . . . . . 
+. . . . . e e d d e e . . . . . 
+. . . . . e d d d d e . . . . . 
+. . . . . d d c d c d . . . . . 
+. . . . . e d d d d e . . . . . 
+. . . . . e d d 3 d e . . . . . 
+. . . . . d d d d d . . . . . . 
+. . . . . b b d d b . . . . . . 
+. . . . . . c b b b b . . . . . 
+. . . . . . c 1 1 b b . . . . . 
+. . . . . b c 1 1 1 b b . . . . 
+. . . . . b 1 b 1 1 1 b . . . . 
+. . . . . c 1 b b 1 1 b . . . . 
+. . . . c c 1 1 b 1 1 b . . . . 
+. . . . c b 1 1 b b 1 c . . . . 
+. . . . b b 1 1 1 b 1 c . . . . 
+. . . . b b 1 1 1 1 1 c . . . . 
+. . . d b 1 1 1 1 1 b c b . . . 
+. . . d b 1 1 1 1 1 1 c b . . . 
+. . . d b 1 1 1 1 1 1 c b . . . 
+. . . . c c 1 1 1 1 1 1 b . . . 
+. . . . b c 1 1 1 1 1 1 b . . . 
+. . . . b c 1 1 1 1 1 1 b . . . 
+. . . . b 1 1 1 1 1 1 1 b . . . 
+. . . . b 1 1 1 1 1 1 1 b . . . 
+. . . . b 1 1 1 1 1 1 1 1 . . . 
+. . . . b 1 1 1 1 1 1 1 . . . . 
+. . . . b 1 1 1 1 1 1 1 . . . . 
+. . . . b 1 1 1 1 1 1 1 . . . . 
+. . . . . 1 1 1 1 1 b 1 . . . . 
+. . . . . c c c c c c b . . . . 
+. . . . . . d d . d d d . . . . 
+`,img`
+. . . . . . . . . . . . . . . . 
+. . . . . . e e e e . . . . . . 
+. . . . . e e d d e e . . . . . 
+. . . . . e d d d d e . . . . . 
+. . . . . d d c d c d . . . . . 
+. . . . . e d d d d e . . . . . 
+. . . . . e d d 3 d e . . . . . 
+. . . . . d d d d d . . . . . . 
+. . . . . b b d d b . . . . . . 
+. . . . . . c b b b b . . . . . 
+. . . . . . c 1 1 b b . . . . . 
+. . . . . b c 1 1 1 b b . . . . 
+. . . . . b 1 b 1 1 1 b . . . . 
+. . . . . c 1 b b 1 1 b . . . . 
+. . . . c c 1 1 b 1 1 b . . . . 
+. . . . c b 1 1 b b 1 c . . . . 
+. . . . b b 1 1 1 b 1 c . . . . 
+. . . d b 1 1 1 1 1 b c b . . . 
+. . . d b 1 1 1 1 1 1 c b . . . 
+. . . d b 1 1 1 1 1 1 c b . . . 
+. . . . c c 1 1 1 1 1 1 b . . . 
+. . . . b c 1 1 1 1 1 1 b . . . 
+. . . . b c 1 1 1 1 1 1 b . . . 
+. . . . b 1 1 1 1 1 1 1 b . . . 
+. . . . b 1 1 1 1 1 1 1 b . . . 
+. . . . b 1 1 1 1 1 1 1 1 . . . 
+. . . . b 1 1 1 1 1 1 1 . . . . 
+. . . . b 1 1 1 1 1 1 1 . . . . 
+. . . . b 1 1 1 1 1 1 1 . . . . 
+. . . . . 1 1 1 1 1 b 1 . . . . 
+. . . . . c c c c c c b . . . . 
+. . . . . . d d . d d d . . . . 
+`],
+        100,
+        true
+        )
     }
     if (direction == "idleLeft") {
         animation.runImageAnimation(
