@@ -1409,6 +1409,82 @@ d d d d d d d d d d d d d b b b
 d d d d d d d d d d d d d b b b 
 d d d d d d d d d d d d b b b c 
 `
+    //% blockIdentity=images._tile
+    export const tile77 = img`
+d d d d d d d d d d d d d c c c 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c c c 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c c c 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c c c 
+3 3 3 3 3 3 3 3 3 3 3 3 3 c b b 
+d d d d d d d d d d d d d d c b 
+f f f f f f f f f f f f f f f c 
+`
+    //% blockIdentity=images._tile
+    export const tile78 = img`
+c c c c c c c c c c c c c c c c 
+d d d d d d d d d d d d d c c b 
+b b b b b b b b b b b b b c b b 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c c c 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c c c 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c c c 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c b b 
+d d d d d d d d d d d d d c b b 
+`
+    //% blockIdentity=images._tile
+    export const tile79 = img`
+c c c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+c c c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+c c c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+c c c d d d d d d d d d d d d d 
+b b c 3 3 3 3 3 3 3 3 3 3 3 3 3 
+b c d d d d d d d d d d d d d d 
+c f f f f f f f f f f f f f f f 
+`
+    //% blockIdentity=images._tile
+    export const tile80 = img`
+c c c c c c c c c c c c c c c c 
+b c d d d d d d d d d d d d d d 
+b b c b b b b b b b b b b b b b 
+b b c d d d d d d d d d d d d d 
+c c c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+c c c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+c c c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+b b c d d d d d d d d d d d d d 
+`
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Event, function (sprite, otherSprite) {
     if (otherSprite == athena && athenaInfoSeen == false) {
@@ -1560,7 +1636,7 @@ function prepareLevel0 () {
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,sprites.castle.tileGrass2,sprites.castle.tileDarkGrass2,sprites.castle.tilePath5,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47,myTiles.tile48,myTiles.tile49,myTiles.tile50,myTiles.tile51,myTiles.tile52,myTiles.tile53,myTiles.tile54,myTiles.tile55,myTiles.tile56,myTiles.tile57,myTiles.tile58,myTiles.tile59,myTiles.tile60,myTiles.tile61,myTiles.tile62,myTiles.tile63,myTiles.tile64,myTiles.tile65,myTiles.tile66,myTiles.tile67,myTiles.tile68,myTiles.tile69,myTiles.tile70,myTiles.tile71,myTiles.tile72,myTiles.tile73,myTiles.tile74,myTiles.tile76],
+            [myTiles.tile0,sprites.castle.tileGrass2,sprites.castle.tileDarkGrass2,sprites.castle.tilePath5,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47,myTiles.tile48,myTiles.tile49,myTiles.tile50,myTiles.tile51,myTiles.tile52,myTiles.tile53,myTiles.tile54,myTiles.tile55,myTiles.tile56,myTiles.tile57,myTiles.tile58,myTiles.tile59,myTiles.tile60,myTiles.tile61,myTiles.tile62,myTiles.tile63,myTiles.tile64,myTiles.tile65,myTiles.tile66,myTiles.tile67,myTiles.tile68,myTiles.tile69,myTiles.tile70,myTiles.tile71,myTiles.tile72,myTiles.tile73,myTiles.tile74,myTiles.tile76,myTiles.tile77,myTiles.tile78,myTiles.tile79,myTiles.tile80],
             TileScale.Sixteen
         ))
     athena = sprites.create(img`
@@ -2235,7 +2311,7 @@ function prepareLevel1 () {
 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
 `)
     tiles.setTilemap(tiles.createTilemap(
-            hex`30001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003c3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3b0000000000000004000400040004000400040004000400040004000004000400040004000400040004000400040004000000000000000005000500050005000500050005000500050005000005000500050005000500050005000500050005000000000000000005000500050005000500050005000500050005000005000500050005000500050005000500050005000000000000000006000600060006000600060006000600060006000006000600060006000600060006000600060006000000000000003c3a3a3a3a3a3a3a4c0909090909090909090909090909090909090909090909094d3a3a3a3a3a3a3a3b000000000000002f30303030303109090909090909090909090909090909090909090909090909092f30303030303100000000000000002f30303030303109090909090909090909090909090909090909090909090909093030303030303000000000000000002c2d2d2d2d2d2e09090909090909090909090909090909090909090909090909092c2d2d2d2d2d2e00000000000000002f30303030303109090909090909090909090909090909090909090909090909092f30303030303100000000000000002c2d2d2d2d2d2e09090909090909090909090909090909090909090909090909092c2d2d2d2d2d2e000000000000000a090909090909090909090909090909090909090909090909090909090909090909090909090909090b00000000002a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a`,
+            hex`30001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003c3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3a3b0000000000000004000400040004000400040004000400040004000004000400040004000400040004000400040004000000000000000005000500050005000500050005000500050005000005000500050005000500050005000500050005000000000000000005000500050005000500050005000500050005000005000500050005000500050005000500050005000000000000000006000600060006000600060006000600060006000006000600060006000600060006000600060006000000000000003c3a3a3a3a3a3a3a4c0909090909090909090909090909090909090909090909094d3a3a3a3a3a3a3a3b000000000000002f30303030304f09090909090909090909090909090909090909090909090909095130303030303100000000000000002f30303030304f09090909090909090909090909090909090909090909090909095130303030303000000000000000002c2d2d2d2d2d4e0909090909090909090909090909090909090909090909090909502d2d2d2d2d2e00000000000000002f30303030304f09090909090909090909090909090909090909090909090909095130303030303100000000000000002c2d2d2d2d2d4e0909090909090909090909090909090909090909090909090909502d2d2d2d2d2e000000000000000a090909090909090909090909090909090909090909090909090909090909090909090909090909090b00000000002a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a2a`,
             img`
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
@@ -2254,7 +2330,7 @@ function prepareLevel1 () {
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,sprites.castle.tileGrass2,sprites.castle.tileDarkGrass2,sprites.castle.tilePath5,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,sprites.castle.tileGrass1,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47,myTiles.tile48,myTiles.tile49,myTiles.tile50,myTiles.tile51,myTiles.tile52,myTiles.tile53,myTiles.tile54,myTiles.tile55,myTiles.tile56,myTiles.tile57,myTiles.tile58,myTiles.tile59,myTiles.tile60,myTiles.tile61,myTiles.tile62,myTiles.tile63,myTiles.tile64,myTiles.tile65,myTiles.tile66,myTiles.tile67,myTiles.tile68,myTiles.tile69,myTiles.tile70,myTiles.tile71,myTiles.tile72,myTiles.tile73,myTiles.tile74,myTiles.tile76],
+            [myTiles.tile0,sprites.castle.tileGrass2,sprites.castle.tileDarkGrass2,sprites.castle.tilePath5,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,sprites.castle.tileGrass1,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47,myTiles.tile48,myTiles.tile49,myTiles.tile50,myTiles.tile51,myTiles.tile52,myTiles.tile53,myTiles.tile54,myTiles.tile55,myTiles.tile56,myTiles.tile57,myTiles.tile58,myTiles.tile59,myTiles.tile60,myTiles.tile61,myTiles.tile62,myTiles.tile63,myTiles.tile64,myTiles.tile65,myTiles.tile66,myTiles.tile67,myTiles.tile68,myTiles.tile69,myTiles.tile70,myTiles.tile71,myTiles.tile72,myTiles.tile73,myTiles.tile74,myTiles.tile76,myTiles.tile77,myTiles.tile78,myTiles.tile79,myTiles.tile80],
             TileScale.Sixteen
         ))
     if (athena) {
@@ -2263,16 +2339,16 @@ function prepareLevel1 () {
     friezeLeft = sprites.create(img`
 c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 1 1 1 1 c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 
 c b 1 b b b b b b b b b b b b b b b b b b b b b c c c c 1 1 1 1 1 c b b c c c 1 b c b c c c d c c c c c b 1 c c c b b b b b b b b b b b b b b b b b b c c c d d d d d 1 c b b b b b b b b b b b b b b b b b b b b b b b b c c c 
-c 1 1 1 1 1 1 1 1 1 1 c 1 1 c c d d d d d d d d c c 1 1 1 1 1 1 1 c b c c 1 1 1 1 c c d c d b b b 1 1 c b d b c c c d d d d c c d d d d d d d d d d c c c c c d d d d 1 c c b b b c c b d c d c d c c c c c c b b c c d d 3 c 3 
-1 1 1 1 1 1 1 1 1 1 1 1 1 b b b d d d d d d d d c 1 1 1 1 1 1 1 1 c d c c 1 1 1 1 c 1 d d d b b c 1 1 b c d b d c d d d d d d d d d d d d d d d d c c b 1 1 c d d d 1 1 1 c b b d d c c d c d c c d d d d d d d d d d d d 3 c c 
-c 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 b d d d d d d d c 1 1 1 1 1 1 1 1 c d c 1 b 1 1 1 c c c d d b b 1 1 1 1 c d b b c d d d d d d c d d d d d d d d d c c b 1 1 c d d d 1 1 1 c 1 1 b d c c c c d c c d d d d d d d d d d d d 3 c c 
-c d 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 b b d d d d c c 1 b 1 1 1 1 1 1 c c c b b 1 1 1 d c c d d d b b 1 1 1 b 1 b b c c d d d d d d d d d d d d d d d b c 1 1 1 d c d d 1 1 1 1 c c c c c c c d c c d d d d d d d d d d d d d 3 c c 
-1 1 1 1 d 1 1 b 1 1 1 d 1 1 1 1 1 1 b b b d d c c d 1 1 1 1 1 1 c d c 1 b 1 1 1 1 1 1 c d d d b b 1 1 c c c b b c 1 d b b b c d d d d d d d d d d b b 1 1 1 d c d d 1 1 1 1 1 1 1 c c c c d c c d d d d d d d d d d d d d 3 c c 
-c 1 1 1 1 1 b 1 1 1 d b 1 1 1 1 1 1 1 1 1 b b d d d b b b b 1 c c d c b 1 1 1 1 1 1 1 1 c c c b b 1 1 1 1 c b b 1 1 1 1 1 1 b b d d d d d d d d d b b 1 1 1 1 c d d 1 1 1 1 1 1 1 1 1 c c d c c d d d d d d b d d d d d d 3 c c 
-c d c b b b 1 1 1 1 b b 1 1 d 1 1 1 1 1 1 1 b b 1 1 1 1 1 1 1 1 1 1 c 1 1 1 1 1 1 c b 1 1 c c c b b 1 1 1 c d b d c 1 1 1 1 1 1 b b d d d d d d d b b c 1 1 1 c d d 1 b b b b b d 1 1 c 1 1 c c d d d 1 1 1 b b c c d d d 3 c c 
-c c c d b 1 1 1 b b 1 1 1 1 b b 1 1 1 1 1 1 1 b b 1 1 1 1 1 1 1 1 1 1 1 c 1 1 d c c b b b c c c c c c c c c d d c d d d d d c c 1 1 b b d d d d d b b 1 c 1 1 1 c d d c c c c b 1 1 1 1 1 1 1 c d d 1 1 1 1 1 1 b c c d d 3 c c 
-c c c c c c c c c c 1 1 b b 1 1 1 1 1 1 b 1 1 1 1 1 1 1 1 1 1 1 1 b 1 1 c 1 1 c c d d b b b 1 1 1 1 c c c c b d c d d d d d c 1 d d 1 b b d d d d b d 1 c 1 1 1 c c c c c 1 c 1 1 1 1 1 1 1 1 c c d d d d b b 1 1 b c d d 3 c c 
-. c d b 1 1 1 d d 1 c c c c c 1 1 1 1 1 b 1 1 1 1 1 1 1 1 1 1 1 1 b b c c 1 c d d d b c c b 1 d 1 1 1 1 1 c c b c d d d d 1 c c c c c 1 b d d d d d d d 1 c 1 1 1 c c 1 1 1 1 1 1 1 1 1 1 1 1 1 1 c d d d d b b 1 1 b d d 3 c c 
+c 1 1 1 1 1 1 1 1 1 1 c 1 1 c c d d d d d d d d c c 1 1 1 1 1 1 1 c b c c 1 1 1 1 c c d c d b b b 1 1 c b d b c c c d d d d c c d d d d d d d d d d c c c c c d d d d 1 c c b b b c c b d c d c d c c c c c c b b c c d d c c c 
+1 1 1 1 1 1 1 1 1 1 1 1 1 b b b d d d d d d d d c 1 1 1 1 1 1 1 1 c d c c 1 1 1 1 c 1 d d d b b c 1 1 b c d b d c d d d d d d d d d d d d d d d d c c b 1 1 c d d d 1 1 1 c b b d d c c d c d c c d d d d d d d d d d d d c c c 
+c 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 b d d d d d d d c 1 1 1 1 1 1 1 1 c d c 1 b 1 1 1 c c c d d b b 1 1 1 1 c d b b c d d d d d d c d d d d d d d d d c c b 1 1 c d d d 1 1 1 c 1 1 b d c c c c d c c d d d d d d d d d d d d c c c 
+c d 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 b b d d d d c c 1 b 1 1 1 1 1 1 c c c b b 1 1 1 d c c d d d b b 1 1 1 b 1 b b c c d d d d d d d d d d d d d d d b c 1 1 1 d c d d 1 1 1 1 c c c c c c c d c c d d d d d d d d d d d d d c c c 
+1 1 1 1 d 1 1 b 1 1 1 d 1 1 1 1 1 1 b b b d d c c d 1 1 1 1 1 1 c d c 1 b 1 1 1 1 1 1 c d d d b b 1 1 c c c b b c 1 d b b b c d d d d d d d d d d b b 1 1 1 d c d d 1 1 1 1 1 1 1 c c c c d c c d d d d d d d d d d d d d c c c 
+c 1 1 1 1 1 b 1 1 1 d b 1 1 1 1 1 1 1 1 1 b b d d d b b b b 1 c c d c b 1 1 1 1 1 1 1 1 c c c b b 1 1 1 1 c b b 1 1 1 1 1 1 b b d d d d d d d d d b b 1 1 1 1 c d d 1 1 1 1 1 1 1 1 1 c c d c c d d d d d d b d d d d d d c c c 
+c d c b b b 1 1 1 1 b b 1 1 d 1 1 1 1 1 1 1 b b 1 1 1 1 1 1 1 1 1 1 c 1 1 1 1 1 1 c b 1 1 c c c b b 1 1 1 c d b d c 1 1 1 1 1 1 b b d d d d d d d b b c 1 1 1 c d d 1 b b b b b d 1 1 c 1 1 c c d d d 1 1 1 b b c c d d d c c c 
+c c c d b 1 1 1 b b 1 1 1 1 b b 1 1 1 1 1 1 1 b b 1 1 1 1 1 1 1 1 1 1 1 c 1 1 d c c b b b c c c c c c c c c d d c d d d d d c c 1 1 b b d d d d d b b 1 c 1 1 1 c d d c c c c b 1 1 1 1 1 1 1 c d d 1 1 1 1 1 1 b c c d d c c c 
+c c c c c c c c c c 1 1 b b 1 1 1 1 1 1 b 1 1 1 1 1 1 1 1 1 1 1 1 b 1 1 c 1 1 c c d d b b b 1 1 1 1 c c c c b d c d d d d d c 1 d d 1 b b d d d d b d 1 c 1 1 1 c c c c c 1 c 1 1 1 1 1 1 1 1 c c d d d d b b 1 1 b c d d c c c 
+. c d b 1 1 1 d d 1 c c c c c 1 1 1 1 1 b 1 1 1 1 1 1 1 1 1 1 1 1 b b c c 1 c d d d b c c b 1 d 1 1 1 1 1 c c b c d d d d 1 c c c c c 1 b d d d d d d d 1 c 1 1 1 c c 1 1 1 1 1 1 1 1 1 1 1 1 1 1 c d d d d b b 1 1 b d d c c c 
 . c b 1 1 1 1 d 1 1 1 b b 1 c c d b 1 b 1 1 1 1 1 1 1 1 b 1 1 1 1 1 b c c c d 1 d d b c d d 1 1 1 1 1 1 1 1 d c b d d d c c c 1 1 d c c 1 b b d d d d d d c 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 c c d d c b 1 1 1 1 c c c c 
 c c d d 1 1 d d 1 b b b d b d 1 c 1 1 b 1 1 b 1 1 1 1 b b 1 1 1 1 1 b b d d c 1 d d b b d d 1 d d d 1 1 1 1 1 c b d d d c c 1 1 1 b b d 1 1 b d d d d d d c c 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 c c c c c b 1 1 1 1 c c c c 
 c d d d 1 1 d 1 1 b d d d d b b c c c b 1 1 b 1 b b b b b b b b b 1 b d d d c c c c 1 1 b c c 1 1 1 1 1 1 1 1 c b d d d c c 1 c c b b b 1 1 b b d d d d d d d c 1 d 1 1 1 1 1 1 1 1 1 1 1 b b 1 1 1 1 c d c c c b 1 1 1 1 c c c 
@@ -2286,23 +2362,23 @@ c d d d c 1 1 1 1 d 1 1 1 1 1 b b b d 1 1 c 1 1 1 1 1 1 1 1 1 1 b b 1 1 c c 1 1 
 c c d d c 1 1 1 1 1 1 1 1 1 1 1 1 b b d 1 c c 1 1 1 1 1 b b b c c c c c c c 1 1 1 d b 1 1 1 1 c c b c b 1 1 1 1 1 1 1 1 1 c c c d c 1 d 1 1 1 1 1 1 1 1 1 b d d d d d 1 b b b 1 1 1 1 1 1 1 1 1 b 1 1 c 1 1 b d 1 c c d d c c c 
 c c d d c b b b d 1 1 1 1 1 1 1 1 1 b b 1 c c 1 1 1 1 b 1 1 1 1 1 1 1 c c c 1 1 1 b b 1 1 1 1 c b b b b b 1 1 1 1 1 1 1 1 1 1 c d c c 1 1 1 1 1 1 1 1 1 1 1 b d d 1 1 b b 1 1 1 1 1 1 1 1 1 1 1 b 1 1 1 d d b c c d c d d c c c 
 c c d d d c 1 1 b b b b c 1 1 1 1 1 1 b 1 1 c 1 1 1 1 b 1 1 1 1 1 1 1 1 1 1 c 1 1 b b 1 1 1 1 c b b b c 1 b 1 1 1 1 1 1 1 1 1 c d d c 1 1 1 1 1 1 1 1 1 1 1 b b 1 1 b b b b 1 1 1 1 1 1 b 1 1 c b 1 1 d d b c d d c d d d c c c 
-c c d d d c 1 1 1 1 1 1 b b 1 1 1 1 1 c 1 1 1 c 1 1 b b 1 1 1 1 1 1 1 1 1 1 c 1 1 b b 1 1 1 1 c b b b c c b 1 1 1 1 1 1 1 1 d 1 c d c 1 1 1 1 1 b 1 b b b 1 d b 1 b b 1 1 b b b 1 1 1 1 b 1 1 1 b d 1 d b b c d c d d d d c . c 
-c c d d d c c c 1 1 1 1 1 1 b 1 1 1 1 c 1 1 1 c c b b 1 1 1 1 c c c c c c d c 1 1 1 b b b 1 1 c c b b c c 1 b 1 1 1 1 1 1 1 1 1 c d c 1 1 1 1 b b b 1 1 1 1 1 1 1 b b b d 1 b b b 1 1 1 1 1 d 1 d b b b c c d d d d d d d c . c 
+c c d d d c 1 1 1 1 1 1 b b 1 1 1 1 1 c 1 1 1 c 1 1 b b 1 1 1 1 1 1 1 1 1 1 c 1 1 b b 1 1 1 1 c b b b c c b 1 1 1 1 1 1 1 1 d 1 c d c 1 1 1 1 1 b 1 b b b 1 d b 1 b b 1 1 b b b 1 1 1 1 b 1 1 1 b d 1 d b b c d c d d d d c c c 
+c c d d d c c c 1 1 1 1 1 1 b 1 1 1 1 c 1 1 1 c c b b 1 1 1 1 c c c c c c d c 1 1 1 b b b 1 1 c c b b c c 1 b 1 1 1 1 1 1 1 1 1 c d c 1 1 1 1 b b b 1 1 1 1 1 1 1 b b b d 1 b b b 1 1 1 1 1 d 1 d b b b c c d d d d d d d c c c 
 c c d d d d c d 1 1 1 1 1 1 1 b 1 1 1 c 1 1 1 c c b b 1 1 1 c c b c c d d d c 1 1 1 1 b b b b b c c c c c 1 b b b 1 1 1 1 1 1 1 c d c 1 1 b b 1 1 1 1 1 1 1 1 1 b b 1 b b d 1 1 d b 1 1 1 1 d c 1 b b c c d d d d d d d d c c c 
 c c d d b b b b b d 1 1 1 1 d 1 b c 1 c c 1 1 c 1 b b 1 1 1 d b b c c d d d 1 1 1 1 1 1 d b b b 1 1 1 c 1 1 1 1 1 b b 1 1 1 1 1 c d c 1 b 1 b 1 1 1 1 1 1 1 1 1 b 1 1 1 1 b d 1 1 1 b b 1 b 1 c d 1 b c c d d d d d d d d c c c 
 c d b b b b b b b b b b 1 1 1 1 1 1 b 1 1 c c 1 1 1 1 1 1 d d b c c d d c b 1 1 1 1 1 c 1 1 1 1 1 c c c 1 1 1 1 1 1 b 1 1 1 1 c d d c 1 1 1 b 1 1 1 1 1 1 1 1 b b b d 1 1 1 b d 1 1 b 1 1 1 1 c 1 1 b b c c d d d d d d d c c c 
 c b b b b b b b 1 b b b b 1 1 1 1 1 1 1 c 1 1 1 1 1 1 1 1 c b b c c d c 1 b 1 1 1 1 1 1 1 1 1 1 1 c d 1 1 1 1 1 1 1 b 1 1 1 1 b d d c 1 1 1 b b 1 1 1 1 1 1 1 1 b b d d d 1 b 1 1 1 b b 1 c 1 b d 1 1 b b c c b d d d d d c c c 
 c c c c c c c c b 1 1 b b b b c c 1 c 1 1 1 1 1 1 1 1 d b b c c d d 1 1 1 b 1 1 1 1 1 1 1 1 1 1 c c 1 1 1 1 1 1 1 1 1 1 1 1 1 c d d c 1 1 1 b b 1 1 1 1 1 1 1 1 c 1 b c c c b b 1 1 1 b 1 b d 1 b d 1 b d c c c d d d d d c c c 
 c c d d d d d 1 c c c d d b b b d d 1 1 1 1 1 1 1 d d b b c c c 1 1 1 1 1 b b 1 1 1 1 1 1 1 1 b b d 1 1 1 1 1 1 1 d 1 1 1 1 1 b c c 1 1 1 1 b d 1 1 1 1 1 1 1 1 1 1 1 b 1 1 1 b 1 1 1 d b 1 1 d 1 b d 1 b d c d c d d d d c c c 
-c c d d d d d c c b b c c 1 b b b b 1 1 1 1 1 1 1 b b b c c c 1 1 1 1 1 1 1 b b b b b 1 1 1 1 b b 1 1 1 1 1 1 1 c c d 1 1 1 1 1 c c 1 1 1 1 b 1 1 1 1 1 1 1 1 1 1 d d d 1 1 1 b 1 1 1 d b 1 1 d 1 d b d 1 b d c b c d d d 3 c c 
-c c d d d d c c 1 1 d 1 b c c b b b b 1 b b b b b b b c c 1 1 1 1 1 1 1 1 1 1 1 1 1 b b b 1 1 b b c 1 1 1 1 1 d c b d 1 1 1 1 1 c c 1 1 1 1 b 1 1 1 1 1 1 1 1 1 1 d d d 1 1 1 1 b 1 1 d d b 1 1 d 1 b d 1 b 1 d c c c 3 d 3 c c 
-c c d d d c d 1 1 1 1 d d 1 b c c b b b b b b b b b c 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 b b c 1 1 1 1 1 c c d b 1 1 1 1 1 d c c 1 1 1 b 1 1 1 1 1 1 1 1 1 1 d d 1 1 1 1 1 b b 1 b d d b 1 1 1 d b d 1 b 1 1 b c c c 3 c c 
+c c d d d d d c c b b c c 1 b b b b 1 1 1 1 1 1 1 b b b c c c 1 1 1 1 1 1 1 b b b b b 1 1 1 1 b b 1 1 1 1 1 1 1 c c d 1 1 1 1 1 c c 1 1 1 1 b 1 1 1 1 1 1 1 1 1 1 d d d 1 1 1 b 1 1 1 d b 1 1 d 1 d b d 1 b d c b c d d d c c c 
+c c d d d d c c 1 1 d 1 b c c b b b b 1 b b b b b b b c c 1 1 1 1 1 1 1 1 1 1 1 1 1 b b b 1 1 b b c 1 1 1 1 1 d c b d 1 1 1 1 1 c c 1 1 1 1 b 1 1 1 1 1 1 1 1 1 1 d d d 1 1 1 1 b 1 1 d d b 1 1 d 1 b d 1 b 1 d c c c 3 d c c c 
+c c d d d c d 1 1 1 1 d d 1 b c c b b b b b b b b b c 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 b b c 1 1 1 1 1 c c d b 1 1 1 1 1 d c c 1 1 1 b 1 1 1 1 1 1 1 1 1 1 d d 1 1 1 1 1 b b 1 b d d b 1 1 1 d b d 1 b 1 1 b c c c c c c 
 c c d d c 1 d 1 1 1 d 1 1 1 1 b c b b b b b b c c d 1 1 1 1 1 1 c 1 1 1 1 1 1 c b 1 b 1 1 1 1 b b c 1 1 1 1 d c c d 1 b 1 1 1 1 1 1 c d 1 1 b 1 1 c c c c c c c 1 d d 1 d 1 1 1 1 b d 1 b d d b c 1 1 b d d b d 1 1 d c c c c c 
 c c d c 1 1 1 1 1 d d 1 1 1 b b b c c c c c c c c 1 1 1 1 1 1 1 c 1 1 1 1 1 1 c b b b b 1 1 1 b b c c 1 1 1 c c d d 1 1 d 1 1 1 1 d 1 d 1 1 b 1 1 1 1 1 b 1 1 d 1 1 d 1 d 1 1 1 1 1 b 1 b d d d b c 1 1 1 d 1 b d 1 d 3 b c c c 
-c c d c 1 1 d 1 d d d d d d b d d d d d d c c c 1 1 1 1 1 1 1 1 c b b 1 1 1 1 c b b 1 b 1 1 1 b b c c 1 1 1 d c d d 1 1 1 b 1 1 1 1 1 1 1 1 b 1 1 1 1 1 c b 1 1 1 1 d 1 1 1 1 1 1 1 b d 1 b d d d b c b 1 1 d 1 b b 1 d b c . c 
-c c c 1 1 1 d d d d c b b b b d d d d c c 1 1 1 1 1 1 1 1 1 1 b c 1 1 1 1 1 1 c b b c b 1 1 1 1 b b c c 1 1 1 d c 1 d 1 1 d b 1 1 1 1 d 1 1 1 1 1 1 1 1 c b b 1 1 1 1 d 1 1 d 1 1 1 1 1 1 d b d d d b c b 1 b d 1 1 b b d b . c 
-c 1 1 1 1 d d d b b b d d d d d c c c 1 1 1 1 1 1 1 1 1 d b b 1 c 1 1 1 1 1 1 c b 1 1 b 1 1 1 1 b b c d c 1 1 1 c c d 1 1 d b 1 1 1 1 1 1 1 1 1 1 1 1 c c d b b 1 1 1 1 1 1 d 1 1 1 1 1 1 d d b d d b 1 c 1 1 d d 1 d b d b 3 c 
-1 1 1 1 d d d c d 1 1 d 1 d d c 1 1 1 1 1 1 1 1 1 c c b b d 1 1 c c 1 1 1 1 1 c b 1 1 1 b b 1 1 1 b c d c 1 1 1 1 c 1 d 1 d b b 1 1 1 1 d 1 1 1 1 1 1 c d d d b 1 1 1 1 1 1 d 1 d 1 1 1 1 1 d b d d b 1 1 c 1 1 d 1 1 b d c b c 
+c c d c 1 1 d 1 d d d d d d b d d d d d d c c c 1 1 1 1 1 1 1 1 c b b 1 1 1 1 c b b 1 b 1 1 1 b b c c 1 1 1 d c d d 1 1 1 b 1 1 1 1 1 1 1 1 b 1 1 1 1 1 c b 1 1 1 1 d 1 1 1 1 1 1 1 b d 1 b d d d b c b 1 1 d 1 b b 1 d b c c c 
+c c c 1 1 1 d d d d c b b b b d d d d c c 1 1 1 1 1 1 1 1 1 1 b c 1 1 1 1 1 1 c b b c b 1 1 1 1 b b c c 1 1 1 d c 1 d 1 1 d b 1 1 1 1 d 1 1 1 1 1 1 1 1 c b b 1 1 1 1 d 1 1 d 1 1 1 1 1 1 d b d d d b c b 1 b d 1 1 b b d b c c 
+c 1 1 1 1 d d d b b b d d d d d c c c 1 1 1 1 1 1 1 1 1 d b b 1 c 1 1 1 1 1 1 c b 1 1 b 1 1 1 1 b b c d c 1 1 1 c c d 1 1 d b 1 1 1 1 1 1 1 1 1 1 1 1 c c d b b 1 1 1 1 1 1 d 1 1 1 1 1 1 d d b d d b 1 c 1 1 d d 1 d b d b c c 
+1 1 1 1 d d d c d 1 1 d 1 d d c 1 1 1 1 1 1 1 1 1 c c b b d 1 1 c c 1 1 1 1 1 c b 1 1 1 b b 1 1 1 b c d c 1 1 1 1 c 1 d 1 d b b 1 1 1 1 d 1 1 1 1 1 1 c d d d b 1 1 1 1 1 1 d 1 d 1 1 1 1 1 d b d d b 1 1 c 1 1 d 1 1 b d c c c 
 1 1 1 1 d d c 1 1 1 1 1 1 c c c 1 1 1 1 1 1 1 d c c 1 c c c c c c c 1 1 1 1 1 c b b b b b b b 1 1 b c d d c c 1 1 1 c 1 1 d d b b 1 1 1 1 1 1 1 1 1 1 c d d d d b 1 1 1 1 d 1 1 d 1 1 1 1 1 b d b b d b 1 c 1 1 b d 1 b 1 c c c 
 1 1 1 1 d c 1 1 1 1 1 1 c c 1 1 1 1 1 c c c c b b 1 1 1 1 1 1 1 1 1 1 1 1 1 1 c b 1 1 1 1 b 1 1 1 1 b c d d c 1 1 1 c c d d d b b b 1 1 1 1 1 1 1 1 c d d d d d d 1 1 d 1 1 1 d d 1 1 1 1 1 1 1 1 d b b d 1 c c c 1 1 1 1 1 c c 
 1 d 1 1 1 1 1 1 1 1 1 c c 1 1 1 1 1 d b c c d d 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 c b 1 1 1 1 1 1 1 1 b b c d d c c 1 1 d c d d d d b b b 1 d 1 1 1 1 1 c d d d d d d 1 d 1 d 1 d d d d 1 1 1 1 d b 1 1 d d b 1 1 1 d c c d d d c c 
@@ -2629,7 +2705,7 @@ function prepareLevel2 () {
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `,
-            [myTiles.tile0,sprites.castle.tileGrass2,sprites.castle.tileDarkGrass2,sprites.castle.tilePath5,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,sprites.castle.tileGrass1,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47,myTiles.tile48,myTiles.tile49,myTiles.tile50,myTiles.tile51,myTiles.tile52,myTiles.tile53,myTiles.tile54,myTiles.tile55,myTiles.tile56,myTiles.tile57,myTiles.tile58,myTiles.tile59,myTiles.tile60,myTiles.tile61,myTiles.tile62,myTiles.tile63,myTiles.tile64,myTiles.tile65,myTiles.tile66,myTiles.tile67,myTiles.tile68,myTiles.tile69,myTiles.tile70,myTiles.tile71,myTiles.tile72,myTiles.tile73,myTiles.tile74,myTiles.tile76],
+            [myTiles.tile0,sprites.castle.tileGrass2,sprites.castle.tileDarkGrass2,sprites.castle.tilePath5,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,sprites.castle.tileGrass1,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47,myTiles.tile48,myTiles.tile49,myTiles.tile50,myTiles.tile51,myTiles.tile52,myTiles.tile53,myTiles.tile54,myTiles.tile55,myTiles.tile56,myTiles.tile57,myTiles.tile58,myTiles.tile59,myTiles.tile60,myTiles.tile61,myTiles.tile62,myTiles.tile63,myTiles.tile64,myTiles.tile65,myTiles.tile66,myTiles.tile67,myTiles.tile68,myTiles.tile69,myTiles.tile70,myTiles.tile71,myTiles.tile72,myTiles.tile73,myTiles.tile74,myTiles.tile76,myTiles.tile77,myTiles.tile78,myTiles.tile79,myTiles.tile80],
             TileScale.Sixteen
         ))
     if (athena) {
