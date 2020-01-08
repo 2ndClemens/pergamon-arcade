@@ -2806,6 +2806,114 @@ c d c . . c . .
 . . . c d 1 b . 
 . . . c d 1 c . 
 `, SpriteKind.item)
+animation.runImageAnimation(
+nike,
+[img`
+. c . . 5 . . 5 
+c d c . . c . . 
+. c . . c 1 c . 
+. b . 5 c d c . 
+5 b . . . c . . 
+. c b . b b . 5 
+. . c b d d c . 
+. . . c d 1 d c 
+. . . c d 1 d c 
+. 5 . c d 1 b c 
+. . . c d 1 b 5 
+. . . c d 1 b . 
+. . . c d 1 b . 
+. . 5 c d 1 b . 
+. . . c d 1 b 5 
+5 . . c d 1 c . 
+`,img`
+. c . . . . . . 
+c d c . . c . . 
+. c . . c 1 c . 
+. b . . c d c . 
+. b . . . c . . 
+. c b . b b . . 
+. . c b d d c . 
+. . . c d 1 d c 
+. . . c d 1 d c 
+. . . c d 1 b c 
+. . . c d 1 b . 
+. . . c d 1 b . 
+. . . c d 1 b . 
+. . . c d 1 b . 
+. . . c d 1 b . 
+. . . c d 1 c . 
+`,img`
+. c . . . . 5 . 
+c d c . . c . . 
+. c 5 . c 1 c . 
+. b . . c d c . 
+. b . . . c . 5 
+. c b . b b . . 
+. 5 c b d d c . 
+. . . c d 1 d c 
+5 . . c d 1 d c 
+. . . c d 1 b c 
+. . . c d 1 b . 
+. 5 . c d 1 b . 
+. . . c d 1 b 5 
+5 . . c d 1 b . 
+. . . c d 1 b . 
+. 5 . c d 1 c . 
+`,img`
+. c . . . . . . 
+c d c . . c . . 
+. c . . c 1 c . 
+. b . . c d c . 
+. b . . . c . . 
+. c b . b b . . 
+. . c b d d c . 
+. . . c d 1 d c 
+. . . c d 1 d c 
+. . . c d 1 b c 
+. . . c d 1 b . 
+. . . c d 1 b . 
+. . . c d 1 b . 
+. . . c d 1 b . 
+. . . c d 1 b . 
+. . . c d 1 c . 
+`,img`
+5 c . . . . . . 
+c d c . . c 5 . 
+. c . . c 1 c . 
+. b . . c d c 5 
+. b . . . c . . 
+. c b 5 b b . . 
+. . c b d d c . 
+. . 5 c d 1 d c 
+. . . c d 1 d c 
+. . . c d 1 b c 
+. 5 . c d 1 b . 
+. . . c d 1 b . 
+5 . . c d 1 b 5 
+. . . c d 1 b . 
+. . . c d 1 b . 
+. 5 . c d 1 c . 
+`,img`
+. c . . . . . . 
+c d c . . c . . 
+. c . . c 1 c . 
+. b . . c d c . 
+. b . . . c . . 
+. c b . b b . . 
+. . c b d d c . 
+. . . c d 1 d c 
+. . . c d 1 d c 
+. . . c d 1 b c 
+. . . c d 1 b . 
+. . . c d 1 b . 
+. . . c d 1 b . 
+. . . c d 1 b . 
+. . . c d 1 b . 
+. . . c d 1 c . 
+`],
+100,
+true
+)
 nike.setPosition(680, 215)
 nike.z = 4
 info.setScore(0)
