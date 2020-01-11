@@ -2235,6 +2235,10 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         }
     }
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    info.changeScoreBy(1)
+    otherSprite.destroy()
+})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     controller.moveSprite(hero, 100, 0)
     hero.setFlag(SpriteFlag.Ghost, false)
@@ -3050,13 +3054,13 @@ empty = sprites.create(img`
 currentObject = empty
 let previousDirection = "none"
 currentDirection = "idleRight"
+info.setScore(0)
 game.onUpdate(function () {
     setHeroDirection()
     if (currentObject == nike) {
         nike.x = hero.x + 5
         nike.y = hero.y - 10
     }
-    info.setScore(hero.vy)
     if (hero.tileKindAt(TileDirection.Bottom, myTiles.tile6) || hero.tileKindAt(TileDirection.Center, myTiles.tile6) || (hero.tileKindAt(TileDirection.Bottom, myTiles.tile83) || hero.tileKindAt(TileDirection.Center, myTiles.tile83) || (hero.tileKindAt(TileDirection.Bottom, myTiles.tile82) || hero.tileKindAt(TileDirection.Center, myTiles.tile82)))) {
         if (hero.vy >= 0) {
             controller.moveSprite(hero, 100, 50)
