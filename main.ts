@@ -2399,8 +2399,8 @@ function prepareLevel1 () {
         athena.destroy()
     }
     friezeLeft = sprites.create(img`
-. c c c c c c c c c c c c c c c c c c c c c c c c c c c c d d d d c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c . . 
-. b 1 b b b b b b b b b b b b b b b b b b b b b c c c c b b 1 1 1 c b b c c c 1 b c b c c c d c c c c c b 1 c c c b b b b b b b b b b b b b b b b b b c c c d d d d d b c b c c c c c c c c c c c b b b b b b b b b b b b c . . 
+. . c c c c c c c c c c c c c c c c c c c c c c c c c c c d d d d c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c . . 
+. . b b b b b b b b b b b b b b b b b b b b b b c c c c b b 1 1 1 c b b c c c 1 b c b c c c d c c c c c b 1 c c c b b b b b b b b b b b b b b b b b b c c c d d d d d b c b c c c c c c c c c c c b b b b b b b b b b b b c . . 
 d d 1 1 1 1 1 1 1 1 1 c 1 1 c c d d d d d d d d c c 1 1 b d 1 1 1 c b c c 1 1 1 1 c c d c d b b b 1 1 c b d b c c c d d d d c c d d d d d d d d d d c c c c c d d d c b c c c b c c c c c c c c d c c c c c c b b c c d d c . . 
 1 1 1 1 1 b 1 b 1 d d 1 1 b b b c c d d d d d d c 1 d d d 1 1 1 1 c d c c 1 1 1 1 c 1 d d d b b c 1 1 b c d b d c d d d d d d d d d d d d d d d d c c b 1 1 c d d d b 1 1 c b c d c c c d c d c c d d d d d d d d d d d d c . . 
 b 1 1 1 1 b 1 b b 1 1 d 1 1 1 1 b c c d d d d d c 1 1 d d 1 1 1 1 c d c 1 b 1 1 1 c c c d d b b 1 1 1 1 c d b b c d d d d d d c d d d d d d d d d c c b 1 1 d c c d b 1 1 c b c b d c c c c d c c d d d d d d d d d d d d c . . 
