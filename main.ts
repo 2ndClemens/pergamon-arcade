@@ -2534,6 +2534,72 @@ c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 1 c c c c c c c c c c 
     enemy1.setPosition(300, 196)
 }
 function prepareLevel2 () {
+    for (let value of coinPositions) {
+        coin = sprites.create(img`
+. . 4 4 4 . . 
+. 4 5 5 5 4 . 
+4 5 5 d 5 5 4 
+4 5 5 d 5 5 4 
+4 5 5 d 5 5 4 
+. 4 5 5 5 4 . 
+. . 4 4 4 . . 
+`, SpriteKind.Food)
+        coin.setPosition(value[0], value[1])
+        animation.runImageAnimation(
+        coin,
+        [img`
+. . 4 4 4 . . 
+. 4 5 5 5 4 . 
+4 5 5 d 5 5 4 
+4 5 5 d 5 5 4 
+4 5 5 d 5 5 4 
+. 4 5 5 5 4 . 
+. . 4 4 4 . . 
+`,img`
+. . . 4 . . . 
+. . 4 5 4 . . 
+. 4 5 5 5 4 . 
+. 4 5 5 5 4 . 
+. 4 5 5 5 4 . 
+. . 4 5 4 . . 
+. . . 4 . . . 
+`,img`
+. . . 4 . . . 
+. . 4 5 4 . . 
+. . 4 5 4 . . 
+. . 4 5 4 . . 
+. . 4 5 4 . . 
+. . 4 5 4 . . 
+. . . 4 . . . 
+`,img`
+. . . 4 . . . 
+. . . 4 . . . 
+. . . 4 . . . 
+. . . 4 . . . 
+. . . 4 . . . 
+. . . 4 . . . 
+. . . 4 . . . 
+`,img`
+. . . 4 . . . 
+. . 4 5 4 . . 
+. . 4 5 4 . . 
+. . 4 5 4 . . 
+. . 4 5 4 . . 
+. . 4 5 4 . . 
+. . . 4 . . . 
+`,img`
+. . . 4 . . . 
+. . 4 5 4 . . 
+. 4 5 5 5 4 . 
+. 4 5 5 5 4 . 
+. 4 5 5 5 4 . 
+. . 4 5 4 . . 
+. . . 4 . . . 
+`],
+        70,
+        true
+        )
+    }
     scene.setBackgroundImage(img`
 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
@@ -2712,6 +2778,10 @@ function prepareLevel2 () {
     hero.z = 1
 }
 function prepareLevel (num: number) {
+    leftOverCoins = sprites.allOfKind(SpriteKind.Food)
+    for (let value of leftOverCoins) {
+        value.destroy()
+    }
     if (num == 0) {
         prepareLevel0()
     }
@@ -2781,6 +2851,8 @@ function setFireAnimation (mySprite: Sprite) {
     true
     )
 }
+let leftOverCoins: Sprite[] = []
+let coin: Sprite = null
 let friezeRight: Sprite = null
 let friezeLeft: Sprite = null
 let enemy1: Sprite = null
@@ -2793,75 +2865,9 @@ let nikeInfoSeen = false
 let athenaInfoSeen = false
 let nike: Sprite = null
 let hero: Sprite = null
-let coin: Sprite = null
+let coinPositions: number[][] = []
 music.setVolume(30)
-let coinPositions = [[50, 50, 0], [100, 50, 0], [150, 50, 0], [200, 50, 0], [50, 150, 0], [100, 150, 0], [150, 150, 0], [200, 150, 0]]
-for (let value of coinPositions) {
-    coin = sprites.create(img`
-. . 4 4 4 . . 
-. 4 5 5 5 4 . 
-4 5 5 d 5 5 4 
-4 5 5 d 5 5 4 
-4 5 5 d 5 5 4 
-. 4 5 5 5 4 . 
-. . 4 4 4 . . 
-`, SpriteKind.Food)
-    coin.setPosition(value[0], value[1])
-    animation.runImageAnimation(
-    coin,
-    [img`
-. . 4 4 4 . . 
-. 4 5 5 5 4 . 
-4 5 5 d 5 5 4 
-4 5 5 d 5 5 4 
-4 5 5 d 5 5 4 
-. 4 5 5 5 4 . 
-. . 4 4 4 . . 
-`,img`
-. . . 4 . . . 
-. . 4 5 4 . . 
-. 4 5 5 5 4 . 
-. 4 5 5 5 4 . 
-. 4 5 5 5 4 . 
-. . 4 5 4 . . 
-. . . 4 . . . 
-`,img`
-. . . 4 . . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . . 4 . . . 
-`,img`
-. . . 4 . . . 
-. . . 4 . . . 
-. . . 4 . . . 
-. . . 4 . . . 
-. . . 4 . . . 
-. . . 4 . . . 
-. . . 4 . . . 
-`,img`
-. . . 4 . . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . . 4 . . . 
-`,img`
-. . . 4 . . . 
-. . 4 5 4 . . 
-. 4 5 5 5 4 . 
-. 4 5 5 5 4 . 
-. 4 5 5 5 4 . 
-. . 4 5 4 . . 
-. . . 4 . . . 
-`],
-    70,
-    true
-    )
-}
+coinPositions = [[50, 50, 0], [100, 50, 0], [150, 50, 0], [200, 50, 0], [50, 150, 0], [100, 150, 0], [150, 150, 0], [200, 150, 0]]
 hero = sprites.create(img`
 . . . . . e e e e . . . . . . . 
 . . . . e e d d d e . . . . . . 
