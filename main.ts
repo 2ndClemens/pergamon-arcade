@@ -1545,7 +1545,7 @@ d b b b b b b b b b b b b b 1 d
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Event, function (sprite, otherSprite) {
     if (otherSprite == athena && athenaInfoSeen == false) {
-        game.showLongText("ATHENA NIKEPHOROS       \"phoros\" means \"carry\" but she is not carrying anything...", DialogLayout.Bottom)
+        game.showLongText("ATHENA NIKEPHOROS       \"nikephoros\" means \"bringing victory\" but her hand is empty...", DialogLayout.Bottom)
         athenaInfoSeen = true
         animation.stopAnimation(animation.AnimationTypes.All, hero)
     }
@@ -1836,7 +1836,7 @@ function setHeroDirection () {
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.item, function (sprite, otherSprite) {
     if (otherSprite == nike && nikeInfoSeen == false) {
-        game.showLongText("A small statue of NIKE. This clearly belongs someplace else. Press 'B' to pick it up or put it down.", DialogLayout.Bottom)
+        game.showLongText("A small statue of NIKE. This clearly belongs someplace else.       Press 'B' to pick it up or put it down.", DialogLayout.Bottom)
         nikeInfoSeen = true
         animation.stopAnimation(animation.AnimationTypes.All, hero)
     }
@@ -2611,7 +2611,8 @@ function setCoinPositionsLevel2 () {
     coinPositionsLevel2 = [[32, 16, 0], [96, 16, 0], [172, 16, 0], [216, 32, 0], [232, 24, 0], [248, 16, 0], [264, 24, 0], [280, 32, 0], [324, 16, 0], [400, 16, 0], [464, 16, 0], [48, 144, 0], [96, 144, 0], [148, 144, 0], [216, 160, 0], [232, 152, 0], [248, 144, 0], [264, 152, 0], [280, 160, 0], [348, 144, 0], [400, 144, 0], [448, 144, 0], [48, 272, 0], [96, 272, 0], [148, 272, 0], [216, 288, 0], [232, 280, 0], [248, 272, 0], [264, 280, 0], [280, 288, 0], [348, 272, 0], [400, 272, 0], [448, 272, 0]]
 }
 function prepareLevel2 () {
-    coin = sprites.create(img`
+    for (let value2 of coinPositionsLevel2) {
+        coin = sprites.create(img`
 . . 4 4 4 . . 
 . 4 5 5 5 4 . 
 4 5 5 d 5 5 4 
@@ -2620,7 +2621,6 @@ function prepareLevel2 () {
 . 4 5 5 5 4 . 
 . . 4 4 4 . . 
 `, SpriteKind.Food)
-    for (let value2 of coinPositionsLevel2) {
         coin.setPosition(value2[0], value2[1])
         animation.runImageAnimation(
         coin,
@@ -2950,6 +2950,41 @@ let nike: Sprite = null
 let hero: Sprite = null
 music.setVolume(30)
 setCoinPositions()
+game.setDialogCursor(img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`)
+game.setDialogFrame(img`
+c c c c c c c c c c c c c c c 
+c d d d d d d d d d d d d d c 
+c d d d d d d d d d d d d d c 
+c d d d d d d d d d d d d d c 
+c d d d d d d d d d d d d d c 
+c d d d d d d d d d d d d d c 
+c d d d d d d d d d d d d d c 
+c d d d d d d d d d d d d d c 
+c d d d d d d d d d d d d d c 
+c d d d d d d d d d d d d d c 
+c d d d d d d d d d d d d d c 
+. c d d d d d d d d d d d c . 
+. c d d d d d d d d d d d c . 
+. c d d d d d d d d d d d c . 
+c c c c c c c c c c c c c c c 
+`)
 hero = sprites.create(img`
 . . . . . e e e e . . . . . . . 
 . . . . e e d d d e . . . . . . 
