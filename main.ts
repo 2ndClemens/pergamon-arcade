@@ -2247,7 +2247,12 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     hero.vy = -150
 })
 function setCoinPositionsLevel1 () {
-    coinPositionsLevel1 = [[32, 16, 0]]
+    coinPositionsLevel1 = []
+    for (let index = 0; index <= 10; index++) {
+        for (let index2 = 0; index2 <= 3; index2++) {
+            coinPositionsLevel1.push([index * 32 + 192, index2 * 32 + 96, 0])
+        }
+    }
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
@@ -2606,8 +2611,7 @@ function setCoinPositionsLevel2 () {
     coinPositionsLevel2 = [[32, 16, 0], [96, 16, 0], [172, 16, 0], [216, 32, 0], [232, 24, 0], [248, 16, 0], [264, 24, 0], [280, 32, 0], [324, 16, 0], [400, 16, 0], [464, 16, 0], [48, 144, 0], [96, 144, 0], [148, 144, 0], [216, 160, 0], [232, 152, 0], [248, 144, 0], [264, 152, 0], [280, 160, 0], [348, 144, 0], [400, 144, 0], [448, 144, 0], [48, 272, 0], [96, 272, 0], [148, 272, 0], [216, 288, 0], [232, 280, 0], [248, 272, 0], [264, 280, 0], [280, 288, 0], [348, 272, 0], [400, 272, 0], [448, 272, 0]]
 }
 function prepareLevel2 () {
-    for (let value of coinPositionsLevel2) {
-        coin = sprites.create(img`
+    coin = sprites.create(img`
 . . 4 4 4 . . 
 . 4 5 5 5 4 . 
 4 5 5 d 5 5 4 
@@ -2616,7 +2620,8 @@ function prepareLevel2 () {
 . 4 5 5 5 4 . 
 . . 4 4 4 . . 
 `, SpriteKind.Food)
-        coin.setPosition(value[0], value[1])
+    for (let value2 of coinPositionsLevel2) {
+        coin.setPosition(value2[0], value2[1])
         animation.runImageAnimation(
         coin,
         [img`
@@ -2851,8 +2856,8 @@ function prepareLevel2 () {
 }
 function prepareLevel (num: number) {
     leftOverCoins = sprites.allOfKind(SpriteKind.Food)
-    for (let value2 of leftOverCoins) {
-        value2.destroy()
+    for (let value22 of leftOverCoins) {
+        value22.destroy()
     }
     if (num == 0) {
         prepareLevel0()
