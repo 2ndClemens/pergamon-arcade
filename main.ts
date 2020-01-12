@@ -2795,7 +2795,7 @@ let nike: Sprite = null
 let hero: Sprite = null
 let coin: Sprite = null
 music.setVolume(30)
-let coinPositions = [[50, 50], [100, 50], [150, 50], [200, 50], [50, 150], [100, 150], [150, 150], [200, 150]]
+let coinPositions = [[50, 50, 0], [100, 50, 0], [150, 50, 0], [200, 50, 0], [50, 150, 0], [100, 150, 0], [150, 150, 0], [200, 150, 0]]
 for (let value of coinPositions) {
     coin = sprites.create(img`
 . . 4 4 4 . . 
