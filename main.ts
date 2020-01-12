@@ -2237,6 +2237,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     info.changeScoreBy(1)
+    music.baDing.play()
     otherSprite.destroy(effects.disintegrate, 100)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -2793,7 +2794,8 @@ let athenaInfoSeen = false
 let nike: Sprite = null
 let hero: Sprite = null
 let coin: Sprite = null
-let coinPositions = [50, 100, 150, 200]
+music.setVolume(30)
+let coinPositions = [[50, 50], [100, 50], [150, 50], [200, 50], [50, 150], [100, 150], [150, 150], [200, 150]]
 for (let value of coinPositions) {
     coin = sprites.create(img`
 . . 4 4 4 . . 
@@ -2804,7 +2806,7 @@ for (let value of coinPositions) {
 . 4 5 5 5 4 . 
 . . 4 4 4 . . 
 `, SpriteKind.Food)
-    coin.setPosition(value, 50)
+    coin.setPosition(value[0], value[1])
     animation.runImageAnimation(
     coin,
     [img`
