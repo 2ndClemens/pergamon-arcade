@@ -2779,8 +2779,8 @@ function prepareLevel2 () {
 }
 function prepareLevel (num: number) {
     leftOverCoins = sprites.allOfKind(SpriteKind.Food)
-    for (let value of leftOverCoins) {
-        value.destroy()
+    for (let value2 of leftOverCoins) {
+        value2.destroy()
     }
     if (num == 0) {
         prepareLevel0()
@@ -2867,7 +2867,7 @@ let nike: Sprite = null
 let hero: Sprite = null
 let coinPositions: number[][] = []
 music.setVolume(30)
-coinPositions = [[50, 50, 0], [100, 50, 0], [150, 50, 0], [200, 50, 0], [50, 150, 0], [100, 150, 0], [150, 150, 0], [200, 150, 0]]
+coinPositions = [[32, 16, 0], [96, 16, 0], [172, 16, 0], [216, 32, 0], [232, 24, 0], [248, 16, 0], [264, 24, 0], [280, 32, 0], [50, 144, 0], [100, 144, 0], [150, 144, 0], [200, 144, 0]]
 hero = sprites.create(img`
 . . . . . e e e e . . . . . . . 
 . . . . e e d d d e . . . . . . 
