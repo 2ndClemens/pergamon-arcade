@@ -2248,9 +2248,9 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 function setCoinPositionsLevel1 () {
     coinPositionsLevel1 = []
-    for (let index = 0; index <= 10; index++) {
-        for (let index2 = 0; index2 <= 3; index2++) {
-            coinPositionsLevel1.push([index * 32 + 192, index2 * 32 + 96, 0])
+    for (let index = 0; index <= 5; index++) {
+        for (let index2 = 0; index2 <= 2; index2++) {
+            coinPositionsLevel1.push([index * 64 + 192, index2 * 48 + 96, 0])
         }
     }
 }
@@ -2272,55 +2272,7 @@ function prepareLevel1 () {
         coin.setPosition(value[0], value[1])
         animation.runImageAnimation(
         coin,
-        [img`
-. . 4 4 4 . . 
-. 4 5 5 5 4 . 
-4 5 5 d 5 5 4 
-4 5 5 d 5 5 4 
-4 5 5 d 5 5 4 
-. 4 5 5 5 4 . 
-. . 4 4 4 . . 
-`,img`
-. . . 4 . . . 
-. . 4 5 4 . . 
-. 4 5 5 5 4 . 
-. 4 5 5 5 4 . 
-. 4 5 5 5 4 . 
-. . 4 5 4 . . 
-. . . 4 . . . 
-`,img`
-. . . 4 . . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . . 4 . . . 
-`,img`
-. . . 4 . . . 
-. . . 4 . . . 
-. . . 4 . . . 
-. . . 4 . . . 
-. . . 4 . . . 
-. . . 4 . . . 
-. . . 4 . . . 
-`,img`
-. . . 4 . . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . . 4 . . . 
-`,img`
-. . . 4 . . . 
-. . 4 5 4 . . 
-. 4 5 5 5 4 . 
-. 4 5 5 5 4 . 
-. 4 5 5 5 4 . 
-. . 4 5 4 . . 
-. . . 4 . . . 
-`],
+        coinAnimation,
         70,
         true
         )
@@ -2624,55 +2576,7 @@ function prepareLevel2 () {
         coin.setPosition(value2[0], value2[1])
         animation.runImageAnimation(
         coin,
-        [img`
-. . 4 4 4 . . 
-. 4 5 5 5 4 . 
-4 5 5 d 5 5 4 
-4 5 5 d 5 5 4 
-4 5 5 d 5 5 4 
-. 4 5 5 5 4 . 
-. . 4 4 4 . . 
-`,img`
-. . . 4 . . . 
-. . 4 5 4 . . 
-. 4 5 5 5 4 . 
-. 4 5 5 5 4 . 
-. 4 5 5 5 4 . 
-. . 4 5 4 . . 
-. . . 4 . . . 
-`,img`
-. . . 4 . . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . . 4 . . . 
-`,img`
-. . . 4 . . . 
-. . . 4 . . . 
-. . . 4 . . . 
-. . . 4 . . . 
-. . . 4 . . . 
-. . . 4 . . . 
-. . . 4 . . . 
-`,img`
-. . . 4 . . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . 4 5 4 . . 
-. . . 4 . . . 
-`,img`
-. . . 4 . . . 
-. . 4 5 4 . . 
-. 4 5 5 5 4 . 
-. 4 5 5 5 4 . 
-. 4 5 5 5 4 . 
-. . 4 5 4 . . 
-. . . 4 . . . 
-`],
+        coinAnimation,
         70,
         true
         )
@@ -2948,7 +2852,57 @@ let nikeInfoSeen = false
 let athenaInfoSeen = false
 let nike: Sprite = null
 let hero: Sprite = null
+let coinAnimation: Image[] = []
 music.setVolume(30)
+coinAnimation = [img`
+. . 4 4 4 . . 
+. 4 5 5 5 4 . 
+4 5 5 d 5 5 4 
+4 5 5 d 5 5 4 
+4 5 5 d 5 5 4 
+. 4 5 5 5 4 . 
+. . 4 4 4 . . 
+`,img`
+. . . 4 . . . 
+. . 4 5 4 . . 
+. 4 5 5 5 4 . 
+. 4 5 5 5 4 . 
+. 4 5 5 5 4 . 
+. . 4 5 4 . . 
+. . . 4 . . . 
+`,img`
+. . . 4 . . . 
+. . 4 5 4 . . 
+. . 4 5 4 . . 
+. . 4 5 4 . . 
+. . 4 5 4 . . 
+. . 4 5 4 . . 
+. . . 4 . . . 
+`,img`
+. . . 4 . . . 
+. . . 4 . . . 
+. . . 4 . . . 
+. . . 4 . . . 
+. . . 4 . . . 
+. . . 4 . . . 
+. . . 4 . . . 
+`,img`
+. . . 4 . . . 
+. . 4 5 4 . . 
+. . 4 5 4 . . 
+. . 4 5 4 . . 
+. . 4 5 4 . . 
+. . 4 5 4 . . 
+. . . 4 . . . 
+`,img`
+. . . 4 . . . 
+. . 4 5 4 . . 
+. 4 5 5 5 4 . 
+. 4 5 5 5 4 . 
+. 4 5 5 5 4 . 
+. . 4 5 4 . . 
+. . . 4 . . . 
+`]
 setCoinPositions()
 game.setDialogCursor(img`
 . . . . . . . . . . . . . . . . 
