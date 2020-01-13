@@ -1551,7 +1551,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Event, function (sprite, otherSp
     }
 })
 function setCoinPositionsLevel0 () {
-    coinPositionsLevel0 = [[32, 192, 0]]
+    coinPositionsLevel0 = [[32, 192, 0], [400, 192, 0], [400, 160, 0], [400, 128, 0]]
 }
 function prepareLevel0 () {
     for (let value2 of coinPositionsLevel0) {
@@ -2584,7 +2584,7 @@ function setCoinPositionsLevel2 () {
     coinPositionsLevel2 = [[32, 16, 0], [96, 16, 0], [172, 16, 0], [216, 32, 0], [232, 24, 0], [248, 16, 0], [264, 24, 0], [280, 32, 0], [324, 16, 0], [400, 16, 0], [464, 16, 0], [48, 144, 0], [96, 144, 0], [148, 144, 0], [216, 160, 0], [232, 152, 0], [248, 144, 0], [264, 152, 0], [280, 160, 0], [348, 144, 0], [400, 144, 0], [448, 144, 0], [48, 272, 0], [96, 272, 0], [148, 272, 0], [216, 288, 0], [232, 280, 0], [248, 272, 0], [264, 280, 0], [280, 288, 0], [348, 272, 0], [400, 272, 0], [448, 272, 0]]
 }
 function prepareLevel2 () {
-    for (let value2 of coinPositionsLevel2) {
+    for (let value22 of coinPositionsLevel2) {
         coin = sprites.create(img`
 . . 4 4 4 . . 
 . 4 5 5 5 4 . 
@@ -2594,7 +2594,7 @@ function prepareLevel2 () {
 . 4 5 5 5 4 . 
 . . 4 4 4 . . 
 `, SpriteKind.Food)
-        coin.setPosition(value2[0], value2[1])
+        coin.setPosition(value22[0], value22[1])
         animation.runImageAnimation(
         coin,
         coinAnimation,
@@ -2781,8 +2781,8 @@ function prepareLevel2 () {
 }
 function prepareLevel (num: number) {
     leftOverCoins = sprites.allOfKind(SpriteKind.Food)
-    for (let value22 of leftOverCoins) {
-        value22.destroy()
+    for (let value222 of leftOverCoins) {
+        value222.destroy()
     }
     if (num == 0) {
         prepareLevel0()
@@ -2874,6 +2874,7 @@ let empty: Sprite = null
 let nikeInfoSeen = false
 let athenaInfoSeen = false
 let nike: Sprite = null
+let currentLevel = 0
 let hero: Sprite = null
 let coinAnimation: Image[] = []
 music.setVolume(30)
@@ -3001,7 +3002,6 @@ controller.moveSprite(hero, 100, 0)
 hero.setFlag(SpriteFlag.StayInScreen, true)
 scene.cameraFollowSprite(hero)
 hero.ay = 300
-let currentLevel = 0
 prepareLevel(currentLevel)
 hero.setPosition(384, 0)
 nike = sprites.create(img`
