@@ -1373,38 +1373,38 @@ c c c c c c c c c c c . . . . .
 `
     //% blockIdentity=images._tile
     export const tile74 = img`
-b b b b b b b b c b b b b b b b 
+b b b b b b b b c c c c b b b b 
 d d d d d d d c b b b d d d d d 
 b b b b b b c b b b d d d d d d 
 c c c c c c c b b b d d d d d d 
-d d d d d c b b b b b b b b b b 
+d d d d d c c c c b b b b b b b 
 d d d d d c b b b d d d d d d d 
 c c c c c c b b d d d d d d d d 
 c b b c b b b d d d d d d d d d 
-c b b c b b b b b b b b b b b b 
+c b b c c c b b b b b b b b b b 
 c d d c b b d d d d d d d d d d 
 b b b c b b d d d d d d d d d d 
 c c c c b b d d d d d d d d d d 
-c b b b b b b b b b b b b b b b 
+c c c c c c b b b b b b b b b b 
 b b b d d d d d d d d d d d d d 
 b b b d d d d d d d d d d d d d 
 c b b d d d d d d d d d d d d d 
 `
     //% blockIdentity=images._tile
     export const tile76 = img`
-b b b b b b b c b b b b b b b b 
+b b b b c c c c b b b b b b b b 
 d d d d d b b b c d d d d d d d 
 d d d d d d b b b c b b b b b b 
 d d d d d d b b b c c c c c c c 
-b b b b b b b b b b c d d d d d 
+b b b b b b c c c c c d d d d d 
 d d d d d d d b b b c d d d d d 
 d d d d d d d b b b c c c c c c 
 d d d d d d d d d b b b c b b c 
-b b b b b b b b b b b b c b b c 
+b b b b b b b b b c c c c b b c 
 d d d d d d d d d b b b c d d c 
 d d d d d d d d d b b b c b b b 
 d d d d d d d d d b b b c c c c 
-b b b b b b b b b b b b b b b c 
+b b b b b b b b b c c c c c c c 
 d d d d d d d d d d d d d b b b 
 d d d d d d d d d d d d d b b b 
 d d d d d d d d d d d d b b b c 
