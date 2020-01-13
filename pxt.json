@@ -1,15 +1,21 @@
 {
     "name": "pergamon",
+    "description": "",
     "dependencies": {
         "device": "*",
         "animation": "*",
         "jacdac-game": "*"
     },
-    "description": "",
     "files": [
         "main.blocks",
         "main.ts",
         "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "arcade"
     ],
     "preferredEditor": "blocksprj",
     "palette": [
@@ -29,11 +35,5 @@
         "#e5cdc4",
         "#91463d",
         "#000000"
-    ],
-    "testFiles": [
-        "test.ts"
-    ],
-    "supportedTargets": [
-        "arcade"
     ]
 }

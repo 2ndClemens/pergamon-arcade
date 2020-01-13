@@ -1550,7 +1550,28 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Event, function (sprite, otherSp
         animation.stopAnimation(animation.AnimationTypes.All, hero)
     }
 })
+function setCoinPositionsLevel0 () {
+    coinPositionsLevel0 = [[32, 192, 0]]
+}
 function prepareLevel0 () {
+    for (let value2 of coinPositionsLevel0) {
+        coin = sprites.create(img`
+. . 4 4 4 . . 
+. 4 5 5 5 4 . 
+4 5 5 d 5 5 4 
+4 5 5 d 5 5 4 
+4 5 5 d 5 5 4 
+. 4 5 5 5 4 . 
+. . 4 4 4 . . 
+`, SpriteKind.Food)
+        coin.setPosition(value2[0], value2[1])
+        animation.runImageAnimation(
+        coin,
+        coinAnimation,
+        70,
+        true
+        )
+    }
     scene.setBackgroundImage(img`
 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
@@ -2833,17 +2854,19 @@ function setFireAnimation (mySprite: Sprite) {
     )
 }
 function setCoinPositions () {
+    setCoinPositionsLevel0()
     setCoinPositionsLevel1()
     setCoinPositionsLevel2()
 }
 let leftOverCoins: Sprite[] = []
 let coinPositionsLevel2: number[][] = []
-let coin: Sprite = null
 let coinPositionsLevel1: number[][] = []
 let friezeRight: Sprite = null
 let friezeLeft: Sprite = null
 let enemy1: Sprite = null
 let enemy0: Sprite = null
+let coin: Sprite = null
+let coinPositionsLevel0: number[][] = []
 let athena: Sprite = null
 let currentDirection = ""
 let currentObject: Sprite = null
@@ -2862,7 +2885,7 @@ coinAnimation = [img`
 4 5 5 d 5 5 4 
 . 4 5 5 5 4 . 
 . . 4 4 4 . . 
-`,img`
+`, img`
 . . . 4 . . . 
 . . 4 5 4 . . 
 . 4 5 5 5 4 . 
@@ -2870,7 +2893,7 @@ coinAnimation = [img`
 . 4 5 5 5 4 . 
 . . 4 5 4 . . 
 . . . 4 . . . 
-`,img`
+`, img`
 . . . 4 . . . 
 . . 4 5 4 . . 
 . . 4 5 4 . . 
@@ -2878,7 +2901,7 @@ coinAnimation = [img`
 . . 4 5 4 . . 
 . . 4 5 4 . . 
 . . . 4 . . . 
-`,img`
+`, img`
 . . . 4 . . . 
 . . . 4 . . . 
 . . . 4 . . . 
@@ -2886,7 +2909,7 @@ coinAnimation = [img`
 . . . 4 . . . 
 . . . 4 . . . 
 . . . 4 . . . 
-`,img`
+`, img`
 . . . 4 . . . 
 . . 4 5 4 . . 
 . . 4 5 4 . . 
@@ -2894,7 +2917,7 @@ coinAnimation = [img`
 . . 4 5 4 . . 
 . . 4 5 4 . . 
 . . . 4 . . . 
-`,img`
+`, img`
 . . . 4 . . . 
 . . 4 5 4 . . 
 . 4 5 5 5 4 . 
@@ -2978,8 +3001,9 @@ controller.moveSprite(hero, 100, 0)
 hero.setFlag(SpriteFlag.StayInScreen, true)
 scene.cameraFollowSprite(hero)
 hero.ay = 300
-let currentLevel = 1
+let currentLevel = 0
 prepareLevel(currentLevel)
+hero.setPosition(384, 0)
 nike = sprites.create(img`
 . c . . . . . . 
 c d c . . c . . 
