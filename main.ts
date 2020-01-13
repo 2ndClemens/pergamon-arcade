@@ -2277,7 +2277,9 @@ function setCoinPositionsLevel1 () {
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
+    music.pewPew.play()
     otherSprite.destroy(effects.fire, 200)
+    scene.cameraShake(4, 500)
 })
 function prepareLevel1 () {
     for (let value of coinPositionsLevel1) {
