@@ -1551,7 +1551,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Event, function (sprite, otherSp
     }
 })
 function setCoinPositionsLevel0 () {
-    coinPositionsLevel0 = [[32, 192, 0], [400, 192, 0], [400, 160, 0], [400, 128, 0]]
+    coinPositionsLevel0 = [[32, 192, 0], [400, 192, 0], [400, 160, 0], [400, 128, 0], [816, 144, 0], [848, 144, 0], [880, 144, 0]]
 }
 function prepareLevel0 () {
     for (let value2 of coinPositionsLevel0) {
