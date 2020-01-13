@@ -1828,6 +1828,35 @@ c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c
     }
     hero.setPosition(60, 200)
     hero.z = 1
+    enemy0 = sprites.create(img`
+. . . . . . . . . . . . . . . . 
+. . . . . 5 5 . . . . . . . . . 
+. . . 5 5 5 5 5 . . . . . . . . 
+. . . 5 5 . 2 5 2 2 2 2 2 . . . 
+. . . . 5 2 2 . 5 . . . . 2 2 . 
+. . . . 5 5 2 2 2 5 5 5 . 2 . . 
+. . . 3 . 5 5 3 2 2 . 5 5 5 . . 
+. . . 5 5 5 5 . 3 2 2 3 . 5 . . 
+. 5 5 3 5 5 3 3 . . . 2 . 5 . . 
+5 5 . . 2 . 5 5 . . 2 2 . 5 . . 
+. . 5 5 5 . . 5 . 2 2 . 5 5 . . 
+. . . . 5 5 . 5 5 2 . 5 5 . . . 
+. . . . . 5 5 2 5 5 . 5 2 . . . 
+. . . . . 2 5 5 5 5 5 5 2 2 . . 
+. . . . . . 2 2 2 2 2 2 2 2 2 . 
+. . . . . . . 2 2 2 2 2 . . . . 
+`, SpriteKind.Enemy)
+    enemy0.setFlag(SpriteFlag.BounceOnWall, true)
+    setFireAnimation(enemy0)
+    enemy1 = sprites.create(enemy0.image, SpriteKind.Enemy)
+    enemy1.setFlag(SpriteFlag.BounceOnWall, true)
+    setFireAnimation(enemy1)
+    enemy0.ay = 300
+    enemy0.vx = 100
+    enemy0.setPosition(300, 200)
+    enemy1.ay = 300
+    enemy1.vx = -100
+    enemy1.setPosition(300, 196)
 }
 function setHeroDirection () {
     if (hero.vx > 0 && currentDirection != "walkRight") {
