@@ -1851,10 +1851,10 @@ c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c
     enemy1 = sprites.create(enemy0.image, SpriteKind.Enemy)
     enemy1.setFlag(SpriteFlag.BounceOnWall, true)
     setFireAnimation(enemy1)
-    enemy0.ay = 300
+    enemy0.ay = 100
     enemy0.vx = 100
     enemy0.setPosition(300, 200)
-    enemy1.ay = 300
+    enemy1.ay = 120
     enemy1.vx = -100
     enemy1.setPosition(300, 196)
 }
@@ -2477,6 +2477,12 @@ function prepareLevel1 () {
     if (athena) {
         athena.destroy()
     }
+    if (enemy0) {
+        enemy0.destroy()
+    }
+    if (enemy1) {
+        enemy1.destroy()
+    }
     friezeLeft = sprites.create(img`
 . . c c c c c c c c c c c c c c c c c c c c c c c c c c c d d d d c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c . . 
 . . b b b b b b b b b b b b b b b b b b b b b b c c c c b b 1 1 1 c b b c c c 1 b c b c c c d c c c c c b 1 c c c b b b b b b b b b b b b b b b b b b c c c d d d d d b c b c c c c c c c c c c c b b b b b b b b b b b b c . . 
@@ -2809,6 +2815,35 @@ function prepareLevel2 () {
     }
     hero.setPosition(30, 0)
     hero.z = 1
+    enemy0 = sprites.create(img`
+. . . . . . . . . . . . . . . . 
+. . . . . 5 5 . . . . . . . . . 
+. . . 5 5 5 5 5 . . . . . . . . 
+. . . 5 5 . 2 5 2 2 2 2 2 . . . 
+. . . . 5 2 2 . 5 . . . . 2 2 . 
+. . . . 5 5 2 2 2 5 5 5 . 2 . . 
+. . . 3 . 5 5 3 2 2 . 5 5 5 . . 
+. . . 5 5 5 5 . 3 2 2 3 . 5 . . 
+. 5 5 3 5 5 3 3 . . . 2 . 5 . . 
+5 5 . . 2 . 5 5 . . 2 2 . 5 . . 
+. . 5 5 5 . . 5 . 2 2 . 5 5 . . 
+. . . . 5 5 . 5 5 2 . 5 5 . . . 
+. . . . . 5 5 2 5 5 . 5 2 . . . 
+. . . . . 2 5 5 5 5 5 5 2 2 . . 
+. . . . . . 2 2 2 2 2 2 2 2 2 . 
+. . . . . . . 2 2 2 2 2 . . . . 
+`, SpriteKind.Enemy)
+    enemy0.setFlag(SpriteFlag.BounceOnWall, true)
+    setFireAnimation(enemy0)
+    enemy1 = sprites.create(enemy0.image, SpriteKind.Enemy)
+    enemy1.setFlag(SpriteFlag.BounceOnWall, true)
+    setFireAnimation(enemy1)
+    enemy0.ay = 150
+    enemy0.vx = 50
+    enemy0.setPosition(300, 400)
+    enemy1.ay = 150
+    enemy1.vx = -50
+    enemy1.setPosition(300, 400)
 }
 function prepareLevel (num: number) {
     leftOverCoins = sprites.allOfKind(SpriteKind.Food)
