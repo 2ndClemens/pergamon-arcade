@@ -2291,10 +2291,13 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
     otherSprite.destroy(effects.disintegrate, 100)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    controller.moveSprite(hero, 100, 0)
-    hero.setFlag(SpriteFlag.Ghost, false)
-    hero.ay = 300
-    hero.vy = -150
+    if (hero.isHittingTile(CollisionDirection.Bottom) || jumpBlocker == false) {
+        controller.moveSprite(hero, 100, 0)
+        hero.setFlag(SpriteFlag.Ghost, false)
+        hero.ay = 300
+        hero.vy = -150
+        jumpBlocker = true
+    }
 })
 function setCoinPositionsLevel1 () {
     coinPositionsLevel1 = []
@@ -2942,6 +2945,7 @@ let athenaInfoSeen = false
 let nike: Sprite = null
 let currentLevel = 0
 let hero: Sprite = null
+let jumpBlocker = false
 let coinAnimation: Image[] = []
 music.setVolume(30)
 coinAnimation = [img`
@@ -3029,6 +3033,7 @@ c d d d d d d d d d d d d d c
 . c d d d d d d d d d d d c . 
 c c c c c c c c c c c c c c c 
 `)
+jumpBlocker = false
 hero = sprites.create(img`
 . . . . . e e e e . . . . . . . 
 . . . . e e d d d e . . . . . . 
@@ -3231,6 +3236,7 @@ game.onUpdate(function () {
         nike.y = hero.y - 10
     }
     if (hero.tileKindAt(TileDirection.Bottom, myTiles.tile6) || hero.tileKindAt(TileDirection.Center, myTiles.tile6) || (hero.tileKindAt(TileDirection.Bottom, myTiles.tile83) || hero.tileKindAt(TileDirection.Center, myTiles.tile83) || (hero.tileKindAt(TileDirection.Bottom, myTiles.tile82) || hero.tileKindAt(TileDirection.Center, myTiles.tile82)))) {
+        jumpBlocker = false
         if (hero.vy >= 0) {
             controller.moveSprite(hero, 100, 50)
             hero.ay = 0
@@ -3239,10 +3245,7 @@ game.onUpdate(function () {
     } else {
         controller.moveSprite(hero, 100, 0)
         hero.ay = 300
-        if (hero.top == 0) {
-        	
-        }
-        if (hero.vy < 0) {
+        if (hero.vy <= 0) {
             hero.setFlag(SpriteFlag.Ghost, false)
         } else {
             hero.setFlag(SpriteFlag.Ghost, false)
