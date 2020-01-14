@@ -2282,7 +2282,8 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
             nike.x = athena.x - 12
             nike.y = athena.y - 30
             game.showLongText("Great. Athena's statue is complete again.", DialogLayout.Bottom)
-            pause(1000)
+            effects.confetti.startScreenEffect()
+            pause(2000)
             game.over(true, effects.hearts)
         }
     }
