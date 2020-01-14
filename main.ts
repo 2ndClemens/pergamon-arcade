@@ -2610,10 +2610,10 @@ c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 1 c c c c c c c c c c 
     enemy1 = sprites.create(enemy0.image, SpriteKind.Enemy)
     enemy1.setFlag(SpriteFlag.BounceOnWall, true)
     setFireAnimation(enemy1)
-    enemy0.ay = 150
+    enemy0.ay = 0
     enemy0.vx = 80
     enemy0.setPosition(300, 180)
-    enemy1.ay = 150
+    enemy1.ay = 0
     enemy1.vx = -80
     enemy1.setPosition(300, 196)
 }
