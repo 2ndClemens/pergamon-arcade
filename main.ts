@@ -2284,6 +2284,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
             game.showLongText("Great. Athena's statue is complete again.", DialogLayout.Bottom)
             effects.confetti.startScreenEffect()
             pause(2000)
+            effects.confetti.endScreenEffect()
             game.over(true, effects.hearts)
         }
     }
@@ -2540,54 +2541,54 @@ c c 1 1 1 1 1 1 c c c c d b c b b b d d d d d d b 1 d 1 1 1 d c c c c c c c c b 
 . c c 1 1 c c c c c c c c c c c c c c c c c c c c c c c c 1 c c c c c c c c c b c c c c c c c b b b c c c c d d c 1 c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c . . 
 `, SpriteKind.Event)
     friezeRight = sprites.create(img`
-c c c c c c c c c c c c c c c c 1 c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 3 c c c 
-c c d c c c c c c c c c c c d 1 1 c d d d d d d d d 1 d d d d d d d d d d d d 1 d d d c c c 1 1 d d d d d d d d d c c c c c c c c c c c c c c c c c c c c c c c c c d 1 c b c c c c c c c c c c 1 d d d d d d d d d d d 3 c c c 
-c d d d d d d d d c c c c 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d c c d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d 1 1 1 c c c c c c c c c 3 3 c c 3 
-c d d d d d d d d d d d d 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 b d d d d d d d d 3 3 c c c 
-c d d d d d d d d d d d 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 b b d d d d d d d d 3 3 c c c 
-c d d d d d d d d d d d 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 d 1 1 1 b d d d d d d d d 3 d d c c 
-c d d d d d d d d d d 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 d 1 d d 1 d 1 1 1 1 1 1 1 1 1 d d d d d d d b d d d d d d d d d d d d d d d d d d d 1 1 1 1 b d d d d d d d d d d d c c 
-c d d d d d d d d d d 1 d 1 d 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 d d 1 1 1 d d 1 1 1 1 1 1 1 1 1 1 1 d d b b b d d d d d d d d d d d d d d d d d 1 1 1 b d d d d d d d d d d d d c c 
-c d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 1 1 1 1 d d d 1 1 1 1 1 1 1 d 1 b b b d d d d d d d d d d d d d d d d d 1 1 b b d d d d d d d d d d d d c c 
-c d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 d 1 1 1 d 1 1 1 1 1 d d d d d 1 1 1 1 1 1 d b b d d d d d d d d d d d d d d d d 1 1 1 d 1 d d d d d d d d d d d d c c 
-c c d d d 1 1 1 d d d d d d d 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 d d 1 1 1 1 1 d d d d 1 1 d d d 1 1 1 d 1 1 d b b d d d d d d d d d d d d d d d d 1 1 1 1 1 d d d d d d d d d d d d c c 
-. c d d 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 d 1 1 d d d 1 1 1 1 1 1 1 1 1 1 1 1 d b b d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 d d d d d d d d d d d c c 
-. c d d 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d 1 d 1 d 1 d 1 d 1 d d 1 1 1 1 1 1 1 1 d b b d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 1 b d d d d d d d d d c c 
-c c d d d d b b 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 d 1 b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 d d 1 1 d 1 1 1 1 1 d b b d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 d d b d d d d d d d c c c 
-c d d d d d b b b b 1 1 1 1 1 1 1 1 1 1 b b b b b b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 d d d d 1 1 1 d d 1 1 1 1 1 d 1 1 1 b b d d d d d d d d d d d d d d d 1 1 1 1 1 d d 1 d 1 b d d d d 1 d c c c 
-c c d d d d d d d d b 1 1 1 1 1 1 d b b 1 1 b b d d d d d d d d d d d d d d d 1 d d d d d d d d d d d d d d d d 1 d d d d 1 1 1 d d 1 1 1 1 1 1 1 1 b b b d d d d d d d d d d d d d d d 1 1 1 1 1 d d d 1 1 b d d d d 1 d c c c 
-d d d d d d d d d d b 1 1 1 1 1 1 d d b d d d d d d d d d d d d d d d d d d 1 1 1 1 d d d d d d d d d d d d d d d d 1 d d 1 1 1 1 d 1 1 1 d 1 1 1 1 b b d d d d d d d d d d d d d d d d 1 1 1 1 1 d b d 1 d b d d d d 1 d c c c 
-d d d d d 1 1 d d d b 1 1 1 1 d 1 b b b d d d d d d d d d d d d d d d d d 1 1 1 1 d d d d d d d d d d d d d d d d d d d d 1 1 d 1 d 1 1 d 1 d 1 1 1 1 b d d d d d d d d d d d d d d d d 1 1 1 1 1 b b d 1 1 1 b d d d d d c c c 
-d d d d d 1 1 1 d d b 1 1 1 1 d 1 b b b d d d d d d d d d d d d d d d d 1 d 1 1 1 d d d d d d d d d d d d d d d d d d d d d 1 d d d 1 1 1 d 1 1 1 d 1 b d d d d d d d d d d d d d d d d 1 1 1 1 1 d b 1 1 1 1 b d d d d d c c c 
-d d d d d 1 1 1 d d b 1 1 1 1 d 1 b b d d d d d d d d d d d d d d d d d 1 1 1 1 1 b d d d d d d d d d d d d d d d d d d d d 1 d d d 1 1 1 1 d 1 1 1 d 1 b d d d d d d d d d d d d d d d 1 1 1 1 1 d b d d 1 1 1 b d d d d c c c 
-c c 1 d d 1 1 1 d d b 1 1 1 1 d 1 b b d d d d d d d d d d d d d d d d d d 1 1 1 b b d d d d d d d d d d d d d d d d d d d d 1 d d 1 1 1 1 1 1 1 1 1 1 d b b b d d d d d d d d d d d d d 1 1 1 1 1 d b d d 1 1 1 b d d d c c c c 
-c d 1 1 1 1 d 1 d b 1 1 1 1 1 1 1 b b d d d d d d d d d d d d d d d d d d 1 1 d b d d d d d d d d d d d d d d d d d d d d d d 1 d d 1 1 1 1 1 1 1 1 1 1 d b b b d d d d d d d d d d d d d 1 1 1 1 1 b d d d 1 1 b d d d c c c c 
-c c d d 1 1 1 1 1 b 1 1 1 1 1 1 1 b b d d d d d d d d d d d d d d d d d d 1 1 b b d d d d d d d d d d d d d d d d d d d d d d d b d 1 1 1 1 1 1 1 1 1 1 1 1 b b b d d d d d d d d d d d d 1 1 1 1 1 b b d d 1 1 b d d 3 c c c c 
-c c d 1 1 1 1 1 d b 1 1 1 1 1 1 1 b d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d b b 1 d 1 1 1 1 1 d 1 1 1 1 1 b d b b d d d d d d d d 1 d 1 1 1 1 1 b b d d 1 1 b d d 3 c c c c 
-c c d 1 1 1 1 1 d b 1 1 1 1 1 1 1 b d d d d d d d d d d d d d d 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 b b 1 1 1 1 d 1 d 1 d 1 1 1 1 b d b b d d d d d d d 1 1 1 1 1 1 1 d b b d 1 1 b d d 3 c c c c 
-c c d 1 1 1 1 1 d b 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d 1 1 1 d 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d 1 d b b 1 1 1 1 1 1 1 1 1 1 1 1 1 1 d b b b d d d d d 1 1 1 1 1 1 d 1 d b d 1 1 b d d d c c . c 
-c c d 1 1 1 1 d 1 b 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d 1 d 1 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d 1 d d b b 1 1 1 1 1 1 1 1 1 1 1 1 1 1 b d b d d d d 1 1 1 d 1 1 1 1 d d b 1 1 b d d d c c . c 
-c c d 1 1 1 1 d b 1 1 1 1 1 1 1 d b d d d d d d d d d d d d d d d 1 1 d 1 d 1 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d b b b b 1 1 1 1 d 1 1 1 1 1 1 1 d b d b d d d 1 1 b b 1 1 1 1 d d b b 1 d d d d c c c c 
-c c d d 1 1 d d b 1 1 1 1 1 1 1 d d b d d d d d d d d d d d d d d 1 1 d d 1 1 d 1 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d 1 1 d 1 b b b 1 d 1 1 1 1 1 1 1 1 1 b b b d d 1 1 b b b 1 1 1 1 1 d b b d d d d d c c c c 
-c d d d d 1 d d b 1 1 d 1 1 1 1 1 d d b d d d d d d d d d d d d d d 1 1 1 d d 1 d 1 1 1 1 1 d d 1 1 d d d d d d d d d d d d d d d d d d 1 1 1 1 1 b b b 1 d 1 1 1 1 1 1 1 1 b b 1 1 1 1 b d d b 1 1 1 1 d 1 b d d d d 3 d c c c 
-c d d d d 1 1 d b 1 1 d d 1 1 1 1 1 d d b d d d d d d d d d d d d d 1 1 d 1 d d 1 d 1 1 1 1 1 1 d 1 1 d d d d d d d d d d d d d d d d d d 1 1 1 1 d b b b 1 1 1 1 1 1 d 1 b 1 b 1 1 1 b d d d b 1 1 1 1 1 d b b d d d 3 d c c c 
-c c d d d 1 1 b 1 1 d d d 1 1 1 1 1 1 b b b d d d d d d d d d d d d 1 d 1 1 1 d d 1 1 1 1 1 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d 1 1 1 d b b 1 b b b b b 1 1 1 1 1 1 b b b b b d d d b 1 1 1 1 d 1 b b d d d 3 d c c c 
-c c d d d 1 d b 1 1 d d d d 1 b b 1 1 b b b d d d d d d d d d d d d d 1 1 1 1 1 1 1 d 1 1 1 1 1 1 d 1 1 1 1 1 1 d 1 1 1 1 1 1 d 1 1 1 1 1 1 1 1 d b 1 1 1 1 b b b 1 1 1 1 1 1 b b d d d d d d b b 1 1 1 d 1 b b d d d 3 d c c c 
-c c d d d 1 d b 1 b b b b b b b b b 1 b b b d d d d d d d d d d d d d 1 1 1 b d 1 b b 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 b 1 1 1 1 b d d b 1 1 1 1 1 1 b d d d d d d d d b b 1 1 1 1 d b d d d 3 c d c c 
-c c d d 1 d b 1 1 b b b b b b b 1 1 1 b b d d d d d d d d d d d d d 1 1 d b b b d d d b 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 d d b b b b b b 1 1 1 b b d d b 1 1 1 1 1 1 b d d d d d b b d d b b 1 1 1 d b d d d 3 c d c c 
-c c d 1 d d b 1 1 b b d d d d 1 1 1 1 d b d d d d d d d d d d d 1 1 1 1 b d b b b b d d b b d 1 1 1 1 1 1 1 1 d 1 1 1 b 1 1 b b b b b b b b d d b 1 1 1 b b d d d b 1 1 1 1 1 b 1 d d b d b d b d b b b 1 1 1 d d d d b b d c c 
-c d d 1 d d b 1 1 b d d d d d d 1 1 1 b b d d d d d d d d d d 1 1 1 1 b d d d d b b b b b b b b b b b b 1 1 d d d d b b b b b b b d d d d d d d b b 1 d b d d d d b 1 1 1 1 1 b 1 d d b d b d b d d b b 1 1 1 d d d d b b d c c 
-c d d 1 d b 1 1 d b d d d d d d 1 1 1 b b d d d d d d d d d d 1 1 1 b d d d d d d d 1 b b b b b b b b d 1 1 1 1 1 1 b 1 d d d d d d d d d d d d 1 b 1 1 b d d d d d b b 1 1 1 d b d d d b b d d b d b d b b 1 1 d d d d d c . c 
-c d 1 d b 1 1 1 b d d d d d d d 1 1 1 b b d d d d d d d d d d 1 1 b d d d d d d d d d d 1 1 d d d d d 1 1 1 1 d 1 1 b 1 d d d d d d d d d d d d 1 1 d 1 b d d d d d d d b 1 1 d b d d d b b d d b d d b d b 1 1 d d d d d c . c 
-c d 1 d b d 1 1 b d d d d d d d 1 1 d b b d d d d d d d d d d 1 b d d d d d d d d d d d d d d d d d d d d 1 1 1 1 d b b d d d d d d d d d d d 1 1 1 1 d b d d d d d d d b b 1 1 1 d d d b d b d b d d d b b 1 1 1 d d d d b c c 
-c d 1 d b d 1 b b d d d d d d d 1 1 d b d d d d d d d d d 1 1 1 b d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 b b d d d d d d d d d d d 1 1 1 1 b d d d d d d d d d b b 1 d 1 d d b d b d d b d d b d b 1 1 d d d d b c c 
-c d 1 d b 1 1 b d d d d d d d 1 1 1 d b d d d d d d d d d d 1 1 b d d d d d d d d d d d d d d d d d d d d 1 1 1 b b b d d d d d d d d d d d 1 1 1 b b b d d d d d d d d d b b 1 1 1 d d b d d b d b d d d b b 1 1 d d d d c b c 
-c d 1 1 b 1 1 b d d d d d d d 1 1 1 d b d d d d d d d d d d 1 1 d d d d d d d d d d d d d d d d d d d d 1 1 1 d b b 1 d d d d d d d d d d b 1 1 b d d d d d d d d d d d d b b 1 1 1 d d b d d b d b d d d b b d 1 1 d d d c c c 
-c c d b b 1 1 b d d d d d d d 1 1 1 d b d d d d d d d d d d 1 1 d d d d d d d d d d d d d d d d d d d d 1 1 d b b 1 d d d d d d d d d d d b b b b d d d d d d d d d d d d b 1 d 1 1 d d b d d b d b d d d d b b 1 1 d d d 1 c c 
-c c d 1 d 1 1 b d d d d d d d 1 1 1 d b d d d d d d d d d 1 1 1 d d d d d d d d d d d d d d d d d d d 1 1 d d b 1 1 d d d d d d d d d d 1 b b b d d d d d d d d d d d d d b 1 d d 1 1 d b d d b d d b d d d d b 1 1 1 d d d c c 
-c c d 1 d d b b d d d d d d 1 1 1 d b b d d d d d d d d d 1 1 1 d d d d d d d d d d d d d d d d d d 1 1 1 d b b d 1 d d d d d d d d d d 1 1 d d d d d d d d d d d d d d d b 1 1 d 1 1 d d b 1 d b d b d d d d b b 1 d d d d c c 
-c c 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d c d d d d d d d d d d d d d d d 1 d 1 d b d 1 d d d d d d d d d 1 1 1 d 1 d d d d d d d d d d d d d d b 1 d 1 d 1 1 1 1 d d d c b c c c c b b c c c d c c c 
-c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 1 c c c c c c c c c c c c c c c c c b b b 1 c 1 b 1 1 c 1 c c c c c c c d d d d d d d d d c c c c c c c c c c c b c 1 1 c c c c c c c c c c c c c c c b c c c c c c c 
+c c c c c c c c c c c c c c b c 1 c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c . . 
+. . c b b b b b b b b b b b b 1 1 b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b b 1 b b b b b b b b b b b b c . . 
+. . c d d d d d d c c c c 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d c c d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d 1 1 1 c c c c c c c c c 3 3 b . . 
+. . c d d d d d d d d d d 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 b d d d d d d d d 3 3 b . . 
+. . c d d d d d d d d d 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 b b d d d d d d d d 3 3 b . . 
+. . c d d d d d d d d d 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 d 1 1 1 b d d d d d d d d 3 d b . . 
+. . c d d d d d d d d 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 d 1 d d 1 d 1 1 1 1 1 1 1 1 1 d d d d d d d b d d d d d d d d d d d d d d d d d d d 1 1 1 1 b d d d d d d d d d d b . . 
+. . c d d d d d d d d 1 d 1 d 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 d d 1 1 1 d d 1 1 1 1 1 1 1 1 1 1 1 d d b b b d d d d d d d d d d d d d d d d d 1 1 1 b d d d d d d d d d d d b . . 
+. . c d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 1 1 1 1 d d d 1 1 1 1 1 1 1 d 1 b b b d d d d d d d d d d d d d d d d d 1 1 b b d d d d d d d d d d d b . . 
+. . c d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 d 1 1 1 d 1 1 1 1 1 d d d d d 1 1 1 1 1 1 d b b d d d d d d d d d d d d d d d d 1 1 1 d 1 d d d d d d d d d d d b . . 
+. . c d d 1 1 1 d d d d d d d 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 d d 1 1 1 1 1 d d d d 1 1 d d d 1 1 1 d 1 1 d b b d d d d d d d d d d d d d d d d 1 1 1 1 1 d d d d d d d d d d d b . . 
+. . c d 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 d 1 1 d d d 1 1 1 1 1 1 1 1 1 1 1 1 d b b d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 d d d d d d d d d d b . . 
+. . c d 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d d d 1 d 1 d 1 d 1 d 1 d d 1 1 1 1 1 1 1 1 d b b d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 1 b d d d d d d d d b . . 
+. . c d d d b b 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 d 1 b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 d d 1 1 d 1 1 1 1 1 d b b d d d d d d d d d d d d d d d 1 1 1 1 1 1 1 d d b d d d d d d d b . . 
+. . c d d d b b b b 1 1 1 1 1 1 1 1 1 1 b b b b b b b d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 d d d d 1 1 1 d d 1 1 1 1 1 d 1 1 1 b b d d d d d d d d d d d d d d d 1 1 1 1 1 d d 1 d 1 b d d d d 1 d b . . 
+. . c d d d d d d d b 1 1 1 1 1 1 d b b 1 1 b b d d d d d d d d d d d d d d d 1 d d d d d d d d d d d d d d d d 1 d d d d 1 1 1 d d 1 1 1 1 1 1 1 1 b b b d d d d d d d d d d d d d d d 1 1 1 1 1 d d d 1 1 b d d d d 1 d b . . 
+. . c d d d d d d d b 1 1 1 1 1 1 d d b d d d d d d d d d d d d d d d d d d 1 1 1 1 d d d d d d d d d d d d d d d d 1 d d 1 1 1 1 d 1 1 1 d 1 1 1 1 b b d d d d d d d d d d d d d d d d 1 1 1 1 1 d b d 1 d b d d d d 1 d b . . 
+. . c d d 1 1 d d d b 1 1 1 1 d 1 b b b d d d d d d d d d d d d d d d d d 1 1 1 1 d d d d d d d d d d d d d d d d d d d d 1 1 d 1 d 1 1 d 1 d 1 1 1 1 b d d d d d d d d d d d d d d d d 1 1 1 1 1 b b d 1 1 1 b d d d d d b . . 
+. . c d d 1 1 1 d d b 1 1 1 1 d 1 b b b d d d d d d d d d d d d d d d d 1 d 1 1 1 d d d d d d d d d d d d d d d d d d d d d 1 d d d 1 1 1 d 1 1 1 d 1 b d d d d d d d d d d d d d d d d 1 1 1 1 1 d b 1 1 1 1 b d d d d d b . . 
+. . d d d 1 1 1 d d b 1 1 1 1 d 1 b b d d d d d d d d d d d d d d d d d 1 1 1 1 1 b d d d d d d d d d d d d d d d d d d d d 1 d d d 1 1 1 1 d 1 1 1 d 1 b d d d d d d d d d d d d d d d 1 1 1 1 1 d b d d 1 1 1 b d d d d b . . 
+. . 1 d d 1 1 1 d d b 1 1 1 1 d 1 b b d d d d d d d d d d d d d d d d d d 1 1 1 b b d d d d d d d d d d d d d d d d d d d d 1 d d 1 1 1 1 1 1 1 1 1 1 d b b b d d d d d d d d d d d d d 1 1 1 1 1 d b d d 1 1 1 b d d d c b . . 
+. . 1 1 1 1 d 1 d b 1 1 1 1 1 1 1 b b d d d d d d d d d d d d d d d d d d 1 1 d b d d d d d d d d d d d d d d d d d d d d d d 1 d d 1 1 1 1 1 1 1 1 1 1 d b b b d d d d d d d d d d d d d 1 1 1 1 1 b d d d 1 1 b d d d c b . . 
+. . d d 1 1 1 1 1 b 1 1 1 1 1 1 1 b b d d d d d d d d d d d d d d d d d d 1 1 b b d d d d d d d d d d d d d d d d d d d d d d d b d 1 1 1 1 1 1 1 1 1 1 1 1 b b b d d d d d d d d d d d d 1 1 1 1 1 b b d d 1 1 b d d 3 c b . . 
+. . b 1 1 1 1 1 d b 1 1 1 1 1 1 1 b d d d d d d d d d d d d d d d d d d d d d b d d d d d d d d d d d d d d d d d d d d d d d d b b 1 d 1 1 1 1 1 d 1 1 1 1 1 b d b b d d d d d d d d 1 d 1 1 1 1 1 b b d d 1 1 b d d 3 c b . . 
+. . c 1 1 1 1 1 d b 1 1 1 1 1 1 1 b d d d d d d d d d d d d d d 1 d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d 1 b b 1 1 1 1 d 1 d 1 d 1 1 1 1 b d b b d d d d d d d 1 1 1 1 1 1 1 d b b d 1 1 b d d 3 c b . . 
+. . c 1 1 1 1 1 d b 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d 1 1 1 d 1 1 1 d d d d d d d d d d d d d d d d d d d d d d d d 1 d b b 1 1 1 1 1 1 1 1 1 1 1 1 1 1 d b b b d d d d d 1 1 1 1 1 1 d 1 d b d 1 1 b d d d c b . . 
+. . c 1 1 1 1 d 1 b 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d 1 d 1 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d 1 d d b b 1 1 1 1 1 1 1 1 1 1 1 1 1 1 b d b d d d d 1 1 1 d 1 1 1 1 d d b 1 1 b d d d c b . . 
+. . c 1 1 1 1 d b 1 1 1 1 1 1 1 d b d d d d d d d d d d d d d d d 1 1 d 1 d 1 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d d d d b b b b 1 1 1 1 d 1 1 1 1 1 1 1 d b d b d d d 1 1 b b 1 1 1 1 d d b b 1 d d d d c b . . 
+. . c d 1 1 d d b 1 1 1 1 1 1 1 d d b d d d d d d d d d d d d d d 1 1 d d 1 1 d 1 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d d d d 1 1 d 1 b b b 1 d 1 1 1 1 1 1 1 1 1 b b b d d 1 1 b b b 1 1 1 1 1 d b b d d d d d c b . . 
+. . c d d 1 d d b 1 1 d 1 1 1 1 1 d d b d d d d d d d d d d d d d d 1 1 1 d d 1 d 1 1 1 1 1 d d 1 1 d d d d d d d d d d d d d d d d d d 1 1 1 1 1 b b b 1 d 1 1 1 1 1 1 1 1 b b 1 1 1 1 b d d b 1 1 1 1 d 1 b d d d d 3 d b . . 
+. . c d d 1 1 d b 1 1 d d 1 1 1 1 1 d d b d d d d d d d d d d d d d 1 1 d 1 d d 1 d 1 1 1 1 1 1 d 1 1 d d d d d d d d d d d d d d d d d d 1 1 1 1 d b b b 1 1 1 1 1 1 d 1 b 1 b 1 1 1 b d d d b 1 1 1 1 1 d b b d d d 3 d b . . 
+. . c d d 1 1 b 1 1 d d d 1 1 1 1 1 1 b b b d d d d d d d d d d d d 1 d 1 1 1 d d 1 1 1 1 1 1 1 1 1 1 1 1 d d d d d d d d d d d d d d d d 1 1 1 d b b 1 b b b b b 1 1 1 1 1 1 b b b b b d d d b 1 1 1 1 d 1 b b d d d 3 d b . . 
+. . c d d 1 d b 1 1 d d d d 1 b b 1 1 b b b d d d d d d d d d d d d d 1 1 1 1 1 1 1 d 1 1 1 1 1 1 d 1 1 1 1 1 1 d 1 1 1 1 1 1 d 1 1 1 1 1 1 1 1 d b 1 1 1 1 b b b 1 1 1 1 1 1 b b d d d d d d b b 1 1 1 d 1 b b d d d 3 d b . . 
+. . c d d 1 d b 1 b b b b b b b b b 1 b b b d d d d d d d d d d d d d 1 1 1 b d 1 b b 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 b 1 1 1 1 b d d b 1 1 1 1 1 1 b d d d d d d d d b b 1 1 1 1 d b d d d 3 c b . . 
+. . c d 1 d b 1 1 b b b b b b b 1 1 1 b b d d d d d d d d d d d d d 1 1 d b b b d d d b 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 d d b b b b b b 1 1 1 b b d d b 1 1 1 1 1 1 b d d d d d b b d d b b 1 1 1 d b d d d 3 c b . . 
+. . c 1 d d b 1 1 b b d d d d 1 1 1 1 d b d d d d d d d d d d d 1 1 1 1 b d b b b b d d b b d 1 1 1 1 1 1 1 1 d 1 1 1 b 1 1 b b b b b b b b d d b 1 1 1 b b d d d b 1 1 1 1 1 b 1 d d b d b d b d b b b 1 1 1 d d d d b b b . . 
+. . c 1 d d b 1 1 b d d d d d d 1 1 1 b b d d d d d d d d d d 1 1 1 1 b d d d d b b b b b b b b b b b b 1 1 d d d d b b b b b b b d d d d d d d b b 1 d b d d d d b 1 1 1 1 1 b 1 d d b d b d b d d b b 1 1 1 d d d d b b b . . 
+. . d 1 d b 1 1 d b d d d d d d 1 1 1 b b d d d d d d d d d d 1 1 1 b d d d d d d d 1 b b b b b b b b d 1 1 1 1 1 1 b 1 d d d d d d d d d d d d 1 b 1 1 b d d d d d b b 1 1 1 d b d d d b b d d b d b d b b 1 1 d d d d d b . . 
+. . 1 d b 1 1 1 b d d d d d d d 1 1 1 b b d d d d d d d d d d 1 1 b d d d d d d d d d d 1 1 d d d d d 1 1 1 1 d 1 1 b 1 d d d d d d d d d d d d 1 1 d 1 b d d d d d d d b 1 1 d b d d d b b d d b d d b d b 1 1 d d d d d b . . 
+. . 1 d b d 1 1 b d d d d d d d 1 1 d b b d d d d d d d d d d 1 b d d d d d d d d d d d d d d d d d d d d 1 1 1 1 d b b d d d d d d d d d d d 1 1 1 1 d b d d d d d d d b b 1 1 1 d d d b d b d b d d d b b 1 1 1 d d d d b . . 
+. . 1 d b d 1 b b d d d d d d d 1 1 d b d d d d d d d d d 1 1 1 b d d d d d d d d d d d d d d d d d d d d d 1 1 1 1 b b d d d d d d d d d d d 1 1 1 1 b d d d d d d d d d b b 1 d 1 d d b d b d d b d d b d b 1 1 d d d d b . . 
+. . 1 d b 1 1 b d d d d d d d 1 1 1 d b d d d d d d d d d d 1 1 b d d d d d d d d d d d d d d d d d d d d 1 1 1 b b b d d d d d d d d d d d 1 1 1 b b b d d d d d d d d d b b 1 1 1 d d b d d b d b d d d b b 1 1 d d d d b . . 
+. . 1 1 b 1 1 b d d d d d d d 1 1 1 d b d d d d d d d d d d 1 1 d d d d d d d d d d d d d d d d d d d d 1 1 1 d b b 1 d d d d d d d d d d b 1 1 b d d d d d d d d d d d d b b 1 1 1 d d b d d b d b d d d b b d 1 1 d d d b . . 
+. . d b b 1 1 b d d d d d d d 1 1 1 d b d d d d d d d d d d 1 1 d d d d d d d d d d d d d d d d d d d d 1 1 d b b 1 d d d d d d d d d d d b b b b d d d d d d d d d d d d b 1 d 1 1 d d b d d b d b d d d d b b 1 1 d d d b . . 
+. . c 1 d 1 1 b d d d d d d d 1 1 1 d b d d d d d d d d d 1 1 1 d d d d d d d d d d d d d d d d d d d 1 1 d d b 1 1 d d d d d d d d d d 1 b b b d d d d d d d d d d d d d b 1 d d 1 1 d b d d b d d b d d d d b 1 1 1 d d b c . 
+. . c 1 d d b b d d d d d d 1 1 1 d b b d d d d d d d d d 1 1 1 d d d d d d d d d d d d d d d d d d 1 1 1 d b b d 1 d d d d d d d d d d 1 1 d d d d d d d d d d d d d d d b 1 1 d 1 1 d d b 1 d b d b d d d d b b 1 d d d b c . 
+. . c d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d d c d d d d d d d d d d d d d d d 1 d 1 d b d 1 d d d d d d d d d 1 1 1 d 1 d d d d d d d d d d d d d d b 1 d 1 d 1 1 1 1 d d d c b c c c c b b c c c d c c . 
+c c c c c c c c c c c c c c c c c c c c c c c c c c c c c 1 c c c c c c c c c c c c c c c c c b b b 1 c 1 b 1 1 c 1 c c c c c c c d d d d d d d d d c c c c c c c c c c c b c 1 1 c c c c c c c c c c c c c c c b c c c c c c . 
 `, SpriteKind.Event)
     friezeLeft.setPosition(88, 172)
     friezeRight.setPosition(616, 172)
@@ -3254,6 +3255,8 @@ game.onUpdate(function () {
             hero.setFlag(SpriteFlag.Ghost, false)
         }
     }
+})
+game.onUpdate(function () {
     if (currentLevel == 0 && hero.x > 1520) {
         currentLevel = 1
         prepareLevel(currentLevel)
