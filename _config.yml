@@ -1,1 +1,6 @@
-theme: jekyll-theme-cayman
+makecode:
+  target: arcade
+  platform: arcade
+  home_url: https://arcade.makecode.com/
+theme: jekyll-theme-slate
+include: assets
