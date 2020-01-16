@@ -1914,10 +1914,10 @@ function setHeroDirection () {
         currentDirection = "walkDown"
     }
     if (hero.vx == 0 && hero.vy == 0 && currentDirection != "idle") {
-        if (currentDirection == "walkRight") {
-            setHeroAnimation("idleRight")
-        } else {
+        if (currentDirection == "walkLeft") {
             setHeroAnimation("idleLeft")
+        } else {
+            setHeroAnimation("idleRight")
         }
         currentDirection = "idle"
     }
